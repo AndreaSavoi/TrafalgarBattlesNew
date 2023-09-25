@@ -4,32 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FirstCommit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerLogReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerMainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/CurrentUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bean/BeanCurrTourn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bean/BeanLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bean/BeanReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bean/BeanTournList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/VisualizeScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/singleton/DBconn.java" afterDir="false" />
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="SecondCommit">
+      <change afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/185-1857394_pirates-logo-png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/1f41524aa9f26c12bbc34a1207582797.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/7d26294659d0f81de652dfe8c1238187.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Profile.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +26,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -68,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/William/Downloads/jar_files/jfoenix-17-0.1.1.jar",
+    "last_opened_file_path": "C:/Users/William/IdeaProjects/TrafalgarBattlesNew",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -77,6 +63,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew" />
       <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -111,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695670073627</updated>
-      <workItem from="1695670074902" duration="1742000" />
+      <workItem from="1695670074902" duration="2381000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -127,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695670263507</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SecondCommit">
+      <created>1695671877720</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695671877720</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="FirstCommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="FirstCommit" />
+    <MESSAGE value="SecondCommit" />
+    <option name="LAST_COMMIT_MESSAGE" value="SecondCommit" />
   </component>
 </project>

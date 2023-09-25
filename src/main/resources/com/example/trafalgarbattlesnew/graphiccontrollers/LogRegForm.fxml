@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.LogRegFormController">
+    <children>
+        <Pane layoutX="195.0" layoutY="158.0" prefHeight="644.0" prefWidth="886.0" style="-fx-background-color: #F8F8FF;">
+            <children>
+                <Line endX="1430.0" endY="158.40000915527344" layoutX="-345.0" layoutY="486.0" startX="-1.627604251552839E-5" startY="158.40000915527344" />
+                <Label layoutX="156.0" layoutY="66.0" prefHeight="52.0" prefWidth="131.0" text="LOGIN">
+                    <font>
+                        <Font name="Century Gothic Bold" size="40.0" />
+                    </font>
+                </Label>
+                <Line endX="689.0999755859375" endY="125.89997863769531" layoutX="-253.0" layoutY="-70.0" startX="689.0999755859375" startY="665.0999755859375" />
+                <Label layoutX="577.0" layoutY="66.0" prefHeight="52.0" prefWidth="178.0" text="REGISTER">
+                    <font>
+                        <Font name="Century Gothic Bold" size="40.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameL" layoutX="46.0" layoutY="236.0" prefHeight="59.0" prefWidth="351.0" promptText="Username">
+                    <font>
+                        <Font name="Century Gothic" size="29.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordL" layoutX="46.0" layoutY="362.0" prefHeight="59.0" prefWidth="351.0" promptText="Password">
+                    <font>
+                        <Font name="Century Gothic" size="29.0" />
+                    </font>
+                </PasswordField>
+                <Label fx:id="login" layoutX="156.0" layoutY="504.0" onMouseClicked="#loginVer" prefHeight="52.0" prefWidth="131.0" text="CONTINUE" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameR" layoutX="491.0" layoutY="297.0" prefHeight="59.0" prefWidth="351.0" promptText="Username">
+                    <font>
+                        <Font name="Century Gothic" size="29.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordR" layoutX="491.0" layoutY="419.0" prefHeight="59.0" prefWidth="351.0" promptText="Password">
+                    <font>
+                        <Font name="Century Gothic" size="29.0" />
+                    </font>
+                </PasswordField>
+                <Label fx:id="login1" layoutX="605.0" layoutY="570.0" onMouseClicked="#signupVer" prefHeight="52.0" prefWidth="124.0" text="CONTINUE" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="formRes" alignment="CENTER" layoutX="206.0" layoutY="14.0" prefHeight="43.0" prefWidth="460.0">
+                    <font>
+                        <Font name="Century Gothic" size="13.0" />
+                    </font></Label>
+                <TextField fx:id="email" layoutX="490.0" layoutY="173.0" prefHeight="59.0" prefWidth="351.0" promptText="E-Mail">
+                    <font>
+                        <Font name="Century Gothic" size="29.0" />
+                    </font>
+                </TextField>
+                <CheckBox fx:id="checkRole" layoutX="583.0" layoutY="504.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="165.0" text="Organizer">
+                    <font>
+                        <Font name="Century Gothic Bold" size="24.0" />
+                    </font>
+                </CheckBox>
+            </children>
+        </Pane>
+        <Pane layoutX="-5.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #f0e130;" />
+        <Pane layoutX="1080.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #f0e130;">
+            <children>
+                <PieChart layoutY="50.0" prefHeight="173.0" prefWidth="193.0" />
+            </children>
+        </Pane>
+        <Line endX="194.99998474121094" endY="802.4000244140625" layoutY="-1.0" startX="194.99998474121094" startY="158.40000915527344" />
+        <Line endX="1071.4000244140625" endY="791.4000244140625" layoutX="10.0" layoutY="10.0" startX="1071.4000244140625" startY="146.0" />
+        <Pane prefHeight="158.0" prefWidth="1280.0" style="-fx-background-color: #f0e130;">
+            <children>
+                <Line endX="1280.0001220703125" endY="158.40000915527344" startX="-1.627604251552839E-5" startY="158.40000915527344" />
+                <ImageView fitHeight="133.0" fitWidth="150.0" layoutX="12.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@185-1857394_pirates-logo-png.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="54.0" fitWidth="178.0" layoutX="152.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@1f41524aa9f26c12bbc34a1207582797.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="61.0" fitWidth="165.0" layoutX="177.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@7d26294659d0f81de652dfe8c1238187.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="home" layoutX="1067.0" layoutY="61.0" onMouseClicked="#returnHome" prefHeight="36.0" prefWidth="65.0" text="HOME" textAlignment="CENTER">
+                    <font>
+                        <Font name="Century Gothic Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+            </children></Pane>
+    </children>
+</AnchorPane>
+

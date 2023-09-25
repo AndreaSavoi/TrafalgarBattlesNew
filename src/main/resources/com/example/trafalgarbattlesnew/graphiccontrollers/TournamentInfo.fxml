@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.TournPageController">
+   <children>
+      <Pane layoutX="195.0" layoutY="158.0" prefHeight="644.0" prefWidth="886.0" style="-fx-background-color: #F8F8FF;">
+         <children>
+            <Label fx:id="tName" alignment="CENTER" layoutX="62.0" layoutY="34.0" prefHeight="104.0" prefWidth="440.0" text="Label">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Line endX="1609.3665771484375" endY="158.4000244140625" layoutX="-523.0" layoutY="486.0" startX="-1.627604251552839E-5" startY="158.40000915527344" />
+            <Label fx:id="date" alignment="CENTER" layoutX="604.0" layoutY="34.0" prefHeight="104.0" prefWidth="268.0" text="Label">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="nSub" alignment="CENTER" layoutX="56.0" layoutY="322.0" prefHeight="60.0" prefWidth="200.0" text="Label">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="nPart" alignment="CENTER" layoutX="354.0" layoutY="322.0" prefHeight="60.0" prefWidth="178.0" text="Label">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="tName22" alignment="CENTER" layoutX="56.0" layoutY="262.0" prefHeight="60.0" prefWidth="200.0" text="Current Partecipants">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="tName221" alignment="CENTER" layoutX="354.0" layoutY="262.0" prefHeight="60.0" prefWidth="178.0" text="Max Partecipants">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="register" layoutX="158.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="248.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="REGISTER">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="-5.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #f0e130;">
+         <children>
+            <Label fx:id="homeB" layoutX="48.0" layoutY="207.0" onMouseClicked="#goHome" prefHeight="52.0" prefWidth="112.0" text="&gt; HOME">
+               <font>
+                  <Font name="Century Gothic Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="292.0" prefHeight="52.0" prefWidth="112.0" text="&gt; TEAMS">
+               <font>
+                  <Font name="Century Gothic Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="377.0" prefHeight="52.0" prefWidth="112.0" text="&gt; PROFILE">
+               <font>
+                  <Font name="Century Gothic Bold" size="21.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="1080.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #f0e130;">
+         <children>
+            <PieChart layoutY="50.0" prefHeight="173.0" prefWidth="193.0" />
+         </children>
+      </Pane>
+      <Line endX="194.99998474121094" endY="802.4000244140625" layoutY="-1.0" startX="194.99998474121094" startY="158.40000915527344" />
+      <Line endX="1071.4000244140625" endY="791.4000244140625" layoutX="10.0" layoutY="10.0" startX="1071.4000244140625" startY="146.0" />
+      <Pane prefHeight="158.0" prefWidth="1280.0" style="-fx-background-color: #f0e130;">
+         <children>
+            <Line endX="1280.0001220703125" endY="158.40000915527344" startX="-1.627604251552839E-5" startY="158.40000915527344" />
+            <ImageView fitHeight="133.0" fitWidth="150.0" layoutX="12.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@185-1857394_pirates-logo-png.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="54.0" fitWidth="178.0" layoutX="152.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@1f41524aa9f26c12bbc34a1207582797.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="61.0" fitWidth="165.0" layoutX="177.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@7d26294659d0f81de652dfe8c1238187.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label fx:id="logReg" layoutX="1017.0" layoutY="56.0" onMouseClicked="#goLog" prefHeight="45.0" prefWidth="219.0" text="LOGIN/REGISTER" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
