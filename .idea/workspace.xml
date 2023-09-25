@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="SecondCommit">
-      <change afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/185-1857394_pirates-logo-png.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/1f41524aa9f26c12bbc34a1207582797.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/7d26294659d0f81de652dfe8c1238187.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Profile.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="TerzoCommit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +47,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -98,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695670073627</updated>
-      <workItem from="1695670074902" duration="2381000" />
+      <workItem from="1695670074902" duration="2970000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -121,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695671877720</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TerzoCommit">
+      <created>1695672585142</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695672585142</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +138,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="FirstCommit" />
     <MESSAGE value="SecondCommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="SecondCommit" />
+    <MESSAGE value="TerzoCommit" />
+    <option name="LAST_COMMIT_MESSAGE" value="TerzoCommit" />
   </component>
 </project>

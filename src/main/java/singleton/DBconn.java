@@ -25,6 +25,8 @@ public class DBconn {
             }
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            IS.close();
         }
 
         return conn;
