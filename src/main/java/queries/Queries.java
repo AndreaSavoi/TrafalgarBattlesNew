@@ -3,25 +3,25 @@ package queries;
 public class Queries {
     private Queries(){}
 
-    static final String QueryLogin= "SELECT * FROM trafalgarbattles.login WHERE username = ? and password = ?";
+    static final String QUERY_LOGIN = "SELECT * FROM trafalgarbattles.login WHERE username = ? and password = ?";
 
-    public static String getQueryLogin(){return QueryLogin;}
+    public static String getQueryLogin(){return QUERY_LOGIN;}
 
-    static final String QueryAllTournaments = "SELECT * FROM trafalgarbattles.tournaments;";
+    static final String QUERY_ALL_TOURNAMENTS = "SELECT * FROM trafalgarbattles.tournaments;";
 
     public static String getQueryAllTournaments() {
-        return QueryAllTournaments;
+        return QUERY_ALL_TOURNAMENTS;
     }
 
-    static final String RegisterUser = "INSERT INTO trafalgarbattles.login (username, password, email) VALUES (?, ?, ?);";
+    static final String REGISTER_USER = "INSERT INTO trafalgarbattles.login (username, password, email) VALUES (?, ?, ?);";
 
-    public static String getRegisterUser() { return RegisterUser; }
+    public static String getRegisterUser() { return REGISTER_USER; }
 
-    static final String QueryCurrTourn = "SELECT * FROM trafalgarbattles.tournaments WHERE sno = ?;";
+    static final String QUERY_CURR_TOURN = "SELECT * FROM trafalgarbattles.tournaments WHERE sno = ?;";
 
-    public static String getQueryCurrTourn() { return QueryCurrTourn; }
+    public static String getQueryCurrTourn() { return QUERY_CURR_TOURN; }
 
-    static final String QueryAddSub = "INSERT INTO trafalgarbattles.subscription (names, tname) VALUES (?, ?);";
+    static final String QUERY_ADD_SUB = "INSERT INTO trafalgarbattles.subscription (names, tname) VALUES (?, ?);";
 
-    public static String getQueryAddSub() { return QueryAddSub; }
+    public static String getQueryAddSub() { return QUERY_ADD_SUB; }
 }

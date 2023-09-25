@@ -42,7 +42,7 @@ public class LogRegDAOImpl implements LogRegDAO {
     }
 
     @Override
-    public boolean Register(String email, String username, String password) throws SQLException, IOException {
+    public boolean register(String email, String username, String password) throws SQLException, IOException {
         connVerify();
 
         try {

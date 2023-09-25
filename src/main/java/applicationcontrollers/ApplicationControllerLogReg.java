@@ -42,7 +42,7 @@ public class ApplicationControllerLogReg {
     public void register() {
         try{
             LogRegDAOImpl regDAO = new LogRegDAOImpl();
-            regDAO.Register(email, username, password);
+            regDAO.register(email, username, password);
         } catch (SQLException e){
             e.printStackTrace();
         } catch (IOException e) {

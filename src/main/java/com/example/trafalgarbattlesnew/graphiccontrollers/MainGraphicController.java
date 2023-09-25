@@ -22,7 +22,11 @@ import java.util.ResourceBundle;
 
 public class MainGraphicController implements Initializable {
     @FXML
-    protected Label logReg, teams, profile;
+    protected Label logReg;
+    @FXML
+    protected Label teams;
+    @FXML
+    protected Label profile;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
     @FXML
     protected VBox tournaments;
