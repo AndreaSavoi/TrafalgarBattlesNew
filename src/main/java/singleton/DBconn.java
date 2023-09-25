@@ -17,16 +17,14 @@ public class DBconn {
     public static Connection getDBConnection() throws IOException {
         Properties properties = new Properties();
         InputStream IS= new FileInputStream("application.properties");
-        properties.load(IS);
-        try{
-            if(conn == null) {
+        try (IS) {
+            properties.load(IS);
+            if (conn == null) {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conn = DriverManager.getConnection("jdbc:mysql://localhost/trafalgarbattles", "root", (String) properties.get("password"));
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            IS.close();
         }
 
         return conn;
