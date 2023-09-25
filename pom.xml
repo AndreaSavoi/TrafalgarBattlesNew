@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.trafalgarbattlesnew/com.example.trafalgarbattlesnew.graphiccontrollers.HelloApplication
+                                com.example.trafalgarbattlesnew/com.example.trafalgarbattlesnew.graphiccontrollers.Main
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
