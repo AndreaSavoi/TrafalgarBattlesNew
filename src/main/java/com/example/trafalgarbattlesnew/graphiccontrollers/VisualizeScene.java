@@ -33,7 +33,7 @@ public class VisualizeScene {
         stage.show();
     }
 
-    public static void sceneVisualizer(String sName, MouseEvent event) {
+    public void sceneVisualizer(String sName, MouseEvent event) {
         try{
             Parent loader = FXMLLoader.load(Objects.requireNonNull(VisualizeScene.class.getResource(sName)));
             Scene scene = new Scene(loader);
