@@ -49,7 +49,7 @@ public class MainGraphicController implements Initializable {
 
             for (int i = 0; i < count; i++) {
                 Pane pane = new Pane();
-                pane.setPrefSize(885, 150);
+                pane.setPrefSize(1083, 150);
                 Label label = new Label();
                 String paneId = "Info" + tL.getSNO(i);
                 pane.setId(paneId);
@@ -61,7 +61,7 @@ public class MainGraphicController implements Initializable {
                 });
                 HBox hbox = new HBox();
                 hbox.setPrefHeight(125);
-                hbox.setPrefWidth(875);
+                hbox.setPrefWidth(1083);
                 hbox.setSpacing(50);
                 Image img = new Image(tL.getLogos(i));
                 ImageView logo = new ImageView(img);
