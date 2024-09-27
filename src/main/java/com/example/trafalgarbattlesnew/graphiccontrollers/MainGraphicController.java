@@ -88,10 +88,8 @@ public class MainGraphicController implements Initializable {
                 hbox.setLayoutX(10 + (pane.getPrefWidth() - hbox.getPrefWidth()) / 2);
                 tournaments.getChildren().add(pane);
             }
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
     }
 }
