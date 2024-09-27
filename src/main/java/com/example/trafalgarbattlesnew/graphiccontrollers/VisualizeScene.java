@@ -13,14 +13,14 @@ import java.util.Objects;
 public class VisualizeScene {
     private static VisualizeScene visualizer = null;
 
-    private static Stage stage;
+    private Stage stage;
 
     private VisualizeScene() {}
 
     public static VisualizeScene getVisualizer(Stage newS) {
         if(visualizer==null) {
             visualizer = new VisualizeScene();
-            stage = newS;
+            visualizer.stage = newS;
         }
         return visualizer;
     }
