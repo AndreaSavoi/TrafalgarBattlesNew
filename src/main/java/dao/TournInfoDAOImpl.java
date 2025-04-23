@@ -56,12 +56,12 @@ public class TournInfoDAOImpl implements TournInfoDAO {
         }
     }
 
-    public void addSub(String username, String tname) throws SQLException, IOException {
+    public void addSub(String username, String tName) throws SQLException, IOException {
         connVerify();
 
         stmt = conn.prepareStatement(Queries.getQueryAddSub());
         stmt.setString(1, username);
-        stmt.setString(2, tname);
+        stmt.setString(2, tName);
         stmt.executeUpdate();
     }
 }

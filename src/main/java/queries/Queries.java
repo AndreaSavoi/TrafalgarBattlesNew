@@ -21,7 +21,7 @@ public class Queries {
 
     public static String getQueryCurrTourn() { return QUERY_CURR_TOURN; }
 
-    static final String QUERY_ADD_SUB = "INSERT INTO trafalgarbattles.subscription (names, tname) VALUES (?, ?);";
+    static final String QUERY_ADD_SUB = "INSERT INTO trafalgarbattles.subscription (username, tName) VALUES (?, ?);";
 
     public static String getQueryAddSub() { return QUERY_ADD_SUB; }
 }
