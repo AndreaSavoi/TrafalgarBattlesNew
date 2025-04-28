@@ -37,7 +37,7 @@ public class MainGraphicController implements Initializable {
     public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
 
     @FXML
-    public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("SubsController.fxml", event);}
+    public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
 
 
     @Override
@@ -47,7 +47,7 @@ public class MainGraphicController implements Initializable {
         }
         try {
             BeanTournList tL = new BeanTournList();
-            new ApplicationControllerTournaments(tL, "all");
+            new ApplicationControllerTournaments(tL, "all", null);
             int count = tL.sno.size();
 
             for (int i = 0; i < count; i++) {

@@ -47,7 +47,7 @@ public class SubsController implements Initializable {
         }
         try {
             BeanTournList tL = new BeanTournList();
-            new ApplicationControllerTournaments(tL, "sub");
+            new ApplicationControllerTournaments(tL, "sub", CurrentUser.getUser());
             int count = tL.sno.size();
 
             for (int i = 0; i < count; i++) {

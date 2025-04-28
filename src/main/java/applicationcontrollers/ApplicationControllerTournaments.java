@@ -18,14 +18,14 @@ public class ApplicationControllerTournaments {
     private List<InputStream> logos = new ArrayList<>();
     private TournInfoDAOImpl getTournamentsInfoDAO;
 
-    public ApplicationControllerTournaments(BeanTournList tL, String mode) throws SQLException, IOException {
-        addDatas(tL, mode);
+    public ApplicationControllerTournaments(BeanTournList tL, String mode, String username) throws SQLException, IOException {
+        addDatas(tL, mode, username);
     }
 
-    private void addDatas(BeanTournList tL, String mode) throws SQLException, IOException {
+    private void addDatas(BeanTournList tL, String mode, String username) throws SQLException, IOException {
 
         getTournamentsInfoDAO = new TournInfoDAOImpl();
-        getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, logos, "all");
+        getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, logos, mode, username);
 
         int counter = sno.size();
 

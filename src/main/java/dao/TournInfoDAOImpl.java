@@ -28,15 +28,29 @@ public class TournInfoDAOImpl implements TournInfoDAO {
     }
 
     @Override
-    public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos, String mode) throws SQLException, IOException {
+    public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos, String mode, String username) throws SQLException, IOException {
         connVerify();
 
-        if (mode.equals("all")) {
-            stmt = conn.prepareStatement(Queries.getQueryAllTournaments());
-        } else if (mode.equals("sub")) {
-            stmt = conn.prepareStatement(Queries.getQuerySubTournaments());
-            stmt.setString(1, CurrentUser.getUser());
+        String sql;
+        if (mode.equals("sub")) {
+            if (username == null) {
+                throw new IllegalArgumentException("Username cannot be null when mode is 'sub'");
+            }
+            sql = Queries.getQuerySubTournaments();
+        } else if (mode.equals("all")) {
+            sql = Queries.getQueryAllTournaments();
+        } else {
+            throw new IllegalArgumentException("Invalid mode: " + mode);
         }
+
+        PreparedStatement stmt = conn.prepareStatement(sql);
+
+        if (mode.equals("sub")) {
+            stmt.setString(1, username); // imposto l'username solo in sub
+        }
+
+        System.out.println(stmt);
+
         rs = stmt.executeQuery();
         while(rs.next()){
             tName.add(rs.getString("tname"));
