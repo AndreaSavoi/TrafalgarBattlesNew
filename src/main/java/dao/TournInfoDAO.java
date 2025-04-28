@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface TournInfoDAO {
-    void getInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos) throws SQLException, IOException;
+    void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos, String Type) throws SQLException, IOException;
 
     void getSpecific(List<String> curr, int sno) throws SQLException, IOException;
 

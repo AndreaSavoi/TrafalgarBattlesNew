@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ApplicationControllerMainPage {
+public class ApplicationControllerTournaments {
     private List<String> tName = new ArrayList<>();
     private List<String> nPartecipants = new ArrayList<>();
     private List<String> nSubscribed = new ArrayList<>();
@@ -18,14 +18,14 @@ public class ApplicationControllerMainPage {
     private List<InputStream> logos = new ArrayList<>();
     private TournInfoDAOImpl getTournamentsInfoDAO;
 
-    public ApplicationControllerMainPage(BeanTournList tL) throws SQLException, IOException {
-        addDatas(tL);
+    public ApplicationControllerTournaments(BeanTournList tL, String mode) throws SQLException, IOException {
+        addDatas(tL, mode);
     }
 
-    private void addDatas(BeanTournList tL) throws SQLException, IOException {
+    private void addDatas(BeanTournList tL, String mode) throws SQLException, IOException {
 
         getTournamentsInfoDAO = new TournInfoDAOImpl();
-        getTournamentsInfoDAO.getInfo(tName, nPartecipants, nSubscribed, dates, sno, logos);
+        getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, logos, "all");
 
         int counter = sno.size();
 

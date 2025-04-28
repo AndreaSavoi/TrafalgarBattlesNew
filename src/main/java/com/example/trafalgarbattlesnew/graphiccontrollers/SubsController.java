@@ -20,7 +20,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class MainGraphicController implements Initializable {
+public class SubsController implements Initializable {
     @FXML
     protected Label logReg;
     @FXML
@@ -37,7 +37,7 @@ public class MainGraphicController implements Initializable {
     public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
 
     @FXML
-    public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("SubsController.fxml", event);}
+    public void gohome(MouseEvent event) {visualizer.sceneVisualizer("MainView.fxml", event);}
 
 
     @Override
@@ -47,7 +47,7 @@ public class MainGraphicController implements Initializable {
         }
         try {
             BeanTournList tL = new BeanTournList();
-            new ApplicationControllerTournaments(tL, "all");
+            new ApplicationControllerTournaments(tL, "sub");
             int count = tL.sno.size();
 
             for (int i = 0; i < count; i++) {

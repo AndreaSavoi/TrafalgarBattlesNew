@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixSonarCloud">
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixNomi">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bean/BeanSubTurnList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerMainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/queries/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,27 +36,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AndreaSavoi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AndreaSavoi&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AndreaSavoi/TrafalgarBattlesNew.git",
-    "accountId": "f8bf4f50-21ef-4ba4-8a6c-640c9a99cf89"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AndreaSavoi/TrafalgarBattlesNew.git&quot;,
+    &quot;accountId&quot;: &quot;f8bf4f50-21ef-4ba4-8a6c-640c9a99cf89&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2VtzGvvMoPURf9EdTpbj0Y54Ppj" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,36 +65,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/andre/Downloads/mysql-connector-j-8.0.33.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/IdeaProjects/TrafalgarBattlesNew/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
       <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew" />
       <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="bean" />
+      <recent name="applicationcontrollers" />
+      <recent name="com.example.trafalgarbattlesnew.graphiccontrollers" />
     </key>
   </component>
   <component name="RunManager">
@@ -129,7 +142,11 @@
       <workItem from="1695670074902" duration="3923000" />
       <workItem from="1695718018486" duration="4549000" />
       <workItem from="1695807854688" duration="1841000" />
-      <workItem from="1745410454427" duration="3776000" />
+      <workItem from="1745410454427" duration="4279000" />
+      <workItem from="1745486765436" duration="2016000" />
+      <workItem from="1745749145275" duration="1428000" />
+      <workItem from="1745752988260" duration="11294000" />
+      <workItem from="1745821096912" duration="1558000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -195,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727470305827</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="FixNomi">
+      <option name="closed" value="true" />
+      <created>1745414907658</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745414907658</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +244,7 @@
     <MESSAGE value="TerzoCommit" />
     <MESSAGE value="ForseFix" />
     <MESSAGE value="FixSonarCloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="FixSonarCloud" />
+    <MESSAGE value="FixNomi" />
+    <option name="LAST_COMMIT_MESSAGE" value="FixNomi" />
   </component>
 </project>

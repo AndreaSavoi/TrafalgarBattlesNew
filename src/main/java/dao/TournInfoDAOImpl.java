@@ -1,5 +1,6 @@
 package dao;
 
+import applicationcontrollers.CurrentUser;
 import queries.Queries;
 import singleton.DBconn;
 
@@ -27,10 +28,15 @@ public class TournInfoDAOImpl implements TournInfoDAO {
     }
 
     @Override
-    public void getInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos) throws SQLException, IOException {
+    public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos, String mode) throws SQLException, IOException {
         connVerify();
 
-        stmt = conn.prepareStatement(Queries.getQueryAllTournaments());
+        if (mode.equals("all")) {
+            stmt = conn.prepareStatement(Queries.getQueryAllTournaments());
+        } else if (mode.equals("sub")) {
+            stmt = conn.prepareStatement(Queries.getQuerySubTournaments());
+            stmt.setString(1, CurrentUser.getUser());
+        }
         rs = stmt.executeQuery();
         while(rs.next()){
             tName.add(rs.getString("tname"));
