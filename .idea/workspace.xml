@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixNomi">
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixSubs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +138,7 @@
       <workItem from="1745486765436" duration="2016000" />
       <workItem from="1745749145275" duration="1428000" />
       <workItem from="1745752988260" duration="11294000" />
-      <workItem from="1745821096912" duration="3417000" />
+      <workItem from="1745821096912" duration="6189000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -224,7 +220,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745822684536</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="FixSubs">
+      <option name="closed" value="true" />
+      <created>1745827798747</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1745827798747</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +253,7 @@
     <MESSAGE value="ForseFix" />
     <MESSAGE value="FixSonarCloud" />
     <MESSAGE value="FixNomi" />
-    <option name="LAST_COMMIT_MESSAGE" value="FixNomi" />
+    <MESSAGE value="FixSubs" />
+    <option name="LAST_COMMIT_MESSAGE" value="FixSubs" />
   </component>
 </project>
