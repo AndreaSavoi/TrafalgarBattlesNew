@@ -4,7 +4,6 @@ import queries.Queries;
 import singleton.DBconn;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

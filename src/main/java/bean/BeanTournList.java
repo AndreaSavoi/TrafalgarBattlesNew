@@ -1,6 +1,5 @@
 package bean;
 
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,10 +23,6 @@ public class BeanTournList {
     public void addNS(String nS) {nSubscribed.add(nS);}
     public void addDates(String date) {dates.add(date);}
     public void addSNO(String snoN) {sno.add(snoN);}
-
-    public int getIdx(int snoN) {
-        return sno.indexOf(snoN);
-    }
 
     public String getName(int i) {return tName.get(i);}
     public String getNP(int i) {return nPartecipants.get(i);}
