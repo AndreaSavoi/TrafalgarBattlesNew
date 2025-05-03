@@ -1,6 +1,6 @@
 package singleton;
 
-import Users.User;
+import users.User;
 
 public class SessionManager {
         private static User currentUser;

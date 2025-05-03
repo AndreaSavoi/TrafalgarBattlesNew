@@ -1,6 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
-import Users.User;
+import users.User;
 import applicationcontrollers.ApplicationControllerTournaments;
 import singleton.SessionManager;
 import bean.BeanCurrTourn;
@@ -82,17 +82,12 @@ public class MainGraphicController implements Initializable {
             hbox.setPrefHeight(125);
             hbox.setPrefWidth(1083);
             hbox.setSpacing(50);
-            Image img = new Image(tL.getLogos(i));
-            ImageView logo = new ImageView(img);
-            logo.setPreserveRatio(true);
-            logo.setFitHeight(hbox.getPrefHeight());
             String tabs = "\t\t\t\t";
             label.setText(tL.getName(i) + tabs + tL.getNS(i) + "/" + tL.getNP(i) + tabs + tL.getDate(i) + tabs);
             label.setFont(new Font("Century Gothic", 20));
             label.setStyle("-fx-font-weight: bold italic");
-            label.setLayoutX(logo.getFitWidth() + 50);
             label.setLayoutY(hbox.getHeight() / 2);
-            hbox.getChildren().addAll(logo, label);
+            hbox.getChildren().addAll(label);
             BorderStroke bS = new BorderStroke(
                     Color.BLACK,
                     BorderStrokeStyle.SOLID,

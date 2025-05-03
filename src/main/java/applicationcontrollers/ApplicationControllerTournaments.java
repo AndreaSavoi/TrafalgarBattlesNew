@@ -25,7 +25,7 @@ public class ApplicationControllerTournaments {
     private void addDatas(BeanTournList tL, String mode, String username) throws SQLException, IOException {
 
         getTournamentsInfoDAO = new TournInfoDAOImpl();
-        getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, logos, mode, username);
+        getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, mode, username);
 
         int counter = sno.size();
 
@@ -35,7 +35,6 @@ public class ApplicationControllerTournaments {
             tL.addNS(nSubscribed.get(i));
             tL.addDates(dates.get(i));
             tL.addSNO(sno.get(i));
-            tL.addLogo(logos.get(i));
         }
     }
 

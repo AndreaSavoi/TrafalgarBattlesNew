@@ -1,9 +1,9 @@
-package Users;
+package users;
 
 public abstract class User {
     protected String username;
 
-    public User(String username) {
+    protected User(String username) {
         this.username = username;
     }
 

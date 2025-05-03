@@ -5,28 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixAndFactoryAdd">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Users/Organizer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Users/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Users/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerLogReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerLogReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/CurrentUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/BeanLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/BeanLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/BeanReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/BeanReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/Organizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/queries/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +150,7 @@
       <workItem from="1745911866188" duration="9625000" />
       <workItem from="1745997184405" duration="8395000" />
       <workItem from="1746187674964" duration="1363000" />
-      <workItem from="1746266563656" duration="11774000" />
+      <workItem from="1746266563656" duration="12421000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -265,7 +256,31 @@
       <option name="project" value="LOCAL" />
       <updated>1745839816282</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="FixAndFactoryAdd">
+      <option name="closed" value="true" />
+      <created>1746289142564</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746289142564</updated>
+    </task>
+    <task id="LOCAL-00016" summary="FixAndFactoryAdd">
+      <option name="closed" value="true" />
+      <created>1746289229243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746289229243</updated>
+    </task>
+    <task id="LOCAL-00017" summary="FixAndFactoryAdd">
+      <option name="closed" value="true" />
+      <created>1746289303371</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746289303371</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,6 +307,7 @@
     <MESSAGE value="FixNomi" />
     <MESSAGE value="FixSubs" />
     <MESSAGE value="Fix" />
+    <MESSAGE value="FixDelete" />
     <MESSAGE value="FixAndFactoryAdd" />
     <option name="LAST_COMMIT_MESSAGE" value="FixAndFactoryAdd" />
   </component>

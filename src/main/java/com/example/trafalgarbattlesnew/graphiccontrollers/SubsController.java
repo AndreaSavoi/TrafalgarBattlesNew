@@ -1,6 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
-import Users.User;
+import users.User;
 import applicationcontrollers.ApplicationControllerTournaments;
 import singleton.SessionManager;
 import bean.BeanTournList;

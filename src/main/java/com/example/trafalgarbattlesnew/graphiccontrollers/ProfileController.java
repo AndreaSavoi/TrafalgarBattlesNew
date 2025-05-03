@@ -1,7 +1,7 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import singleton.SessionManager;
-import Users.User;
+import users.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;

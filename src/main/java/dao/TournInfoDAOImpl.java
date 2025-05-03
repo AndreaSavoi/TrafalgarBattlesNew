@@ -27,7 +27,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
     }
 
     @Override
-    public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, List<InputStream> logos, String mode, String username) throws SQLException, IOException {
+    public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, String mode, String username) throws SQLException, IOException {
         connVerify();
 
         String sql;
@@ -42,7 +42,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             throw new IllegalArgumentException("Invalid mode: " + mode);
         }
 
-        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt = conn.prepareStatement(sql);
 
         if (mode.equals("sub")) {
             stmt.setString(1, username); // imposto l'username solo in sub
@@ -55,7 +55,6 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             nSubscribed.add(rs.getString("nsubscribed"));
             dates.add(rs.getString("dates"));
             sno.add(rs.getString("sno"));
-            logos.add(rs.getBinaryStream("image"));
         }
     }
 

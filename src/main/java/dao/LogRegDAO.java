@@ -1,6 +1,6 @@
 package dao;
 
-import Users.User;
+import users.User;
 
 import java.io.IOException;
 import java.sql.SQLException;

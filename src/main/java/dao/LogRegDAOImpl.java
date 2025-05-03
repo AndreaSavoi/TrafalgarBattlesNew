@@ -1,9 +1,9 @@
 package dao;
 
-import Users.Organizer;
-import Users.Player;
+import users.Organizer;
+import users.Player;
 import singleton.SessionManager;
-import Users.User;
+import users.User;
 import queries.Queries;
 import singleton.DBconn;
 

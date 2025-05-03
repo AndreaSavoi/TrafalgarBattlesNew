@@ -1,6 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
-import Users.User;
+import users.User;
 import applicationcontrollers.ApplicationControllerTournInfo;
 import singleton.SessionManager;
 import bean.BeanCurrTourn;
@@ -51,7 +51,7 @@ public class TournPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = SessionManager.getCurrentUser();
-        if(currentUser.getUsername() != null) {
+        if(currentUser!= null && currentUser.getUsername() != null) {
             logReg.setText(currentUser.getUsername());
             logReg.setOnMouseClicked(event -> {
                 try {
