@@ -1,6 +1,7 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
-import applicationcontrollers.CurrentUser;
+import singleton.SessionManager;
+import Users.User;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -31,8 +32,10 @@ public class ProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if(CurrentUser.getUser() != null) {
-            usr.setText(CurrentUser.getUser());
+        User currentUser = SessionManager.getCurrentUser();
+
+        if(currentUser.getUsername() != null) {
+            usr.setText(currentUser.getUsername());
         } else {
             usr.setText("Not currently logged in.");
             usr.setWrapText(true);

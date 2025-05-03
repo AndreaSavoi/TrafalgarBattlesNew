@@ -1,7 +1,8 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import Users.User;
 import applicationcontrollers.ApplicationControllerTournInfo;
-import applicationcontrollers.CurrentUser;
+import singleton.SessionManager;
 import bean.BeanCurrTourn;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,16 +41,18 @@ public class TournPageController implements Initializable {
     }
 
     public void sub(MouseEvent event) throws SQLException, IOException {
-        if(CurrentUser.getUser() != null) {
+        User currentUser = SessionManager.getCurrentUser();
+        if(currentUser.getUsername() != null) {
             BeanCurrTourn bCT = BeanCurrTourn.getInstance();
-            new ApplicationControllerTournInfo(CurrentUser.getUser(), bCT.gettName());
+            new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName());
         }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if(CurrentUser.getUser() != null) {
-            logReg.setText(CurrentUser.getUser());
+        User currentUser = SessionManager.getCurrentUser();
+        if(currentUser.getUsername() != null) {
+            logReg.setText(currentUser.getUsername());
             logReg.setOnMouseClicked(event -> {
                 try {
                     goHome(event);

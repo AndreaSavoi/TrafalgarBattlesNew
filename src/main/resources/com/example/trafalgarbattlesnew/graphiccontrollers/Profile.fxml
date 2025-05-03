@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.ProfileController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.ProfileController">
    <children>
       <Pane layoutX="195.0" layoutY="158.0" prefHeight="644.0" prefWidth="1084.0" style="-fx-background-color: #F8F8FF;">
          <children>
@@ -19,7 +16,7 @@
                   <Font name="Century Gothic Bold Italic" size="61.0" />
                </font>
             </Label>
-            <TextField fx:id="birth" alignment="CENTER" layoutX="149.0" layoutY="266.0" prefHeight="73.0" prefWidth="347.0" promptText="DD/MM//YY">
+            <TextField fx:id="birth" alignment="CENTER" layoutX="149.0" layoutY="266.0" prefHeight="73.0" prefWidth="347.0" promptText="DD/MM/YY">
                <font>
                   <Font name="Century Gothic Bold Italic" size="37.0" />
                </font>

@@ -3,7 +3,7 @@ package queries;
 public class Queries {
     private Queries(){}
 
-    static final String QUERY_LOGIN = "SELECT * FROM trafalgarbattles.login WHERE username = ? and password = ?";
+    static final String QUERY_LOGIN = "SELECT * FROM trafalgarbattles.login WHERE username = ? and password = ? and type = ?";
 
     public static String getQueryLogin(){return QUERY_LOGIN;}
 
@@ -13,7 +13,7 @@ public class Queries {
         return QUERY_ALL_TOURNAMENTS;
     }
 
-    static final String REGISTER_USER = "INSERT INTO trafalgarbattles.login (username, password, email) VALUES (?, ?, ?);";
+    static final String REGISTER_USER = "INSERT INTO trafalgarbattles.login (username, password, email, type) VALUES (?, ?, ?, ?);";
 
     public static String getRegisterUser() { return REGISTER_USER; }
 

@@ -1,9 +1,11 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import Users.User;
 import applicationcontrollers.ApplicationControllerTournaments;
-import applicationcontrollers.CurrentUser;
+import singleton.SessionManager;
 import bean.BeanCurrTourn;
 import bean.BeanTournList;
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -27,6 +29,10 @@ public class MainGraphicController implements Initializable {
     @FXML
     protected VBox tournaments;
     @FXML
+    protected JFXButton subs;
+    @FXML
+    protected JFXButton profile;
+    @FXML
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
     @FXML
@@ -38,8 +44,15 @@ public class MainGraphicController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        if(CurrentUser.getUser() != null) {
-            logReg.setText(CurrentUser.getUser());
+        User currentUser = SessionManager.getCurrentUser();
+
+        if(currentUser != null && currentUser.getUsername() != null) {
+            logReg.setText(currentUser.getUsername());
+            profile.setDisable(false);
+            subs.setDisable(false);
+        } else {
+            profile.setDisable(true);
+            subs.setDisable(true);
         }
         try {
             BeanTournList tL = new BeanTournList();

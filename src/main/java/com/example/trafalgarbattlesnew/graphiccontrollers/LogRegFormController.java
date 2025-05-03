@@ -6,6 +6,7 @@ import bean.BeanReg;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -27,10 +28,14 @@ public class LogRegFormController {
     protected TextField passwordL;
     @FXML
     protected Label formRes;
+    @FXML
+    protected CheckBox checkRoleL;
+    @FXML
+    protected CheckBox checkRoleR;
+    private String type;
     private Stage stage;
     private Scene scene;
     private FXMLLoader root;
-    private BeanLog bL;
 
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
@@ -39,7 +44,8 @@ public class LogRegFormController {
         if(usernameL.getText().isEmpty() || passwordL.getText().isEmpty()){
             formRes.setText("Invalid password/username");
         } else {
-            bL = new BeanLog(usernameL.getText(), passwordL.getText());
+            if(checkRoleL.isSelected()){type = "Organizer";} else {type = "Player";}
+            BeanLog bL = new BeanLog(usernameL.getText(), passwordL.getText(), type);
             try{
                 new ApplicationControllerLogReg(bL);
                 passwordL.setDisable(true);
@@ -49,7 +55,7 @@ public class LogRegFormController {
                 usernameR.setDisable(true);
                 formRes.setText("Successfully logged in");
             } catch (Exception e) {
-                e.printStackTrace();
+                formRes.setText("Something went wrong, please try again");
             }
         }
     }
@@ -59,7 +65,8 @@ public class LogRegFormController {
         if(usernameR.getText().isEmpty() || passwordR.getText().isEmpty() || email.getText().isEmpty() || !email.getText().contains("@")){
             formRes.setText("Invalid credentials, please try again");
         } else {
-            BeanReg bR = new BeanReg(email.getText(), usernameR.getText(), passwordR.getText());
+            if(checkRoleR.isSelected()){type = "Organizer";} else {type = "Player";}
+            BeanReg bR = new BeanReg(email.getText(), usernameR.getText(), passwordR.getText(), type);
             try{
                 new ApplicationControllerLogReg(bR);
                 email.setDisable(true);
@@ -67,7 +74,7 @@ public class LogRegFormController {
                 usernameR.setDisable(true);
                 formRes.setText("Successfully registered, please login");
             } catch (Exception e) {
-                e.printStackTrace();
+                formRes.setText("Something went wrong, please try again");
             }
         }
     }

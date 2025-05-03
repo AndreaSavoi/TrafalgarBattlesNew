@@ -10,9 +10,12 @@ import java.sql.SQLException;
 public class ApplicationControllerLogReg {
 
     private String email = null;
+
     private final String username;
 
     private final String password;
+
+    private final String type;
 
     public ApplicationControllerLogReg(BeanLog bL) {
         if(bL == null) {
@@ -21,6 +24,7 @@ public class ApplicationControllerLogReg {
 
         username = bL.getUsername();
         password = bL.getPassword();
+        type = bL.getType();
 
         if(bL instanceof BeanReg bR) {
             email = bR.getEmail();
@@ -33,7 +37,7 @@ public class ApplicationControllerLogReg {
     public void verify() {
         try {
             LogRegDAOImpl logDao = new LogRegDAOImpl();
-            logDao.getLogInfo(username, password);
+            logDao.getLogInfo(username, password, type);
         } catch (SQLException | IOException e){
             e.printStackTrace();
         }
@@ -42,10 +46,8 @@ public class ApplicationControllerLogReg {
     public void register() {
         try{
             LogRegDAOImpl regDAO = new LogRegDAOImpl();
-            regDAO.register(email, username, password);
-        } catch (SQLException e){
-            e.printStackTrace();
-        } catch (IOException e) {
+            regDAO.register(email, username, password, type);
+        } catch (SQLException | IOException e){
             e.printStackTrace();
         }
     }

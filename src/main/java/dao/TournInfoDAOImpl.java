@@ -1,6 +1,5 @@
 package dao;
 
-import applicationcontrollers.CurrentUser;
 import queries.Queries;
 import singleton.DBconn;
 
@@ -48,8 +47,6 @@ public class TournInfoDAOImpl implements TournInfoDAO {
         if (mode.equals("sub")) {
             stmt.setString(1, username); // imposto l'username solo in sub
         }
-
-        System.out.println(stmt);
 
         rs = stmt.executeQuery();
         while(rs.next()){

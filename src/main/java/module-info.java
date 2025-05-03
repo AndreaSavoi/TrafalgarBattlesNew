@@ -3,6 +3,7 @@ module com.example.trafalgarbattlesnew {
     requires javafx.fxml;
     requires java.sql;
     requires mysql.connector.j;
+    requires com.jfoenix;
 
 
     opens com.example.trafalgarbattlesnew.graphiccontrollers to javafx.fxml;
