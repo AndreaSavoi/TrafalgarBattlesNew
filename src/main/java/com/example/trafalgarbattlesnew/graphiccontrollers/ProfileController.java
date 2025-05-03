@@ -22,20 +22,29 @@ public class ProfileController implements Initializable {
     protected TextField manga;
     @FXML
     protected TextField sex;
+    @FXML
+    protected Label logReg;
+
+
 
     VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
     public void goLog(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
+    @FXML
     public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainView.fxml", event); }
+
+    @FXML
+    public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = SessionManager.getCurrentUser();
 
-        if(currentUser.getUsername() != null) {
+        if(currentUser!= null && currentUser.getUsername() != null) {
             usr.setText(currentUser.getUsername());
+            logReg.setText(currentUser.getUsername());
         } else {
             usr.setText("Not currently logged in.");
             usr.setWrapText(true);

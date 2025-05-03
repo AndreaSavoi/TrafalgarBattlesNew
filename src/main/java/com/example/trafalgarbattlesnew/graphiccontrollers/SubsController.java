@@ -19,9 +19,7 @@ public class SubsController implements Initializable {
     @FXML
     protected Label logReg;
     @FXML
-    protected Label teams;
-    @FXML
-    protected Label profile;
+    protected Label noTournaments;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
     @FXML
     protected VBox tournaments;
@@ -43,8 +41,12 @@ public class SubsController implements Initializable {
 
             try {
                 BeanTournList tL = new BeanTournList();
-                new ApplicationControllerTournaments(tL, "sub", currentUser.getUsername());
-                MainGraphicController.displayTournaments(tL, visualizer, tournaments);
+                ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "sub", currentUser.getUsername());
+                if(controller.hasTournaments()) {
+                    MainGraphicController.displayTournaments(tL, visualizer, tournaments);
+                } else {
+                       noTournaments.setVisible(true);
+                }
             } catch (SQLException | IOException e) {
                 e.printStackTrace();
             }

@@ -1,5 +1,7 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
 import users.User;
 import applicationcontrollers.ApplicationControllerTournaments;
 import singleton.SessionManager;
@@ -20,6 +22,7 @@ import javafx.scene.text.Font;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainGraphicController implements Initializable {
@@ -32,6 +35,8 @@ public class MainGraphicController implements Initializable {
     protected JFXButton subs;
     @FXML
     protected JFXButton profile;
+    @FXML
+    protected Label noTournaments;
     @FXML
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
@@ -56,8 +61,12 @@ public class MainGraphicController implements Initializable {
         }
         try {
             BeanTournList tL = new BeanTournList();
-            new ApplicationControllerTournaments(tL, "all", null);
-            displayTournaments(tL, visualizer, tournaments);
+            ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "all", null);
+            if(controller.hasTournaments()) {
+                displayTournaments(tL, visualizer, tournaments);
+            } else {
+                noTournaments.setVisible(true);
+            }
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
@@ -69,7 +78,6 @@ public class MainGraphicController implements Initializable {
         for (int i = 0; i < count; i++) {
             Pane pane = new Pane();
             pane.setPrefSize(1083, 150);
-            Label label = new Label();
             String paneId = "Info" + tL.getSNO(i);
             pane.setId(paneId);
             pane.setOnMouseClicked(event -> {
@@ -78,29 +86,52 @@ public class MainGraphicController implements Initializable {
                 tournament.setSno(infoN);
                 visualizer.sceneVisualizer("TournamentInfo.fxml", event);
             });
-            HBox hbox = new HBox();
-            hbox.setPrefHeight(125);
-            hbox.setPrefWidth(1083);
-            hbox.setSpacing(50);
-            String tabs = "\t\t\t\t";
-            label.setText(tL.getName(i) + tabs + tL.getNS(i) + "/" + tL.getNP(i) + tabs + tL.getDate(i) + tabs);
-            label.setFont(new Font("Century Gothic", 20));
-            label.setStyle("-fx-font-weight: bold italic");
-            label.setLayoutY(hbox.getHeight() / 2);
-            hbox.getChildren().addAll(label);
-            BorderStroke bS = new BorderStroke(
+            GridPane grid = new GridPane();
+            grid.setPrefSize(1083, 125);
+            grid.setAlignment(Pos.CENTER);
+            grid.setHgap(0);
+            grid.setVgap(0);
+            grid.setPadding(new Insets(0));
+
+            ColumnConstraints col1 = new ColumnConstraints();
+            col1.setPrefWidth(361);
+            col1.setHalignment(HPos.CENTER);
+
+            ColumnConstraints col2 = new ColumnConstraints();
+            col2.setPrefWidth(361);
+            col2.setHalignment(HPos.CENTER);
+
+            ColumnConstraints col3 = new ColumnConstraints();
+            col3.setPrefWidth(361);
+            col3.setHalignment(HPos.CENTER);
+
+            grid.getColumnConstraints().addAll(col1, col2, col3);
+
+            Label nameLabel = new Label(tL.getName(i));
+            Label participantsLabel = new Label(tL.getNS(i) + "/" + tL.getNP(i));
+            Label dateLabel = new Label(tL.getDate(i));
+
+            for (Label label : List.of(nameLabel, participantsLabel, dateLabel)) {
+                label.setFont(new Font("Century Gothic", 20));
+                label.setStyle("-fx-font-weight: bold;");
+            }
+
+            grid.add(nameLabel, 0, 0);
+            grid.add(participantsLabel, 1, 0);
+            grid.add(dateLabel, 2, 0);
+
+            pane.setBorder(new Border(new BorderStroke(
                     Color.BLACK,
                     BorderStrokeStyle.SOLID,
                     CornerRadii.EMPTY,
                     BorderWidths.DEFAULT
-            );
-            Border border = new Border(bS);
-            pane.setBorder(border);
-            pane.getChildren().addAll(hbox);
-            hbox.setAlignment(Pos.CENTER);
-            hbox.setLayoutY((pane.getPrefHeight() - hbox.getPrefHeight()) / 2);
-            hbox.setLayoutX(10 + (pane.getPrefWidth() - hbox.getPrefWidth()) / 2);
+            )));
+
+            grid.setLayoutY((pane.getPrefHeight() - grid.getPrefHeight()) / 2);
+            pane.getChildren().add(grid);
+
             tournaments.getChildren().add(pane);
+
         }
     }
 }

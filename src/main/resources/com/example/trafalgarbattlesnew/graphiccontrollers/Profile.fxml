@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -60,17 +61,16 @@
       </Pane>
       <Pane layoutX="-5.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #00BFFF;">
          <children>
-            <Label fx:id="homeB" layoutX="48.0" layoutY="207.0" onMouseClicked="#goHome" prefHeight="52.0" prefWidth="112.0" stylesheets="@styles.css" text="&gt; HOME">
+            <JFXButton layoutX="44.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#goHome" prefHeight="52.0" prefWidth="113.0" stylesheets="@styles.css" text="&gt; HOME">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="45.0" layoutY="303.0" mnemonicParsing="false" onMouseClicked="#showsubs" stylesheets="@styles.css" text="&gt; SUBS">
                <font>
                   <Font name="Century Gothic" size="21.0" />
                </font>
-            </Label>
-            <Label layoutX="48.0" layoutY="292.0" prefHeight="52.0" prefWidth="112.0" stylesheets="@styles.css" text="&gt; TEAMS">
-               <font>
-                  <Font name="Century Gothic" size="21.0" />
-               </font>
-            </Label>
-            <Label layoutX="48.0" layoutY="377.0" prefHeight="52.0" prefWidth="112.0" stylesheets="@styles.css" text="&gt; PROFILE">
+            </JFXButton>
+            <Label layoutX="58.0" layoutY="388.0" text="&gt; PROFILE" textFill="#a1a1a1">
                <font>
                   <Font name="Century Gothic" size="21.0" />
                </font>

@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixAndFactoryAdd">
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="FixSC">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/Century Gothic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/CenturyGothic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHIC.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICB.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICB0.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICBI.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICI.TTF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/sharefonts.net.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Organizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/Organizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/ProfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Profile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,15 +83,16 @@
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/IdeaProjects/TrafalgarBattlesNew/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -99,6 +103,8 @@
       <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\IdeaProjects\TrafalgarBattlesNew\src\main\resources\fonts" />
+      <recent name="C:\Users\andre\IdeaProjects\TrafalgarBattlesNew\src\main\resources" />
       <recent name="C:\Users\William\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -150,7 +156,10 @@
       <workItem from="1745911866188" duration="9625000" />
       <workItem from="1745997184405" duration="8395000" />
       <workItem from="1746187674964" duration="1363000" />
-      <workItem from="1746266563656" duration="12421000" />
+      <workItem from="1746266563656" duration="15320000" />
+      <workItem from="1746292664765" duration="229000" />
+      <workItem from="1746292902804" duration="2380000" />
+      <workItem from="1746297672661" duration="2299000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -280,7 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746289303371</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="FixSC">
+      <option name="closed" value="true" />
+      <created>1746289886896</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746289886896</updated>
+    </task>
+    <task id="LOCAL-00019" summary="FixSC">
+      <option name="closed" value="true" />
+      <created>1746290054574</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746290054574</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +334,11 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="FixDelete" />
     <MESSAGE value="FixAndFactoryAdd" />
-    <option name="LAST_COMMIT_MESSAGE" value="FixAndFactoryAdd" />
+    <MESSAGE value="FixSC" />
+    <option name="LAST_COMMIT_MESSAGE" value="FixSC" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

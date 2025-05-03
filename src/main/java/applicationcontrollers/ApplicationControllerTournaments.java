@@ -15,28 +15,35 @@ public class ApplicationControllerTournaments {
     private List<String> nSubscribed = new ArrayList<>();
     private List<String> dates = new ArrayList<>();
     private List<String> sno = new ArrayList<>();
-    private List<InputStream> logos = new ArrayList<>();
     private TournInfoDAOImpl getTournamentsInfoDAO;
+    private boolean hasTournaments = false;
 
     public ApplicationControllerTournaments(BeanTournList tL, String mode, String username) throws SQLException, IOException {
-        addDatas(tL, mode, username);
+        this.hasTournaments = addDatas(tL, mode, username);
     }
 
-    private void addDatas(BeanTournList tL, String mode, String username) throws SQLException, IOException {
+    public boolean hasTournaments() {
+        return hasTournaments;
+    }
+
+    private boolean addDatas(BeanTournList tL, String mode, String username) throws SQLException, IOException {
 
         getTournamentsInfoDAO = new TournInfoDAOImpl();
         getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, mode, username);
 
-        int counter = sno.size();
+        if(sno.isEmpty()) {
+            return false;
+        }
 
-        for (int i = 0;i < counter;i++) {
+        for (int i = 0;i < sno.size();i++) {
             tL.addName(tName.get(i));
             tL.addNP(nPartecipants.get(i));
             tL.addNS(nSubscribed.get(i));
             tL.addDates(dates.get(i));
             tL.addSNO(sno.get(i));
         }
-    }
 
+        return true;
+    }
 
 }
