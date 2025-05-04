@@ -63,17 +63,17 @@
          <children>
             <Line endX="361.0" endY="158.0" layoutX="349.0" layoutY="-160.0" startX="361.0" startY="206.0" />
             <Line endX="561.0" endY="158.0" layoutX="-194.0" layoutY="-160.0" startX="561.0" startY="206.0" />
-            <Label layoutX="90.0" layoutY="3.0" text="TOURNAMENT" textAlignment="CENTER">
+            <Label layoutX="90.0" layoutY="3.0" styleClass="label-bold" stylesheets="@styles.css" text="TOURNAMENT" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="31.0" />
                </font>
             </Label>
-            <Label layoutX="436.0" layoutY="3.0" text="PARTECIPANTS" textAlignment="CENTER">
+            <Label layoutX="436.0" layoutY="3.0" styleClass="label-bold" stylesheets="@styles.css" text="PARTECIPANTS" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="31.0" />
                </font>
             </Label>
-            <Label layoutX="858.0" layoutY="3.0" text="DATE" textAlignment="CENTER">
+            <Label layoutX="858.0" layoutY="3.0" styleClass="label-bold" stylesheets="@styles.css" text="DATE" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="31.0" />
                </font>

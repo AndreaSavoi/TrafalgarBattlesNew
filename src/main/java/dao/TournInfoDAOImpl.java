@@ -2,6 +2,7 @@ package dao;
 
 import exception.AlreadySubscribedException;
 import exception.MaxParticipantsReachedException;
+import exception.UserNotSubscribedException;
 import queries.Queries;
 import singleton.DBconn;
 
@@ -77,6 +78,22 @@ public class TournInfoDAOImpl implements TournInfoDAO {
         connVerify();
 
         stmt = conn.prepareStatement(Queries.getQueryAddSub());
+        stmt.setString(1, username);
+        stmt.setString(2, tName);
+        stmt.executeUpdate();
+    }
+
+    public void removeSub(String username, String tName) throws SQLException, IOException, UserNotSubscribedException {
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getQueryCheckSub());
+        stmt.setString(1, username);
+        stmt.setString(2, tName);
+        ResultSet rs = stmt.executeQuery();
+
+        if(!rs.next()) {throw new UserNotSubscribedException("You're not subscribed to this tournament.");}
+
+        stmt = conn.prepareStatement(Queries.getQueryDelSub());
         stmt.setString(1, username);
         stmt.setString(2, tName);
         stmt.executeUpdate();

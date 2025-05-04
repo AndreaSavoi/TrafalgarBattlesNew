@@ -2,6 +2,7 @@ package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import exception.AlreadySubscribedException;
 import exception.MaxParticipantsReachedException;
+import exception.UserNotSubscribedException;
 import users.User;
 import applicationcontrollers.ApplicationControllerTournInfo;
 import singleton.SessionManager;
@@ -49,48 +50,64 @@ public class TournPageController implements Initializable {
             User currentUser = SessionManager.getCurrentUser();
             if (currentUser.getUsername() != null) {
                 BeanCurrTourn bCT = BeanCurrTourn.getInstance();
-                new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName());
+                new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName(), "sub");
             }
             regRes.setText("Registered successfully!");
             regRes.setTextFill(Color.GREEN);
         } catch (AlreadySubscribedException | MaxParticipantsReachedException e) {
             regRes.setText(e.getMessage());
             regRes.setTextFill(Color.RED);
-            e.printStackTrace();
         } catch (Exception e) {
             regRes.setText("Something went wrong.");
             regRes.setTextFill(Color.RED);
-            e.printStackTrace();
         }
     }
+
+    public void unSub(MouseEvent event) {
+        try {
+            User currentUser = SessionManager.getCurrentUser();
+            if (currentUser.getUsername() != null) {
+                BeanCurrTourn bCT = BeanCurrTourn.getInstance();
+                new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName(), "unsub");
+            }
+            regRes.setText("Unregistered successfully!");
+            regRes.setTextFill(Color.GREEN);
+        } catch (UserNotSubscribedException e) {
+            regRes.setText(e.getMessage());
+            regRes.setTextFill(Color.RED);
+        } catch (Exception e) {
+            regRes.setText("Something went wrong.");
+            regRes.setTextFill(Color.RED);
+        }
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = SessionManager.getCurrentUser();
         if(currentUser!= null && currentUser.getUsername() != null) {
             logReg.setText(currentUser.getUsername());
-            logReg.setOnMouseClicked(event -> {
-                try {
-                    goHome(event);
-                } catch (SQLException e) {
-                    throw new RuntimeException(e);
-                }
-            });
-            register.setTextFill(Color.GREEN);
-        } else {
-            register.setTextFill(Color.RED);
-        }
-        BeanCurrTourn bCT = BeanCurrTourn.getInstance();
-        try {
-            new ApplicationControllerTournInfo(bCT);
-        } catch (SQLException | IOException e) {
-            e.printStackTrace();
-        }
-        tName.setText(bCT.gettName());
-        date.setText(bCT.getDates());
-        nSub.setText(bCT.getnSubscribed());
-        nPart.setText(bCT.getnPartecipants());
+        logReg.setOnMouseClicked(event -> {
+            try {
+                goHome(event);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        register.setTextFill(Color.GREEN);
+    } else {
+        register.setTextFill(Color.RED);
+    }
+    BeanCurrTourn bCT = BeanCurrTourn.getInstance();
+    try {
+        new ApplicationControllerTournInfo(bCT);
+    } catch (SQLException | IOException e) {
+        e.printStackTrace();
     }
 
-
+    tName.setText(bCT.gettName());
+    date.setText(bCT.getDates());
+    nSub.setText(bCT.getnSubscribed());
+    nPart.setText(bCT.getnPartecipants());
+    }
 }

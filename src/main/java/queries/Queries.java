@@ -28,4 +28,12 @@ public class Queries {
     static final String QUERY_SUB_TOURNAMENTS = "SELECT t.sno, t.tName, t.dates, t.nPartecipants, t.nSubscribed FROM tournaments t INNER JOIN subscription s ON t.tName = s.tName WHERE s.username = ?";
 
     public static String getQuerySubTournaments() { return QUERY_SUB_TOURNAMENTS; }
+
+    static final String QUERY_DEL_SUB = "DELETE FROM subscription WHERE username = ? AND tName = ?";
+
+    public static String getQueryDelSub() { return QUERY_DEL_SUB; }
+
+    static final String QUERY_CHECK_SUB = "SELECT 1 FROM subscription WHERE username = ? AND tName = ?";
+
+    public static String getQueryCheckSub() { return QUERY_CHECK_SUB; }
 }

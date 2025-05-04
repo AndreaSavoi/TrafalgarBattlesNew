@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix" />
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
+      <change afterPath="$PROJECT_DIR$/src/main/java/exception/UserNotSubscribedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/queries/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/Century Gothic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fonts/Century Gothic.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/CenturyGothic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHIC.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICB.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fonts/GOTHICB.TTF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICB0.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICBI.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICI.TTF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/sharefonts.net.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +78,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -65,6 +86,7 @@
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
     "git-widget-placeholder": "master",
+    "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/andre/IdeaProjects/TrafalgarBattlesNew/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers",
@@ -144,7 +166,8 @@
       <workItem from="1746292902804" duration="2380000" />
       <workItem from="1746297672661" duration="3031000" />
       <workItem from="1746302279390" duration="121000" />
-      <workItem from="1746367603251" duration="2857000" />
+      <workItem from="1746367603251" duration="5014000" />
+      <workItem from="1746372638388" duration="1643000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -314,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746370418697</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1746370770950</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746370770950</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

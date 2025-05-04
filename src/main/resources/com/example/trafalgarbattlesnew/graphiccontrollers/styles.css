@@ -5,3 +5,11 @@
 .label:hover {
     -fx-text-fill: white;
 }
+
+.label {
+    -fx-font-family: "Century Gothic" ;
+}
+
+.label-bold {
+    -fx-font-family: "Century Gothic Bold";
+}

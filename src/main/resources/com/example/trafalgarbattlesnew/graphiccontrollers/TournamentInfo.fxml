@@ -23,7 +23,7 @@
             </Button>
             <Pane layoutX="660.0" layoutY="116.0" prefHeight="412.0" prefWidth="200.0" style="-fx-background-color: #ADD8E6; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;">
                <children>
-                  <Label fx:id="tName221" alignment="CENTER" layoutX="11.0" layoutY="21.0" prefHeight="60.0" prefWidth="178.0" text="Max Partecipants">
+                  <Label fx:id="tName221" alignment="CENTER" layoutX="11.0" layoutY="21.0" prefHeight="60.0" prefWidth="178.0" styleClass="label-bold" stylesheets="@styles.css" text="Max Partecipants">
                      <font>
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>
@@ -33,7 +33,7 @@
                         <Font name="Century Gothic" size="19.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tName22" alignment="CENTER" layoutY="152.0" prefHeight="60.0" prefWidth="200.0" text="Current Partecipants">
+                  <Label fx:id="tName22" alignment="CENTER" layoutY="152.0" prefHeight="60.0" prefWidth="200.0" styleClass="label-bold" stylesheets="@styles.css" text="Current Partecipants">
                      <font>
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>
@@ -48,14 +48,14 @@
                         <Font name="Century Gothic" size="19.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutY="278.0" prefHeight="60.0" prefWidth="200.0" text="Date">
+                  <Label alignment="CENTER" layoutY="278.0" prefHeight="60.0" prefWidth="200.0" styleClass="label-bold" stylesheets="@styles.css" text="Date">
                      <font>
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="register1" layoutX="387.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="UNREGISTER">
+            <Button fx:id="register1" layoutX="387.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#unSub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="UNREGISTER">
                <font>
                   <Font name="Century Gothic" size="27.0" />
                </font>
