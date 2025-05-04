@@ -1,5 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import com.jfoenix.controls.JFXButton;
 import users.User;
 import applicationcontrollers.ApplicationControllerTournaments;
 import singleton.SessionManager;
@@ -15,11 +16,17 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import static util.HoverEffectUtil.applyHoverEffect;
+
 public class SubsController implements Initializable {
     @FXML
     protected Label logReg;
     @FXML
     protected Label noTournaments;
+    @FXML
+    protected JFXButton home;
+    @FXML
+    protected JFXButton profile;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
     @FXML
     protected VBox tournaments;
@@ -34,6 +41,8 @@ public class SubsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyHoverEffect(profile, home, logReg);
+
         User currentUser = SessionManager.getCurrentUser();
 
         if(currentUser != null && currentUser.getUsername() != null) {

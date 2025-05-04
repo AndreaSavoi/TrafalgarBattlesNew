@@ -12,8 +12,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
@@ -24,6 +22,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static util.HoverEffectUtil.applyHoverEffect;
 
 public class MainGraphicController implements Initializable {
     @FXML
@@ -49,6 +49,8 @@ public class MainGraphicController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyHoverEffect(subs, profile,logReg);
+
         User currentUser = SessionManager.getCurrentUser();
 
         if(currentUser != null && currentUser.getUsername() != null) {

@@ -1,15 +1,9 @@
-.button:hover {
-    -fx-text-fill: white;
-}
-
-.label:hover {
-    -fx-text-fill: white;
-}
-
 .label {
     -fx-font-family: "Century Gothic" ;
+    -fx-background-insets: 0;
 }
 
 .label-bold {
     -fx-font-family: "Century Gothic Bold";
+    -fx-background-insets: 0;
 }

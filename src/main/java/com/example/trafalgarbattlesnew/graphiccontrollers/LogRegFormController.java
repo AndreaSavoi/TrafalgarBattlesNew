@@ -5,6 +5,7 @@ import bean.BeanLog;
 import bean.BeanReg;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -15,7 +16,9 @@ import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
-public class LogRegFormController {
+import static util.HoverEffectUtil.applyHoverEffect;
+
+public class LogRegFormController implements Initializable {
     @FXML
     protected TextField usernameR;
     @FXML
@@ -32,6 +35,8 @@ public class LogRegFormController {
     protected CheckBox checkRoleL;
     @FXML
     protected CheckBox checkRoleR;
+    @FXML
+    protected Label home;
     private String type;
     private Stage stage;
     private Scene scene;
@@ -81,5 +86,10 @@ public class LogRegFormController {
 
     public void returnHome(MouseEvent event){
         visualizer.sceneVisualizer("Mainview.fxml", event);
+    }
+
+    @Override
+    public void initialize(java.net.URL url, java.util.ResourceBundle resourceBundle) {
+        applyHoverEffect(home);
     }
 }

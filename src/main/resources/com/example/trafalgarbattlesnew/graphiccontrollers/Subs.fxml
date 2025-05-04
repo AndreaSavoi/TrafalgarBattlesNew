@@ -27,7 +27,7 @@
                     </font>
                 </JFXButton>
             <Line endX="1071.4000244140625" endY="791.4000244140625" layoutX="-872.0" layoutY="-145.0" startX="1071.5001220703125" startY="148.90000915527344" />
-            <JFXButton cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="218.0" onMouseClicked="#gohome" scaleShape="false" stylesheets="@styles.css" text="&gt; HOME">
+            <JFXButton fx:id="home" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="218.0" onMouseClicked="#gohome" scaleShape="false" stylesheets="@styles.css" text="&gt; HOME">
                <font>
                   <Font name="Century Gothic" size="21.0" />
                </font>

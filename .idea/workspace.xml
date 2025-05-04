@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exception/UserNotSubscribedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/util/HoverEffectUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/queries/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/MainGraphicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/SubsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/Century Gothic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fonts/Century Gothic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/CenturyGothic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHIC.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICB.TTF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fonts/GOTHICB.TTF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICB0.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICBI.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/GOTHICI.TTF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fonts/century-gothic/sharefonts.net.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +154,7 @@
       <workItem from="1746297672661" duration="3031000" />
       <workItem from="1746302279390" duration="121000" />
       <workItem from="1746367603251" duration="5014000" />
-      <workItem from="1746372638388" duration="1643000" />
+      <workItem from="1746372638388" duration="3334000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -345,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746370770950</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1746374320951</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1746374320951</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
