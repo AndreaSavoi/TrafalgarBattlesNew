@@ -59,7 +59,7 @@ public class LogRegFormController implements Initializable {
                 passwordR.setDisable(true);
                 usernameR.setDisable(true);
                 formRes.setText("Successfully logged in");
-            } catch (Exception e) {
+            } catch (Exception _) {
                 formRes.setText("Something went wrong, please try again");
             }
         }
@@ -78,7 +78,7 @@ public class LogRegFormController implements Initializable {
                 passwordR.setDisable(true);
                 usernameR.setDisable(true);
                 formRes.setText("Successfully registered, please login");
-            } catch (Exception e) {
+            } catch (Exception _) {
                 formRes.setText("Something went wrong, please try again");
             }
         }

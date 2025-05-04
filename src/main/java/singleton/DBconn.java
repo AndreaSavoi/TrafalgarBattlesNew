@@ -24,7 +24,7 @@ public class DBconn {
                 conn = DriverManager.getConnection("jdbc:mysql://localhost/trafalgarbattles", "root", (String) properties.get("password"));
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new IOException("Something went wrong");
         }
 
         return conn;
@@ -36,7 +36,7 @@ public class DBconn {
                 conn.close();
                 conn = null;
             } catch (SQLException e) {
-                e.printStackTrace();
+                throw new SQLException("Something went wrong");
             }
         }
     }

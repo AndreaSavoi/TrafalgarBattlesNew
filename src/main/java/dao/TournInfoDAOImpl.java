@@ -89,7 +89,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
         stmt = conn.prepareStatement(Queries.getQueryCheckSub());
         stmt.setString(1, username);
         stmt.setString(2, tName);
-        ResultSet rs = stmt.executeQuery();
+        rs = stmt.executeQuery();
 
         if(!rs.next()) {throw new UserNotSubscribedException("You're not subscribed to this tournament.");}
 

@@ -8,6 +8,11 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 public class HoverEffectUtil {
+
+    private HoverEffectUtil() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static void applyHoverEffect(Labeled... nodes) {
         for (Labeled node : nodes) {
             Color fromColor = Color.BLACK;

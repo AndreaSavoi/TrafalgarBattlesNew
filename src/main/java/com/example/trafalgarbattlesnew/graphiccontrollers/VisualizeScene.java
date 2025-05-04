@@ -42,7 +42,7 @@ public class VisualizeScene {
             }
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) {
+        } catch (Exception _) {
             System.exit(-1);
         }
     }

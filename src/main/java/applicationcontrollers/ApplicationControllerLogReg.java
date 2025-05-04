@@ -39,7 +39,7 @@ public class ApplicationControllerLogReg {
             LogRegDAOImpl logDao = new LogRegDAOImpl();
             logDao.getLogInfo(username, password, type);
         } catch (SQLException | IOException e){
-            e.printStackTrace();
+            throw new IllegalArgumentException("Invalid credentials");
         }
     }
 
@@ -48,7 +48,7 @@ public class ApplicationControllerLogReg {
             LogRegDAOImpl regDAO = new LogRegDAOImpl();
             regDAO.register(email, username, password, type);
         } catch (SQLException | IOException e){
-            e.printStackTrace();
+            throw new IllegalArgumentException("Something went wrong");
         }
     }
 }

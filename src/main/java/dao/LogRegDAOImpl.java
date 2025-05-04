@@ -69,8 +69,7 @@ public class LogRegDAOImpl implements LogRegDAO {
             stmt.executeUpdate();
             return true;
         } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
+            throw new IllegalArgumentException("Something went wrong");
         }
 
     }

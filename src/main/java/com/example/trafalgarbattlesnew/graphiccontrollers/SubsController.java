@@ -57,7 +57,7 @@ public class SubsController implements Initializable {
                        noTournaments.setVisible(true);
                 }
             } catch (SQLException | IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
     }

@@ -57,7 +57,7 @@ public class TournPageController implements Initializable {
         } catch (AlreadySubscribedException | MaxParticipantsReachedException e) {
             regRes.setText(e.getMessage());
             regRes.setTextFill(Color.RED);
-        } catch (Exception e) {
+        } catch (Exception _) {
             regRes.setText("Something went wrong.");
             regRes.setTextFill(Color.RED);
         }
@@ -75,7 +75,7 @@ public class TournPageController implements Initializable {
         } catch (UserNotSubscribedException e) {
             regRes.setText(e.getMessage());
             regRes.setTextFill(Color.RED);
-        } catch (Exception e) {
+        } catch (Exception _) {
             regRes.setText("Something went wrong.");
             regRes.setTextFill(Color.RED);
         }
@@ -90,8 +90,8 @@ public class TournPageController implements Initializable {
         logReg.setOnMouseClicked(event -> {
             try {
                 goHome(event);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+            } catch (SQLException _) {
+                throw new RuntimeException();
             }
         });
         register.setTextFill(Color.GREEN);
@@ -102,7 +102,7 @@ public class TournPageController implements Initializable {
     try {
         new ApplicationControllerTournInfo(bCT);
     } catch (SQLException | IOException e) {
-        e.printStackTrace();
+        throw new RuntimeException(e);
     }
 
     tName.setText(bCT.gettName());
