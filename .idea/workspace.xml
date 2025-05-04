@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exception/AlreadySubscribedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exception/MaxParticipantsReachedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +144,7 @@
       <workItem from="1746292902804" duration="2380000" />
       <workItem from="1746297672661" duration="3031000" />
       <workItem from="1746302279390" duration="121000" />
-      <workItem from="1746367603251" duration="2555000" />
+      <workItem from="1746367603251" duration="2857000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -308,7 +298,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746302140516</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1746370411164</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746370411164</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1746370418697</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1746370418697</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

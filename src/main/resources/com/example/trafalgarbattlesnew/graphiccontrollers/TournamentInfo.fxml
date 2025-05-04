@@ -60,9 +60,9 @@
                   <Font name="Century Gothic" size="27.0" />
                </font>
             </Button>
-            <Label fx:id="regRes" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="357.0" prefHeight="73.0" prefWidth="251.0">
+            <Label fx:id="regRes" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="357.0" prefHeight="73.0" prefWidth="606.0">
                <font>
-                  <Font size="25.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
          </children>

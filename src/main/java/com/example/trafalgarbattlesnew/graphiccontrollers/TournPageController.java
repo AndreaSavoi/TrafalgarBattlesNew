@@ -34,7 +34,7 @@ public class TournPageController implements Initializable {
     @FXML
     protected Button register;
     @FXML
-    protected Button regRes;
+    protected Label regRes;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
     public void goLog(MouseEvent event){
         visualizer.sceneVisualizer("LogRegForm.fxml", event);
