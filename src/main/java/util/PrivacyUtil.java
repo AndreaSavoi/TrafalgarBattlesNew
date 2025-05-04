@@ -2,6 +2,10 @@ package util;
 
 public class PrivacyUtil {
 
+    private PrivacyUtil() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static String obfuscateEmail(String email) {
         if (email == null || !email.contains("@")) {
             return email;
