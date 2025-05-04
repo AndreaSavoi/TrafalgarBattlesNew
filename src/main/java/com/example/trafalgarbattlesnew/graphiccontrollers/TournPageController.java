@@ -101,7 +101,7 @@ public class TournPageController implements Initializable {
     BeanCurrTourn bCT = BeanCurrTourn.getInstance();
     try {
         new ApplicationControllerTournInfo(bCT);
-    } catch (SQLException | IOException e) {
+    } catch (SQLException | IOException _) {
         throw new IllegalArgumentException("Something went wrong");
     }
 

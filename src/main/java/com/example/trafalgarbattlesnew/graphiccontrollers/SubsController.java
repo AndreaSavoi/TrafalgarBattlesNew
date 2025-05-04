@@ -56,7 +56,7 @@ public class SubsController implements Initializable {
                 } else {
                        noTournaments.setVisible(true);
                 }
-            } catch (SQLException | IOException e) {
+            } catch (SQLException | IOException _) {
                 throw new IllegalArgumentException("Something went wrong");
             }
         }
