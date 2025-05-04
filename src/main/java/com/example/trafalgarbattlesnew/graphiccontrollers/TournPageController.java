@@ -1,5 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import com.jfoenix.controls.JFXButton;
 import exception.AlreadySubscribedException;
 import exception.MaxParticipantsReachedException;
 import exception.UserNotSubscribedException;
@@ -19,6 +20,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import static util.HoverEffectUtil.applyHoverEffect;
+
 public class TournPageController implements Initializable {
     @FXML
     protected Label logReg;
@@ -31,7 +34,11 @@ public class TournPageController implements Initializable {
     @FXML
     protected Label nPart;
     @FXML
-    protected Label homeB;
+    protected JFXButton home;
+    @FXML
+    protected JFXButton profile;
+    @FXML
+    protected JFXButton subs;
     @FXML
     protected Button register;
     @FXML
@@ -47,10 +54,16 @@ public class TournPageController implements Initializable {
         visualizer.sceneVisualizer("MainView.fxml", event);
     }
 
+    @FXML
+    public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
+
+    @FXML
+    public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
+
     public void sub(MouseEvent event) {
         try {
             User currentUser = SessionManager.getCurrentUser();
-            if (currentUser.getUsername() != null) {
+            if (currentUser!= null && currentUser.getUsername() != null) {
                 BeanCurrTourn bCT = BeanCurrTourn.getInstance();
                 new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName(), "sub");
             }
@@ -86,6 +99,8 @@ public class TournPageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyHoverEffect(subs, profile, logReg, home);
+
         User currentUser = SessionManager.getCurrentUser();
         if(currentUser!= null && currentUser.getUsername() != null) {
             logReg.setText(currentUser.getUsername());
@@ -99,6 +114,8 @@ public class TournPageController implements Initializable {
     } else {
         register.setDisable(true);
         unregister.setDisable(true);
+        profile.setDisable(true);
+        subs.setDisable(true);
     }
     BeanCurrTourn bCT = BeanCurrTourn.getInstance();
     try {
@@ -106,7 +123,6 @@ public class TournPageController implements Initializable {
     } catch (SQLException | IOException _) {
         throw new IllegalArgumentException("Something went wrong");
     }
-
     tName.setText(bCT.gettName());
     date.setText(bCT.getDates());
     nSub.setText(bCT.getnSubscribed());
