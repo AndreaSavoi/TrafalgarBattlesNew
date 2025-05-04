@@ -102,7 +102,7 @@ public class TournPageController implements Initializable {
     try {
         new ApplicationControllerTournInfo(bCT);
     } catch (SQLException | IOException e) {
-        throw new RuntimeException(e);
+        throw new IllegalArgumentException("Something went wrong");
     }
 
     tName.setText(bCT.gettName());

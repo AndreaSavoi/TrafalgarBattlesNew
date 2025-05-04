@@ -70,7 +70,7 @@ public class MainGraphicController implements Initializable {
                 noTournaments.setVisible(true);
             }
         } catch (SQLException | IOException e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException("Something went wrong");
         }
     }
 

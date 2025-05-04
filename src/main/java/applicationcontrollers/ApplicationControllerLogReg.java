@@ -38,7 +38,7 @@ public class ApplicationControllerLogReg {
         try {
             LogRegDAOImpl logDao = new LogRegDAOImpl();
             logDao.getLogInfo(username, password, type);
-        } catch (SQLException | IOException e){
+        } catch (SQLException | IOException _){
             throw new IllegalArgumentException("Invalid credentials");
         }
     }
@@ -47,7 +47,7 @@ public class ApplicationControllerLogReg {
         try{
             LogRegDAOImpl regDAO = new LogRegDAOImpl();
             regDAO.register(email, username, password, type);
-        } catch (SQLException | IOException e){
+        } catch (SQLException | IOException _){
             throw new IllegalArgumentException("Something went wrong");
         }
     }
