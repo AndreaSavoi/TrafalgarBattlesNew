@@ -41,9 +41,9 @@ public class LogRegDAOImpl implements LogRegDAO {
         if(rs.next()){
             User user;
             if(type.equals("Player")){
-                user = new Player(username);
+                user = new Player(username, rs.getString("email"));
             } else if (type.equals("Organizer")){
-                user = new Organizer(username);
+                user = new Organizer(username, rs.getString("email"));
             } else {
                 throw new IllegalArgumentException("Invalid type");
             }

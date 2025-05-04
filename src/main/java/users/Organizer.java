@@ -2,8 +2,8 @@ package users;
 
 public class Organizer extends User {
 
-    public Organizer(String username) {
-        super(username);
+    public Organizer(String username, String email) {
+        super(username, email);
     }
 
     @Override

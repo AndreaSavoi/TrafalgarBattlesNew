@@ -1,5 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import com.jfoenix.controls.JFXButton;
 import singleton.SessionManager;
 import users.User;
 import javafx.fxml.FXML;
@@ -10,6 +11,9 @@ import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static util.HoverEffectUtil.applyHoverEffect;
+import static util.PrivacyUtil.obfuscateEmail;
 
 public class ProfileController implements Initializable {
     @FXML
@@ -24,6 +28,12 @@ public class ProfileController implements Initializable {
     protected TextField sex;
     @FXML
     protected Label logReg;
+    @FXML
+    protected Label email;
+    @FXML
+    protected JFXButton home;
+    @FXML
+    protected JFXButton subs;
 
 
 
@@ -40,11 +50,13 @@ public class ProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        applyHoverEffect(home, subs, logReg);
         User currentUser = SessionManager.getCurrentUser();
 
         if(currentUser!= null && currentUser.getUsername() != null) {
             usr.setText(currentUser.getUsername());
             logReg.setText(currentUser.getUsername());
+            email.setText(obfuscateEmail(currentUser.getEmail()));
         } else {
             usr.setText("Not currently logged in.");
             usr.setWrapText(true);
