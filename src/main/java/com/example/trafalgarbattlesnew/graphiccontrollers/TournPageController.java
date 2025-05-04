@@ -36,6 +36,8 @@ public class TournPageController implements Initializable {
     protected Button register;
     @FXML
     protected Label regRes;
+    @FXML
+    protected Button unregister;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
     public void goLog(MouseEvent event){
         visualizer.sceneVisualizer("LogRegForm.fxml", event);
@@ -94,9 +96,9 @@ public class TournPageController implements Initializable {
                 throw new RuntimeException();
             }
         });
-        register.setTextFill(Color.GREEN);
     } else {
-        register.setTextFill(Color.RED);
+        register.setDisable(true);
+        unregister.setDisable(true);
     }
     BeanCurrTourn bCT = BeanCurrTourn.getInstance();
     try {

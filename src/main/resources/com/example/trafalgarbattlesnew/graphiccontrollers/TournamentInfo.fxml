@@ -16,7 +16,7 @@
                </font>
             </Label>
             <Line endX="1607.4000244140625" endY="157.9000244140625" layoutX="-523.0" layoutY="486.0" startX="-1.627604251552839E-5" startY="158.40000915527344" />
-            <Button fx:id="register" layoutX="95.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="REGISTER">
+            <Button fx:id="register" layoutX="95.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="REGISTER" textFill="LIME">
                <font>
                   <Font name="Century Gothic" size="27.0" />
                </font>
@@ -55,7 +55,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="register1" layoutX="387.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#unSub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="UNREGISTER">
+            <Button fx:id="unregister" layoutX="387.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#unSub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="UNREGISTER" textFill="RED">
                <font>
                   <Font name="Century Gothic" size="27.0" />
                </font>
