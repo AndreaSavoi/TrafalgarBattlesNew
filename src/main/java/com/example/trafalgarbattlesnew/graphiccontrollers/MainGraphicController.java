@@ -49,7 +49,7 @@ public class MainGraphicController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(subs, profile,logReg);
+        applyHoverEffect(subs, profile, logReg);
 
         User currentUser = SessionManager.getCurrentUser();
 
