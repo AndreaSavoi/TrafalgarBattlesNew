@@ -1,5 +1,7 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
+import exception.AlreadySubscribedException;
+import exception.MaxParticipantsReachedException;
 import users.User;
 import applicationcontrollers.ApplicationControllerTournInfo;
 import singleton.SessionManager;
@@ -31,6 +33,8 @@ public class TournPageController implements Initializable {
     protected Label homeB;
     @FXML
     protected Button register;
+    @FXML
+    protected Button regRes;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
     public void goLog(MouseEvent event){
         visualizer.sceneVisualizer("LogRegForm.fxml", event);
@@ -40,11 +44,23 @@ public class TournPageController implements Initializable {
         visualizer.sceneVisualizer("MainView.fxml", event);
     }
 
-    public void sub(MouseEvent event) throws SQLException, IOException {
-        User currentUser = SessionManager.getCurrentUser();
-        if(currentUser.getUsername() != null) {
-            BeanCurrTourn bCT = BeanCurrTourn.getInstance();
-            new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName());
+    public void sub(MouseEvent event) {
+        try {
+            User currentUser = SessionManager.getCurrentUser();
+            if (currentUser.getUsername() != null) {
+                BeanCurrTourn bCT = BeanCurrTourn.getInstance();
+                new ApplicationControllerTournInfo(currentUser.getUsername(), bCT.gettName());
+            }
+            regRes.setText("Registered successfully!");
+            regRes.setTextFill(Color.GREEN);
+        } catch (AlreadySubscribedException | MaxParticipantsReachedException e) {
+            regRes.setText(e.getMessage());
+            regRes.setTextFill(Color.RED);
+            e.printStackTrace();
+        } catch (Exception e) {
+            regRes.setText("Something went wrong.");
+            regRes.setTextFill(Color.RED);
+            e.printStackTrace();
         }
     }
 
@@ -75,4 +91,6 @@ public class TournPageController implements Initializable {
         nSub.setText(bCT.getnSubscribed());
         nPart.setText(bCT.getnPartecipants());
     }
+
+
 }

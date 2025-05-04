@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.TournPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.TournPageController">
    <children>
       <Pane layoutX="195.0" layoutY="158.0" prefHeight="644.0" prefWidth="1086.0" style="-fx-background-color: #F8F8FF;">
          <children>
-            <Label fx:id="tName" alignment="CENTER" layoutX="112.0" layoutY="116.0" prefHeight="104.0" prefWidth="440.0" text="Label">
+            <Label fx:id="tName" alignment="CENTER" layoutX="112.0" layoutY="218.0" prefHeight="104.0" prefWidth="440.0" text="Label">
                <font>
-                  <Font name="Century Gothic" size="30.0" />
+                  <Font name="Century Gothic" size="65.0" />
                </font>
             </Label>
             <Line endX="1607.4000244140625" endY="157.9000244140625" layoutX="-523.0" layoutY="486.0" startX="-1.627604251552839E-5" startY="158.40000915527344" />
-            <Button fx:id="register" layoutX="232.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="REGISTER">
+            <Button fx:id="register" layoutX="95.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="REGISTER">
                <font>
                   <Font name="Century Gothic" size="27.0" />
                </font>
@@ -31,9 +28,9 @@
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nPart" alignment="CENTER" layoutX="48.0" layoutY="81.0" prefHeight="60.0" prefWidth="178.0" text="Label">
+                  <Label fx:id="nPart" alignment="CENTER" layoutX="11.0" layoutY="81.0" prefHeight="60.0" prefWidth="178.0" text="Label">
                      <font>
-                        <Font name="Century Gothic Bold Italic" size="19.0" />
+                        <Font name="Century Gothic" size="19.0" />
                      </font>
                   </Label>
                   <Label fx:id="tName22" alignment="CENTER" layoutY="152.0" prefHeight="60.0" prefWidth="200.0" text="Current Partecipants">
@@ -41,14 +38,14 @@
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>
                   </Label>
-                  <Label fx:id="nSub" alignment="CENTER" layoutX="37.0" layoutY="212.0" prefHeight="60.0" prefWidth="200.0" text="Label">
+                  <Label fx:id="nSub" alignment="CENTER" layoutY="212.0" prefHeight="60.0" prefWidth="200.0" text="Label">
                      <font>
-                        <Font name="Century Gothic Bold Italic" size="19.0" />
+                        <Font name="Century Gothic" size="19.0" />
                      </font>
                   </Label>
                   <Label fx:id="date" alignment="CENTER" layoutX="-34.0" layoutY="308.0" prefHeight="104.0" prefWidth="268.0" text="Label">
                      <font>
-                        <Font name="Century Gothic Bold Italic" size="19.0" />
+                        <Font name="Century Gothic" size="19.0" />
                      </font>
                   </Label>
                   <Label alignment="CENTER" layoutY="278.0" prefHeight="60.0" prefWidth="200.0" text="Date">
@@ -58,6 +55,16 @@
                   </Label>
                </children>
             </Pane>
+            <Button fx:id="register1" layoutX="387.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#sub" prefHeight="85.0" prefWidth="200.0" style="-fx-background-color: #F8F8FF; -fx-border-color: #000000; -fx-border-radius: 5;" text="UNREGISTER">
+               <font>
+                  <Font name="Century Gothic" size="27.0" />
+               </font>
+            </Button>
+            <Label fx:id="regRes" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="357.0" prefHeight="73.0" prefWidth="251.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane layoutX="-5.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #00BFFF;">

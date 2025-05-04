@@ -1,5 +1,7 @@
 package dao;
 
+import exception.AlreadySubscribedException;
+import exception.MaxParticipantsReachedException;
 import queries.Queries;
 import singleton.DBconn;
 
@@ -71,7 +73,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
         }
     }
 
-    public void addSub(String username, String tName) throws SQLException, IOException {
+    public void addSub(String username, String tName) throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException {
         connVerify();
 
         stmt = conn.prepareStatement(Queries.getQueryAddSub());
