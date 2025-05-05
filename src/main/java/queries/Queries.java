@@ -41,7 +41,7 @@ public class Queries {
 
     public static String getQueryProfileInfo() { return QUERY_PROFILE_INFO; }
 
-    static final String ADD_PROFILE_INFO = "INSERT INTO trafalgarbattles.login (birth, game, sex, fullname) VALUES (?, ?, ?, ?);";
+    static final String ADD_PROFILE_INFO = "UPDATE login SET birth = ?, game = ?, sex = ?, fullname = ? WHERE username = ?";
 
     public static String getAddProfileInfo() { return ADD_PROFILE_INFO; }
 }

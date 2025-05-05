@@ -17,4 +17,8 @@ public class ApplicationControllerProfile {
     public Map<String, String> getUserProfile(String username) throws SQLException, IOException {
         return dao.getProfileInfo(username);
     }
+
+    public void updateUserProfile(String birth, String game, String sex, String fullname, String username) throws SQLException, IOException {
+        dao.updateProfileInfo(birth, game, sex, fullname, username);
+    }
 }

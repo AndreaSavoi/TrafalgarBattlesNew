@@ -2,6 +2,7 @@ package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import applicationcontrollers.ApplicationControllerProfile;
 import com.jfoenix.controls.JFXButton;
+import javafx.scene.image.ImageView;
 import singleton.SessionManager;
 import users.User;
 import javafx.fxml.FXML;
@@ -38,7 +39,10 @@ public class ProfileController implements Initializable {
     protected JFXButton home;
     @FXML
     protected JFXButton subs;
-
+    @FXML
+    protected JFXButton save;
+    @FXML
+    protected ImageView saveok;
 
     VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
@@ -50,6 +54,29 @@ public class ProfileController implements Initializable {
 
     @FXML
     public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
+
+    @FXML
+    public void saveProfileFields(MouseEvent event) {
+        User user = SessionManager.getCurrentUser();
+        if (user == null || user.getUsername() == null) return;
+
+        String b = birth.getText();
+        String g = game.getText();
+        String s = sex.getText();
+        String f = fullname.getText();
+        try {
+            ApplicationControllerProfile appController = new ApplicationControllerProfile();
+            appController.updateUserProfile(b, g, s, f, user.getUsername());
+
+            birth.setDisable(true);
+            sex.setDisable(true);
+            fullname.setDisable(true);
+            game.setDisable(true);
+            saveok.setVisible(true);
+        } catch (SQLException | IOException _) {
+            throw new IllegalArgumentException("Something went wrong");
+        }
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -63,13 +90,6 @@ public class ProfileController implements Initializable {
             } catch (SQLException | IOException _) {
                 throw new IllegalArgumentException("Something went wrong");
             }
-        } else {
-            usr.setText("Not currently logged in.");
-            usr.setWrapText(true);
-            sex.setDisable(true);
-            birth.setDisable(true);
-            fullname.setDisable(true);
-            game.setDisable(true);
         }
     }
 
@@ -85,7 +105,7 @@ public class ProfileController implements Initializable {
 
         setOrEnable(birth, data.get("birth"));
         setOrEnable(sex, data.get("sex"));
-        setOrEnable(fullname, data.get("manage"));
+        setOrEnable(fullname, data.get("fullname"));
         setOrEnable(game, data.get("game"));
     }
 

@@ -13,6 +13,8 @@ import java.util.Map;
 
 public class ProfileDAOImpl implements ProfileDAO{
     private final Connection conn;
+    private PreparedStatement stmt;
+    private ResultSet rs;
 
     public ProfileDAOImpl() throws IOException {
         conn = DBconn.getDBConnection();
@@ -25,13 +27,27 @@ public class ProfileDAOImpl implements ProfileDAO{
     }
 
     @Override
+    public void updateProfileInfo(String birth, String game, String sex, String fullname, String username) throws SQLException, IOException {
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getAddProfileInfo());
+        stmt.setString(1, birth);
+        stmt.setString(2, game);
+        stmt.setString(3, sex);
+        stmt.setString(4, fullname);
+        stmt.setString(5, username);
+
+        stmt.executeUpdate();
+    }
+
+    @Override
     public Map<String, String> getProfileInfo(String username) throws SQLException, IOException {
         connVerify();
         Map<String, String> profileData = new HashMap<>();
 
-        PreparedStatement stmt = conn.prepareStatement(Queries.getQueryProfileInfo());
+        stmt = conn.prepareStatement(Queries.getQueryProfileInfo());
         stmt.setString(1, username);
-        ResultSet rs = stmt.executeQuery();
+        rs = stmt.executeQuery();
 
         if (rs.next()) {
             profileData.put("birth", rs.getString("birth"));
