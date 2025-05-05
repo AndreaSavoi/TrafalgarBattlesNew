@@ -43,6 +43,14 @@ public class ProfileController implements Initializable {
     protected JFXButton save;
     @FXML
     protected ImageView saveok;
+    @FXML
+    private ImageView birthMod;
+    @FXML
+    private ImageView gameMod;
+    @FXML
+    private ImageView sexMod;
+    @FXML
+    private ImageView nameMod;
 
     VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
@@ -54,24 +62,43 @@ public class ProfileController implements Initializable {
 
     @FXML
     public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
+    @FXML
+    private void enableBirthEdit(MouseEvent event) {    birth.setDisable(false);    }
+
+    @FXML
+    private void enableGameEdit(MouseEvent event) { game.setDisable(false); }
+
+    @FXML
+    private void enableSexEdit(MouseEvent event) {  sex.setDisable(false);  }
+
+    @FXML
+    private void enableNameEdit(MouseEvent event) { fullname.setDisable(false); }
 
     @FXML
     public void saveProfileFields(MouseEvent event) {
         User user = SessionManager.getCurrentUser();
         if (user == null || user.getUsername() == null) return;
 
-        String b = birth.getText();
-        String g = game.getText();
-        String s = sex.getText();
-        String f = fullname.getText();
         try {
             ApplicationControllerProfile appController = new ApplicationControllerProfile();
+            // Ottieni i dati attuali dal DB
+            Map<String, String> current = appController.getUserProfile(user.getUsername());
+
+            // Scegli se aggiornare solo i campi compilati
+            String b = !birth.getText().isBlank() ? birth.getText() : current.get("birth");
+            String g = !game.getText().isBlank() ? game.getText() : current.get("game");
+            String s = !sex.getText().isBlank() ? sex.getText() : current.get("sex");
+            String f = !fullname.getText().isBlank() ? fullname.getText() : current.get("fullname");
+
+            // Esegui l'update completo (ma con valori misti tra nuovi e già esistenti)
             appController.updateUserProfile(b, g, s, f, user.getUsername());
 
-            birth.setDisable(true);
-            sex.setDisable(true);
-            fullname.setDisable(true);
-            game.setDisable(true);
+            // Disabilita solo i campi che sono stati compilati
+            if (!birth.getText().isBlank()) birth.setDisable(true);
+            if (!game.getText().isBlank()) game.setDisable(true);
+            if (!sex.getText().isBlank()) sex.setDisable(true);
+            if (!fullname.getText().isBlank()) fullname.setDisable(true);
+
             saveok.setVisible(true);
         } catch (SQLException | IOException _) {
             throw new IllegalArgumentException("Something went wrong");
