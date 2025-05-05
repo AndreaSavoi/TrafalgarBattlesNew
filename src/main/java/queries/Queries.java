@@ -36,4 +36,12 @@ public class Queries {
     static final String QUERY_CHECK_SUB = "SELECT 1 FROM subscription WHERE username = ? AND tName = ?";
 
     public static String getQueryCheckSub() { return QUERY_CHECK_SUB; }
+
+    static final String QUERY_PROFILE_INFO = "SELECT birth, game, sex, fullname FROM login WHERE username = ?";
+
+    public static String getQueryProfileInfo() { return QUERY_PROFILE_INFO; }
+
+    static final String ADD_PROFILE_INFO = "INSERT INTO trafalgarbattles.login (birth, game, sex, fullname) VALUES (?, ?, ?, ?);";
+
+    public static String getAddProfileInfo() { return ADD_PROFILE_INFO; }
 }
