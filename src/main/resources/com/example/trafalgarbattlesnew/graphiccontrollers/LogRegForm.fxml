@@ -52,9 +52,9 @@
                         <Font name="Century Gothic Bold Italic" size="24.0" />
                     </font>
                 </Label>
-                <Label fx:id="formRes" alignment="CENTER" layoutX="206.0" layoutY="14.0" prefHeight="43.0" prefWidth="460.0">
+                <Label fx:id="formRes" alignment="CENTER" layoutX="312.0" layoutY="14.0" prefHeight="43.0" prefWidth="460.0">
                     <font>
-                        <Font name="Century Gothic" size="13.0" />
+                        <Font name="Century Gothic" size="21.0" />
                     </font></Label>
                 <TextField fx:id="email" layoutX="647.0" layoutY="173.0" prefHeight="59.0" prefWidth="351.0" promptText="E-Mail">
                     <font>

@@ -4,15 +4,12 @@ import applicationcontrollers.ApplicationControllerLogReg;
 import bean.BeanLog;
 import bean.BeanReg;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
@@ -38,14 +35,11 @@ public class LogRegFormController implements Initializable {
     @FXML
     protected Label home;
     private String type;
-    private Stage stage;
-    private Scene scene;
-    private FXMLLoader root;
 
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
-    public void loginVer() throws SQLException {
+    public void loginVer() {
         if(usernameL.getText().isEmpty() || passwordL.getText().isEmpty()){
             formRes.setText("Invalid password/username");
         } else {
@@ -59,8 +53,10 @@ public class LogRegFormController implements Initializable {
                 passwordR.setDisable(true);
                 usernameR.setDisable(true);
                 formRes.setText("Successfully logged in");
+                formRes.setTextFill(javafx.scene.paint.Color.GREEN);
             } catch (Exception _) {
                 formRes.setText("Something went wrong, please try again");
+                formRes.setTextFill(javafx.scene.paint.Color.RED);
             }
         }
     }
@@ -78,8 +74,10 @@ public class LogRegFormController implements Initializable {
                 passwordR.setDisable(true);
                 usernameR.setDisable(true);
                 formRes.setText("Successfully registered, please login");
+                formRes.setTextFill(javafx.scene.paint.Color.GREEN);
             } catch (Exception _) {
                 formRes.setText("Something went wrong, please try again");
+                formRes.setTextFill(javafx.scene.paint.Color.RED);
             }
         }
     }

@@ -14,7 +14,6 @@ import java.util.Map;
 public class ProfileDAOImpl implements ProfileDAO{
     private final Connection conn;
     private PreparedStatement stmt;
-    private ResultSet rs;
 
     public ProfileDAOImpl() throws IOException {
         conn = DBconn.getDBConnection();
@@ -47,7 +46,7 @@ public class ProfileDAOImpl implements ProfileDAO{
 
         stmt = conn.prepareStatement(Queries.getQueryProfileInfo());
         stmt.setString(1, username);
-        rs = stmt.executeQuery();
+        ResultSet rs = stmt.executeQuery();
 
         if (rs.next()) {
             profileData.put("birth", rs.getString("birth"));

@@ -2,7 +2,11 @@ package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import applicationcontrollers.ApplicationControllerProfile;
 import com.jfoenix.controls.JFXButton;
+import javafx.animation.FadeTransition;
+import javafx.animation.PauseTransition;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
+import javafx.util.Duration;
 import singleton.SessionManager;
 import users.User;
 import javafx.fxml.FXML;
@@ -43,14 +47,6 @@ public class ProfileController implements Initializable {
     protected JFXButton save;
     @FXML
     protected ImageView saveok;
-    @FXML
-    private ImageView birthMod;
-    @FXML
-    private ImageView gameMod;
-    @FXML
-    private ImageView sexMod;
-    @FXML
-    private ImageView nameMod;
 
     VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
@@ -63,19 +59,19 @@ public class ProfileController implements Initializable {
     @FXML
     public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
     @FXML
-    private void enableBirthEdit(MouseEvent event) {    birth.setDisable(false);    }
+    private void enableBirthEdit(MouseEvent ignoredEvent) {    birth.setDisable(false);    }
 
     @FXML
-    private void enableGameEdit(MouseEvent event) { game.setDisable(false); }
+    private void enableGameEdit(MouseEvent ignoredEvent) { game.setDisable(false); }
 
     @FXML
-    private void enableSexEdit(MouseEvent event) {  sex.setDisable(false);  }
+    private void enableSexEdit(MouseEvent ignoredEvent) {  sex.setDisable(false);  }
 
     @FXML
-    private void enableNameEdit(MouseEvent event) { fullname.setDisable(false); }
+    private void enableNameEdit(MouseEvent ignoredEvent) { fullname.setDisable(false); }
 
     @FXML
-    public void saveProfileFields(MouseEvent event) {
+    public void saveProfileFields(MouseEvent ignoredEvent) {
         User user = SessionManager.getCurrentUser();
         if (user == null || user.getUsername() == null) return;
 
@@ -99,7 +95,13 @@ public class ProfileController implements Initializable {
             if (!sex.getText().isBlank()) sex.setDisable(true);
             if (!fullname.getText().isBlank()) fullname.setDisable(true);
 
+            // Fade-in iniziale (0.3 secondi)
+            saveok.setOpacity(0.0);
             saveok.setVisible(true);
+
+            FadeTransition fadeIn = getFadeTransition(saveok);
+
+            fadeIn.play();
         } catch (SQLException | IOException _) {
             throw new IllegalArgumentException("Something went wrong");
         }
@@ -144,5 +146,29 @@ public class ProfileController implements Initializable {
             field.setText("");
             field.setDisable(false);
         }
+    }
+
+    private FadeTransition getFadeTransition(ImageView img) {
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(0.7), img);
+        fadeIn.setFromValue(0.0);
+        fadeIn.setToValue(1.0);
+
+        fadeIn.setOnFinished(_ -> {
+            // Dopo il fade-in, aspetta 5 secondi
+            PauseTransition delay = new PauseTransition(Duration.seconds(5));
+            delay.setOnFinished(__ -> {
+                // Poi esegui fade-out (1 secondo)
+                FadeTransition fadeOut = new FadeTransition(Duration.seconds(1), img);
+                fadeOut.setFromValue(1.0);
+                fadeOut.setToValue(0.0);
+                fadeOut.setOnFinished(___ -> {
+                    img.setVisible(false);
+                    img.setOpacity(1.0); // reset per il prossimo uso
+                });
+                fadeOut.play();
+            });
+            delay.play();
+        });
+        return fadeIn;
     }
 }

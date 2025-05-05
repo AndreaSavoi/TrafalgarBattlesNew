@@ -60,7 +60,7 @@ public class TournPageController implements Initializable {
     @FXML
     public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
 
-    public void sub(MouseEvent event) {
+    public void sub(MouseEvent ignoredEvent) {
         try {
             User currentUser = SessionManager.getCurrentUser();
             if (currentUser!= null && currentUser.getUsername() != null) {
@@ -78,7 +78,7 @@ public class TournPageController implements Initializable {
         }
     }
 
-    public void unSub(MouseEvent event) {
+    public void unSub(MouseEvent ignoredEvent) {
         try {
             User currentUser = SessionManager.getCurrentUser();
             if (currentUser.getUsername() != null) {
