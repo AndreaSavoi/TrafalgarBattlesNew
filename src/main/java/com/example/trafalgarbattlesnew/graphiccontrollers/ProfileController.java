@@ -107,9 +107,6 @@ public class ProfileController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("home = " + home);
-        System.out.println("subs = " + subs);
-        System.out.println("logReg = " + logReg);
         applyHoverEffect(home, subs, logReg);
         User currentUser = SessionManager.getCurrentUser();
 
