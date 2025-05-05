@@ -153,15 +153,15 @@ public class ProfileController implements Initializable {
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);
 
-        fadeIn.setOnFinished(_ -> {
+        fadeIn.setOnFinished(event1 -> {
             // Dopo il fade-in, aspetta 5 secondi
             PauseTransition delay = new PauseTransition(Duration.seconds(5));
-            delay.setOnFinished(__ -> {
+            delay.setOnFinished(event2 -> {
                 // Poi esegui fade-out (1 secondo)
                 FadeTransition fadeOut = new FadeTransition(Duration.seconds(1), img);
                 fadeOut.setFromValue(1.0);
                 fadeOut.setToValue(0.0);
-                fadeOut.setOnFinished(___ -> {
+                fadeOut.setOnFinished(event3 -> {
                     img.setVisible(false);
                     img.setOpacity(1.0); // reset per il prossimo uso
                 });
