@@ -21,36 +21,29 @@ import java.util.ResourceBundle;
 import static util.FadeTransitionUtil.getFadeTransition;
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class CreateTournamentController implements Initializable{
-    @FXML  protected Label logReg;
+public class CreateTournamentController extends AbstractTournController implements Initializable{
+
     @FXML  protected TextField tournamentName;
-    @FXML  protected JFXButton home;
-    @FXML  protected JFXButton profile;
-    @FXML  protected TextField max;
-    @FXML  protected DatePicker date;
     @FXML  protected ImageView saveok;
     @FXML  protected Label result;
 
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
+    @Override
     public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainViewOrganizer.fxml", event); }
-
-    @FXML
-    public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event); }
 
     @FXML
     public void goLog(MouseEvent event){ visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(home, profile, logReg);
+        initializeCommonTourn();
+    }
 
-        User currentUser = SessionManager.getCurrentUser();
-        if (currentUser != null && currentUser.getUsername() != null) {
-            logReg.setText(currentUser.getUsername());
-            logReg.setOnMouseClicked(this::goHome);
-        }
+    @Override
+    protected JFXButton[] getHoverButtons() {
+        return new JFXButton[]{};
     }
 
 

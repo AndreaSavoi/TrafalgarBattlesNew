@@ -20,7 +20,6 @@ public abstract class AbstractMainController {
     @FXML protected Label logReg;
     @FXML protected Label noTournaments;
     @FXML protected VBox tournaments;
-    @FXML protected JFXButton profile;
 
     protected final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 

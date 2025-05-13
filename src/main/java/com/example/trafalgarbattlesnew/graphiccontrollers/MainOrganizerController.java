@@ -25,14 +25,11 @@ public class MainOrganizerController extends AbstractMainController implements I
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
     @FXML
-    public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
-
-    @FXML
     public void showcreate(MouseEvent event) { visualizer.sceneVisualizer("CreateTournament.fxml", event);}
 
     @Override
     protected JFXButton[] getHoverButtons() {
-        return new JFXButton[]{profile, create};
+        return new JFXButton[]{create};
     }
 
     @Override

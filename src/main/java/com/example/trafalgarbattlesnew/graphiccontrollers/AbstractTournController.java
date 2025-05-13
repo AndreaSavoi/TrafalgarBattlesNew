@@ -1,9 +1,13 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Labeled;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import singleton.SessionManager;
 import users.User;
@@ -14,24 +18,25 @@ import static util.HoverEffectUtil.applyHoverEffect;
 
 public abstract class AbstractTournController implements Initializable {
 
-    protected Label logReg;
+    @FXML  protected Label logReg;
+    @FXML  protected JFXButton home;
+    @FXML  protected TextField max;
+    @FXML  protected DatePicker date;
 
-    protected void initializeCommonTourn(Labeled... nodes) {
+    protected final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
-        applyHoverEffect(nodes);
+    protected abstract JFXButton[] getHoverButtons();
+
+    protected void initializeCommonTourn() {
+
+        applyHoverEffect(logReg, home);
+        applyHoverEffect(getHoverButtons());
 
         User currentUser = SessionManager.getCurrentUser();
         if (currentUser != null && currentUser.getUsername() != null) {
             logReg.setText(currentUser.getUsername());
-            logReg.setOnMouseClicked(event -> {
-                try {
-                    goHome(event);
-                } catch (SQLException _) {
-                    throw new RuntimeException();
-                }
-            });
-        }
-    }
+            logReg.setOnMouseClicked(this::goHome);
+        }    }
 
-    protected abstract void goHome(MouseEvent event) throws SQLException;
+    protected abstract void goHome(MouseEvent event);
 }

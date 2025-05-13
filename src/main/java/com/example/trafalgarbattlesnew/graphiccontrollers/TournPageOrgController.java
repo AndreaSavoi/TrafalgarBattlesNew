@@ -21,12 +21,11 @@ import java.util.ResourceBundle;
 
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class TournPageOrgController implements Initializable{
+public class TournPageOrgController extends AbstractTournController implements Initializable{
 
     @FXML protected Label logReg;
     @FXML protected Label tName;
     @FXML protected JFXButton home;
-    @FXML protected JFXButton profile;
     @FXML protected JFXButton create;
     @FXML protected TextField max;
     @FXML protected TextField curr;
@@ -38,24 +37,19 @@ public class TournPageOrgController implements Initializable{
     public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainViewOrganizer.fxml", event); }
 
     @FXML
-    public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
-
-    @FXML
     public void goLog(MouseEvent event){  visualizer.sceneVisualizer("LogRegForm.fxml", event);   }
 
     @FXML
     public void edit(MouseEvent event) {  date.setDisable(false); max.setDisable(false);  }
 
+    @Override
+    protected JFXButton[] getHoverButtons() {
+        return new JFXButton[]{create};
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(create, home, profile, logReg);
-
-        User currentUser = SessionManager.getCurrentUser();
-        if (currentUser != null && currentUser.getUsername() != null) {
-            logReg.setText(currentUser.getUsername());
-            logReg.setOnMouseClicked(this::goHome);
-        }
+        initializeCommonTourn();
 
         BeanCurrTourn bCT = BeanCurrTourn.getInstance();
         try {

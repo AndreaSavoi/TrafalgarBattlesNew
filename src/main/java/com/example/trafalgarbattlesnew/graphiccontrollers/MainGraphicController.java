@@ -29,6 +29,8 @@ public class MainGraphicController extends AbstractMainController implements Ini
 
     @FXML protected JFXButton subs;
 
+    @FXML protected JFXButton profile;
+
     @FXML
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
