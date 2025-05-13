@@ -37,7 +37,7 @@ public class MainOrganizerController implements Initializable {
     public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
 
     @FXML
-    public void gohome(MouseEvent event) {visualizer.sceneVisualizer("MainView.fxml", event);}
+    public void showcreate(MouseEvent event) { visualizer.sceneVisualizer("CreateTournament.fxml", event);}
 
 
     @Override

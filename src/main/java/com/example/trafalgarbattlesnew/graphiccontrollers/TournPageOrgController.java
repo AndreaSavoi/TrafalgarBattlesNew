@@ -21,31 +21,21 @@ import java.util.ResourceBundle;
 
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class TournPageOrgController implements Initializable {
+public class TournPageOrgController extends AbstractTournController {
 
-    @FXML
-    protected Label logReg;
-    @FXML
-    protected TextField tournamentName;
-    @FXML
-    protected JFXButton home;
-    @FXML
-    protected JFXButton profile;
-    @FXML
-    protected JFXButton create;
-    @FXML
-    protected TextField max;
-    @FXML
-    protected TextField curr;
-    @FXML
-    protected DatePicker date;
+    @FXML protected Label logReg;
+    @FXML protected TextField tournamentName;
+    @FXML protected JFXButton home;
+    @FXML protected JFXButton profile;
+    @FXML protected JFXButton create;
+    @FXML protected TextField max;
+    @FXML protected TextField curr;
+    @FXML protected DatePicker date;
 
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
-    public void goHome(MouseEvent event) throws SQLException {
-        visualizer.sceneVisualizer("MainView.fxml", event);
-    }
+    public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainView.fxml", event); }
 
     @FXML
     public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
@@ -59,19 +49,7 @@ public class TournPageOrgController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(create, profile, logReg, home);
-
-        User currentUser = SessionManager.getCurrentUser();
-        if(currentUser!= null && currentUser.getUsername() != null) {
-            logReg.setText(currentUser.getUsername());
-            logReg.setOnMouseClicked(event -> {
-                try {
-                    goHome(event);
-                } catch (SQLException _) {
-                    throw new RuntimeException();
-                }
-            });
-        }
+        initializeCommon(create, home, profile, logReg);
 
         BeanCurrTourn bCT = BeanCurrTourn.getInstance();
         try {

@@ -1,7 +1,9 @@
 package dao;
 
+import bean.BeanTournCreation;
+
 public interface TournOrgDAO {
 
-    public void addTourn(String tName, String nPartecipants, String date, String organizer);
+    public void addTourn(BeanTournCreation bean) throws Exception;
 
 }

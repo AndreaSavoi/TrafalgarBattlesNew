@@ -1,13 +1,11 @@
 package dao;
 
+import bean.BeanTournCreation;
 import queries.Queries;
 import singleton.DBconn;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class TournOrgDAOImpl {
 
@@ -25,14 +23,14 @@ public class TournOrgDAOImpl {
         conn = DBconn.getDBConnection();
     }
 
-    public void addTourn(String tName, String date, String nPartecipants, String organizer) throws IOException, SQLException {
+    public void addTourn(BeanTournCreation bean) throws IOException, SQLException {
         connVerify();
 
         stmt = conn.prepareStatement(Queries.getAddTournament());
-        stmt.setString(1, tName);
-        stmt.setString(2, date);
-        stmt.setString(3, nPartecipants);
-        stmt.setString(4, organizer);
+        stmt.setString(1, bean.getName());
+        stmt.setDate(2, Date.valueOf(bean.getDate()));
+        stmt.setInt(3, bean.getMaxPlayers());
+        stmt.setString(4, bean.getOrganizer());
         stmt.executeUpdate();
     }
 

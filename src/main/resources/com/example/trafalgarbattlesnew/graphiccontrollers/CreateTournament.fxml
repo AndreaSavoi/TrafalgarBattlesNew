@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.TournPageOrgController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #00000085;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.trafalgarbattlesnew.graphiccontrollers.CreateTournamentController">
    <children>
       <Pane layoutX="195.0" layoutY="158.0" prefHeight="644.0" prefWidth="1086.0" style="-fx-background-color: #F8F8FF;">
          <children>
@@ -41,12 +37,12 @@
                   <Font name="Century Gothic" size="26.0" />
                </font>
             </Label>
-            <Label fx:id="save" layoutX="499.0" layoutY="520.0" text="SAVE">
+            <Label fx:id="save" layoutX="499.0" layoutY="520.0" onMouseClicked="#createTournament" text="SAVE">
                <font>
                   <Font name="Century Gothic" size="26.0" />
                </font>
             </Label>
-            <ImageView fx:id="saveIcon" fitHeight="26.0" fitWidth="28.0" layoutX="570.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="saveok" fitHeight="26.0" fitWidth="28.0" layoutX="570.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@check_ok_accept_apply_1582.png" />
                </image>
@@ -56,11 +52,16 @@
                   <Font name="Century Gothic" size="58.0" />
                </font>
             </Label>
+            <Label fx:id="result" alignment="CENTER" layoutX="28.0" layoutY="579.0" prefHeight="32.0" prefWidth="1030.0">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane layoutX="-5.0" layoutY="155.0" prefHeight="646.0" prefWidth="200.0" style="-fx-background-color: #00BFFF;">
          <children>
-            <JFXButton fx:id="create" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="30.0" layoutY="303.0" scaleShape="false" stylesheets="@styles.css" text="&gt; CREATE">
+            <JFXButton fx:id="create" cacheShape="false" centerShape="false" disable="true" focusTraversable="false" layoutX="30.0" layoutY="303.0" scaleShape="false" stylesheets="@styles.css" text="&gt; CREATE">
                <font>
                   <Font name="Century Gothic" size="21.0" />
                </font>
