@@ -27,8 +27,6 @@ import static util.HoverEffectUtil.applyHoverEffect;
 
 public class MainGraphicController extends AbstractMainController implements Initializable {
 
-    private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
-
     @FXML protected JFXButton subs;
 
     @FXML

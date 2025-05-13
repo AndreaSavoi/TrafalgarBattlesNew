@@ -21,8 +21,6 @@ import static util.HoverEffectUtil.applyHoverEffect;
 public class MainOrganizerController extends AbstractMainController implements Initializable {
     @FXML protected JFXButton create;
 
-    private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
-
     @FXML
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 

@@ -60,8 +60,8 @@ public abstract class AbstractMainController {
             } else {
                 noTournaments.setVisible(true);
             }
-        } catch (SQLException | IOException e) {
-            throw new RuntimeException("Errore durante il caricamento dei tornei", e);
+        } catch (SQLException | IOException _) {
+            throw new IllegalArgumentException("Error while loading tournaments");
         }
     }
 }

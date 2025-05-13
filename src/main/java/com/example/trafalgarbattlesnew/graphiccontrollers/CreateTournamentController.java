@@ -55,7 +55,7 @@ public class CreateTournamentController implements Initializable{
 
 
     @FXML
-    public void createTournament(MouseEvent event) {
+    public void createTournament(MouseEvent ignoredEvent) {
         String name = tournamentName.getText();
         String maxText = max.getText();
         LocalDate tournDate = this.date.getValue();
@@ -72,7 +72,7 @@ public class CreateTournamentController implements Initializable{
                 result.setText("Maximum number must be greater than 0.");
                 return;
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException _) {
             result.setText("Max number must be a number.");
             return;
         }

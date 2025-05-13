@@ -74,7 +74,7 @@ public class ProfileController implements Initializable {
 
     @FXML
     public void saveProfileFields(MouseEvent ignoredEvent) {
-        User user = SessionManager.getCurrentUser();
+
         if (user == null || user.getUsername() == null) return;
 
         try {

@@ -41,7 +41,7 @@ public class Queries {
 
     static final String ADD_PROFILE_INFO = "UPDATE login SET birth = ?, game = ?, sex = ?, fullname = ? WHERE username = ?";
 
-    public static String getAddProfileInfo() { return ADD_PROFILE_INFO; };
+    public static String getAddProfileInfo() { return ADD_PROFILE_INFO; }
 
     static final String QUERY_ORG_TOURNAMENTS = "SELECT * FROM trafalgarbattles.tournaments WHERE organizer = ?";
 

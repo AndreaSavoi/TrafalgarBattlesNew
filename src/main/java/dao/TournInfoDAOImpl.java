@@ -36,7 +36,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
 
         stmt = conn.prepareStatement(sql);
 
-        if (mode.equals("sub") | mode.equals("org")) {
+        if (mode.equals("sub") || mode.equals("org")) {
             stmt.setString(1, username); // imposto l'username solo in sub e org
         }
 
