@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import singleton.SessionManager;
+import users.User;
 
 import java.sql.SQLException;
 
@@ -83,7 +85,12 @@ public class LogRegFormController implements Initializable {
     }
 
     public void returnHome(MouseEvent event){
-        visualizer.sceneVisualizer("Mainview.fxml", event);
+        User currentUser = SessionManager.getCurrentUser();
+        if(currentUser == null){
+            visualizer.sceneVisualizer("MainView.fxml", event);
+        } else {
+            visualizer.sceneVisualizer(currentUser.getDashboardFXML(), event);
+        }
     }
 
     @Override

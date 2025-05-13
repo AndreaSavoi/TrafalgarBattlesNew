@@ -32,22 +32,12 @@ public class TournInfoDAOImpl implements TournInfoDAO {
     public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, String mode, String username) throws SQLException, IOException {
         connVerify();
 
-        String sql;
-        if (mode.equals("sub")) {
-            if (username == null) {
-                throw new IllegalArgumentException("Username cannot be null when mode is 'sub'");
-            }
-            sql = Queries.getQuerySubTournaments();
-        } else if (mode.equals("all")) {
-            sql = Queries.getQueryAllTournaments();
-        } else {
-            throw new IllegalArgumentException("Invalid mode: " + mode);
-        }
+        String sql = getString(mode, username);
 
         stmt = conn.prepareStatement(sql);
 
-        if (mode.equals("sub")) {
-            stmt.setString(1, username); // imposto l'username solo in sub
+        if (mode.equals("sub") | mode.equals("org")) {
+            stmt.setString(1, username); // imposto l'username solo in sub e org
         }
 
         rs = stmt.executeQuery();
@@ -58,6 +48,22 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             dates.add(rs.getString("dates"));
             sno.add(rs.getString("sno"));
         }
+    }
+
+    private static String getString(String mode, String username) {
+        String sql;
+        switch (mode) {
+            case "sub" -> {
+                if (username == null) {
+                    throw new IllegalArgumentException("Username cannot be null when mode is 'sub'");
+                }
+                sql = Queries.getQuerySubTournaments();
+            }
+            case "all" -> sql = Queries.getQueryAllTournaments();
+            case "org" -> sql = Queries.getQueryOrgTournaments();
+            default -> throw new IllegalArgumentException("Invalid mode: " + mode);
+        }
+        return sql;
     }
 
     public void getSpecific(List<String> curr, int sno) throws SQLException, IOException {

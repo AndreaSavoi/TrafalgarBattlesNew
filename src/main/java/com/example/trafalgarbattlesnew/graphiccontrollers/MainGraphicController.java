@@ -65,7 +65,7 @@ public class MainGraphicController implements Initializable {
             BeanTournList tL = new BeanTournList();
             ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "all", null);
             if(controller.hasTournaments()) {
-                displayTournaments(tL, visualizer, tournaments);
+                displayTournaments(tL, visualizer, tournaments, "player" );
             } else {
                 noTournaments.setVisible(true);
             }
@@ -74,7 +74,7 @@ public class MainGraphicController implements Initializable {
         }
     }
 
-    static void displayTournaments(BeanTournList tL, VisualizeScene visualizer, VBox tournaments) {
+    static void displayTournaments(BeanTournList tL, VisualizeScene visualizer, VBox tournaments, String type) {
         int count = tL.sno.size();
 
         for (int i = 0; i < count; i++) {
@@ -86,7 +86,11 @@ public class MainGraphicController implements Initializable {
                 int infoN = Integer.parseInt(((Pane) event.getSource()).getId().replace("Info", ""));
                 BeanCurrTourn tournament = BeanCurrTourn.getInstance();
                 tournament.setSno(infoN);
-                visualizer.sceneVisualizer("TournamentInfo.fxml", event);
+                if(type.equals("player")) {
+                    visualizer.sceneVisualizer("TournamentInfo.fxml", event);
+                } else if(type.equals("organizer")) {
+                    visualizer.sceneVisualizer("TournamentInfoOrg.fxml", event);
+                }
             });
             GridPane grid = new GridPane();
             grid.setPrefSize(1083, 125);

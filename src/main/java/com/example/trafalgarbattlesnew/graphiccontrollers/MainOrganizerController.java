@@ -1,15 +1,15 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
-import com.jfoenix.controls.JFXButton;
-import users.User;
 import applicationcontrollers.ApplicationControllerTournaments;
-import singleton.SessionManager;
 import bean.BeanTournList;
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.*;
+import javafx.scene.layout.VBox;
+import singleton.SessionManager;
+import users.User;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,13 +18,13 @@ import java.util.ResourceBundle;
 
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class SubsController implements Initializable {
+public class MainOrganizerController implements Initializable {
     @FXML
     protected Label logReg;
     @FXML
     protected Label noTournaments;
     @FXML
-    protected JFXButton home;
+    protected JFXButton create;
     @FXML
     protected JFXButton profile;
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
@@ -39,9 +39,10 @@ public class SubsController implements Initializable {
     @FXML
     public void gohome(MouseEvent event) {visualizer.sceneVisualizer("MainView.fxml", event);}
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(profile, home, logReg);
+        applyHoverEffect(profile, create, logReg);
 
         User currentUser = SessionManager.getCurrentUser();
 
@@ -50,9 +51,9 @@ public class SubsController implements Initializable {
 
             try {
                 BeanTournList tL = new BeanTournList();
-                ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "sub", currentUser.getUsername());
+                ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "org", currentUser.getUsername());
                 if(controller.hasTournaments()) {
-                    MainGraphicController.displayTournaments(tL, visualizer, tournaments, "player");
+                    MainGraphicController.displayTournaments(tL, visualizer, tournaments, "organizer");
                 } else {
                        noTournaments.setVisible(true);
                 }

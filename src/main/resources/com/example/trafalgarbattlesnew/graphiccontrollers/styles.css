@@ -7,3 +7,9 @@
     -fx-font-family: "Century Gothic Bold";
     -fx-background-insets: 0;
 }
+
+.date-picker .text-field {
+    -fx-alignment: center;         /* Centra il testo */
+    -fx-font-family: "Century Gothic";      /* Font desiderato */
+    -fx-font-size: 28px;           /* Dimensione del font */
+}

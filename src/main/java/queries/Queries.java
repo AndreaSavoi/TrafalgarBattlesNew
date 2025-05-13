@@ -5,13 +5,11 @@ public class Queries {
 
     static final String QUERY_LOGIN = "SELECT * FROM trafalgarbattles.login WHERE username = ? and password = ? and type = ?";
 
-    public static String getQueryLogin(){return QUERY_LOGIN;}
+    public static String getQueryLogin(){   return QUERY_LOGIN; }
 
     static final String QUERY_ALL_TOURNAMENTS = "SELECT * FROM trafalgarbattles.tournaments;";
 
-    public static String getQueryAllTournaments() {
-        return QUERY_ALL_TOURNAMENTS;
-    }
+    public static String getQueryAllTournaments() { return QUERY_ALL_TOURNAMENTS;   }
 
     static final String REGISTER_USER = "INSERT INTO trafalgarbattles.login (username, password, email, type) VALUES (?, ?, ?, ?);";
 
@@ -43,5 +41,13 @@ public class Queries {
 
     static final String ADD_PROFILE_INFO = "UPDATE login SET birth = ?, game = ?, sex = ?, fullname = ? WHERE username = ?";
 
-    public static String getAddProfileInfo() { return ADD_PROFILE_INFO; }
+    public static String getAddProfileInfo() { return ADD_PROFILE_INFO; };
+
+    static final String QUERY_ORG_TOURNAMENTS = "SELECT * FROM trafalgarbattles.tournaments WHERE organizer = ?";
+
+    public static String getQueryOrgTournaments() { return QUERY_ORG_TOURNAMENTS; }
+
+    static final String ADD_TOURNAMENT = "INSERT INTO trafalgarbattles.tournaments (tName, dates, nPartecipants, 0, organizer) VALUES (?, ?, ?, ?, ?)";
+
+    public static String getAddTournament() { return ADD_TOURNAMENT; }
 }
