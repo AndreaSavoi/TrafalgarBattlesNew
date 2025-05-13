@@ -25,18 +25,12 @@ import java.util.ResourceBundle;
 
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class MainGraphicController implements Initializable {
-    @FXML
-    protected Label logReg;
+public class MainGraphicController extends AbstractMainController implements Initializable {
+
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
-    @FXML
-    protected VBox tournaments;
-    @FXML
-    protected JFXButton subs;
-    @FXML
-    protected JFXButton profile;
-    @FXML
-    protected Label noTournaments;
+
+    @FXML protected JFXButton subs;
+
     @FXML
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
@@ -46,32 +40,14 @@ public class MainGraphicController implements Initializable {
     @FXML
     public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}
 
+    @Override
+    protected JFXButton[] getHoverButtons() {
+        return new JFXButton[]{profile, subs};
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(subs, profile, logReg);
-
-        User currentUser = SessionManager.getCurrentUser();
-
-        if(currentUser != null && currentUser.getUsername() != null) {
-            logReg.setText(currentUser.getUsername());
-            profile.setDisable(false);
-            subs.setDisable(false);
-        } else {
-            profile.setDisable(true);
-            subs.setDisable(true);
-        }
-        try {
-            BeanTournList tL = new BeanTournList();
-            ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "all", null);
-            if(controller.hasTournaments()) {
-                displayTournaments(tL, visualizer, tournaments, "player" );
-            } else {
-                noTournaments.setVisible(true);
-            }
-        } catch (SQLException | IOException _) {
-            throw new IllegalArgumentException("Something went wrong");
-        }
+        initializeCommon();
     }
 
     static void displayTournaments(BeanTournList tL, VisualizeScene visualizer, VBox tournaments, String type) {

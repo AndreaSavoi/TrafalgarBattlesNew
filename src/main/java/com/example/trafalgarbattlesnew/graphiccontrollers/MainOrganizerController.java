@@ -18,18 +18,11 @@ import java.util.ResourceBundle;
 
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class MainOrganizerController implements Initializable {
-    @FXML
-    protected Label logReg;
-    @FXML
-    protected Label noTournaments;
-    @FXML
-    protected JFXButton create;
-    @FXML
-    protected JFXButton profile;
+public class MainOrganizerController extends AbstractMainController implements Initializable {
+    @FXML protected JFXButton create;
+
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
-    @FXML
-    protected VBox tournaments;
+
     @FXML
     public void show(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
@@ -39,27 +32,13 @@ public class MainOrganizerController implements Initializable {
     @FXML
     public void showcreate(MouseEvent event) { visualizer.sceneVisualizer("CreateTournament.fxml", event);}
 
+    @Override
+    protected JFXButton[] getHoverButtons() {
+        return new JFXButton[]{profile, create};
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        applyHoverEffect(profile, create, logReg);
-
-        User currentUser = SessionManager.getCurrentUser();
-
-        if(currentUser != null && currentUser.getUsername() != null) {
-            logReg.setText(currentUser.getUsername());
-
-            try {
-                BeanTournList tL = new BeanTournList();
-                ApplicationControllerTournaments controller = new ApplicationControllerTournaments(tL, "org", currentUser.getUsername());
-                if(controller.hasTournaments()) {
-                    MainGraphicController.displayTournaments(tL, visualizer, tournaments, "organizer");
-                } else {
-                       noTournaments.setVisible(true);
-                }
-            } catch (SQLException | IOException _) {
-                throw new IllegalArgumentException("Something went wrong");
-            }
-        }
+        initializeCommon();
     }
 }

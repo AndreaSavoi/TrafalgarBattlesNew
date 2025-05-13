@@ -16,7 +16,7 @@ public abstract class AbstractTournController implements Initializable {
 
     protected Label logReg;
 
-    protected void initializeCommon(Labeled... nodes) {
+    protected void initializeCommonTourn(Labeled... nodes) {
 
         applyHoverEffect(nodes);
 
