@@ -47,7 +47,7 @@ public class Queries {
 
     public static String getQueryOrgTournaments() { return QUERY_ORG_TOURNAMENTS; }
 
-    static final String ADD_TOURNAMENT = "INSERT INTO trafalgarbattles.tournaments (tName, dates, nPartecipants, 0, organizer) VALUES (?, ?, ?, ?, ?)";
+    static final String ADD_TOURNAMENT = "INSERT INTO trafalgarbattles.tournaments (tName, dates, nPartecipants, nSubscribed, organizer) VALUES (?, ?, ?, ?, ?)";
 
     public static String getAddTournament() { return ADD_TOURNAMENT; }
 }

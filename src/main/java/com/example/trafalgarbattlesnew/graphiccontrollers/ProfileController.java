@@ -48,13 +48,15 @@ public class ProfileController implements Initializable {
     @FXML
     protected ImageView saveok;
 
+    User user = SessionManager.getCurrentUser();
+
     VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
     public void goLog(MouseEvent event) { visualizer.sceneVisualizer("LogRegForm.fxml", event); }
 
     @FXML
-    public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainView.fxml", event); }
+    public void goHome(MouseEvent event) { visualizer.sceneVisualizer(user.getDashboardFXML(), event); }
 
     @FXML
     public void showsubs(MouseEvent event) { visualizer.sceneVisualizer("Subs.fxml", event);}

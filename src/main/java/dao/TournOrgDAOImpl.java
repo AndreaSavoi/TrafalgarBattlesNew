@@ -30,7 +30,8 @@ public class TournOrgDAOImpl {
         stmt.setString(1, bean.getName());
         stmt.setDate(2, Date.valueOf(bean.getDate()));
         stmt.setInt(3, bean.getMaxPlayers());
-        stmt.setString(4, bean.getOrganizer());
+        stmt.setInt(4, 0);
+        stmt.setString(5, bean.getOrganizer());
         stmt.executeUpdate();
     }
 

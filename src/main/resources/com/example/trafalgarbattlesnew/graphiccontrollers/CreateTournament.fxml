@@ -42,7 +42,7 @@
                   <Font name="Century Gothic" size="26.0" />
                </font>
             </Label>
-            <ImageView fx:id="saveok" fitHeight="26.0" fitWidth="28.0" layoutX="570.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="saveok" fitHeight="26.0" fitWidth="28.0" layoutX="570.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@check_ok_accept_apply_1582.png" />
                </image>

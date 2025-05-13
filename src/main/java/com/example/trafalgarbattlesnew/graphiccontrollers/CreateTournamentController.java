@@ -1,8 +1,6 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import applicationcontrollers.ApplicationControllerCreateTourn;
-import applicationcontrollers.ApplicationControllerTournaments;
-import bean.BeanCurrTourn;
 import bean.BeanTournCreation;
 import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
@@ -16,16 +14,14 @@ import javafx.scene.input.MouseEvent;
 import singleton.SessionManager;
 import users.User;
 
-import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import static util.FadeTransitionUtil.getFadeTransition;
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class CreateTournamentController extends AbstractTournController{
+public class CreateTournamentController implements Initializable{
     @FXML  protected Label logReg;
     @FXML  protected TextField tournamentName;
     @FXML  protected JFXButton home;
@@ -38,8 +34,7 @@ public class CreateTournamentController extends AbstractTournController{
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
-    @Override
-    public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainView.fxml", event); }
+    public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainViewOrganizer.fxml", event); }
 
     @FXML
     public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event); }
@@ -49,8 +44,15 @@ public class CreateTournamentController extends AbstractTournController{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        initializeCommon(home, profile, logReg);
+        applyHoverEffect(home, profile, logReg);
+
+        User currentUser = SessionManager.getCurrentUser();
+        if (currentUser != null && currentUser.getUsername() != null) {
+            logReg.setText(currentUser.getUsername());
+            logReg.setOnMouseClicked(this::goHome);
+        }
     }
+
 
     @FXML
     public void createTournament(MouseEvent event) {
@@ -79,9 +81,8 @@ public class CreateTournamentController extends AbstractTournController{
         String organizer = currentUser.getUsername();
 
         BeanTournCreation bean = new BeanTournCreation(name, maxPlayers, tournDate, organizer);
-        ApplicationControllerCreateTourn controller = new ApplicationControllerCreateTourn();
         try {
-            controller.createTournament(bean);
+            new ApplicationControllerCreateTourn(bean);
         } catch (Exception _) {
             result.setText("Error while creating the tournament.");
             return;

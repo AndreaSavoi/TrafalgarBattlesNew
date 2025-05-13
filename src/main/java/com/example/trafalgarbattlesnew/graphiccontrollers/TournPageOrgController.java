@@ -21,10 +21,10 @@ import java.util.ResourceBundle;
 
 import static util.HoverEffectUtil.applyHoverEffect;
 
-public class TournPageOrgController extends AbstractTournController {
+public class TournPageOrgController implements Initializable{
 
     @FXML protected Label logReg;
-    @FXML protected TextField tournamentName;
+    @FXML protected Label tName;
     @FXML protected JFXButton home;
     @FXML protected JFXButton profile;
     @FXML protected JFXButton create;
@@ -35,7 +35,7 @@ public class TournPageOrgController extends AbstractTournController {
     private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
-    public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainView.fxml", event); }
+    public void goHome(MouseEvent event) { visualizer.sceneVisualizer("MainViewOrganizer.fxml", event); }
 
     @FXML
     public void showprofile(MouseEvent event) { visualizer.sceneVisualizer("Profile.fxml", event);}
@@ -49,7 +49,13 @@ public class TournPageOrgController extends AbstractTournController {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        initializeCommon(create, home, profile, logReg);
+        applyHoverEffect(create, home, profile, logReg);
+
+        User currentUser = SessionManager.getCurrentUser();
+        if (currentUser != null && currentUser.getUsername() != null) {
+            logReg.setText(currentUser.getUsername());
+            logReg.setOnMouseClicked(this::goHome);
+        }
 
         BeanCurrTourn bCT = BeanCurrTourn.getInstance();
         try {
@@ -57,7 +63,7 @@ public class TournPageOrgController extends AbstractTournController {
         } catch (SQLException | IOException _) {
             throw new IllegalArgumentException("Something went wrong");
         }
-        tournamentName.setText(bCT.gettName());
+        tName.setText(bCT.gettName());
         date.setValue(LocalDate.parse(bCT.getDates()));
         curr.setText(bCT.getnSubscribed());
         max.setText(bCT.getnPartecipants());
