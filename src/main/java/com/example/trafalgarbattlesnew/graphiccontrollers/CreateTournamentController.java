@@ -6,7 +6,6 @@ import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -19,15 +18,12 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import static util.FadeTransitionUtil.getFadeTransition;
-import static util.HoverEffectUtil.applyHoverEffect;
 
 public class CreateTournamentController extends AbstractTournController implements Initializable{
 
     @FXML  protected TextField tournamentName;
     @FXML  protected ImageView saveok;
     @FXML  protected Label result;
-
-    private final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
     @FXML
     @Override
@@ -51,7 +47,7 @@ public class CreateTournamentController extends AbstractTournController implemen
     public void createTournament(MouseEvent ignoredEvent) {
         String name = tournamentName.getText();
         String maxText = max.getText();
-        LocalDate tournDate = this.date.getValue();
+        LocalDate tournDate = date.getValue();
 
         if (name == null || name.isBlank() || maxText == null || maxText.isBlank() || tournDate == null) {
             result.setText("Please fill all the fields.");
