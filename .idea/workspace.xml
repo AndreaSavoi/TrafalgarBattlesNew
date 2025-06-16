@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerDeleteTourn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerModifyTourn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/CreateTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/CreateTournamentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageOrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageOrgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournOrgDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournOrgDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/queries/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/FadeTransitionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/FadeTransitionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfoOrg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfoOrg.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +166,7 @@
       <workItem from="1746644992712" duration="3123000" />
       <workItem from="1746706142837" duration="4644000" />
       <workItem from="1747127127975" duration="11658000" />
-      <workItem from="1750102569161" duration="5332000" />
+      <workItem from="1750102569161" duration="5634000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -543,7 +536,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747143089215</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1750108070646</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1750108070646</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

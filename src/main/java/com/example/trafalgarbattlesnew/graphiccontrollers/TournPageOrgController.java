@@ -79,7 +79,7 @@ public class TournPageOrgController extends AbstractTournController implements I
 
         try {
             new ApplicationControllerModifyTourn(bean);
-        } catch (Exception e) {
+        } catch (Exception _) {
             result.setText("Error while updating the tournament.");
             return;
         }
@@ -125,7 +125,7 @@ public class TournPageOrgController extends AbstractTournController implements I
             date.setDisable(true);
             save.setDisable(true);
 
-        } catch (Exception e) {
+        } catch (Exception _) {
 
             result.setText("Error while deleting the tournament.");
             return;

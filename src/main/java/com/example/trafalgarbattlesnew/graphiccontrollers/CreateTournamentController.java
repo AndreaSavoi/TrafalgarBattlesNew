@@ -50,7 +50,7 @@ public class CreateTournamentController extends AbstractTournController implemen
 
         try {
             new ApplicationControllerCreateTourn(bean);
-        } catch (Exception e) {
+        } catch (Exception _) {
             result.setText("Error while creating the tournament.");
             return;
         }

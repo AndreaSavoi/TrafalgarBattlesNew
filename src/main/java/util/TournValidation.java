@@ -14,6 +14,10 @@ import java.time.LocalDate;
 
 public class TournValidation {
 
+    private TournValidation() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static BeanTournCreation validateAndBuildBean(String name, TextField maxField, DatePicker datePicker, Label resultLabel, String currentPlayersTextIfAny) {
         String maxText = maxField.getText();
         LocalDate tournDate = datePicker.getValue();
@@ -38,7 +42,7 @@ public class TournValidation {
                     return null;
                 }
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException _) {
             resultLabel.setText("Max number must be a number.");
             return null;
         }
