@@ -9,7 +9,7 @@ public class FadeTransitionUtil {
 
     private FadeTransitionUtil() { throw new IllegalStateException("Utility class"); }
 
-    public static FadeTransition getFadeTransition(ImageView img) {
+    public static FadeTransition getFadeTransition (ImageView img) {
         javafx.animation.FadeTransition fadeIn = new javafx.animation.FadeTransition(Duration.seconds(0.7), img);
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);

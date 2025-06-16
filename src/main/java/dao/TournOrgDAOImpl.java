@@ -35,4 +35,25 @@ public class TournOrgDAOImpl {
         stmt.executeUpdate();
     }
 
+    public void modifyTourn(BeanTournCreation bean) throws IOException, SQLException {
+
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getModTournament());
+        stmt.setDate(1, Date.valueOf(bean.getDate()));
+        stmt.setInt(2, bean.getMaxPlayers());
+        stmt.setString(3, bean.getName());
+        stmt.executeUpdate();
+
+    }
+
+    public void deleteTourn(String name) throws IOException, SQLException {
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getDelTournament());
+        stmt.setString(1, name);
+        stmt.executeUpdate();
+
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.example.trafalgarbattlesnew.graphiccontrollers;
 
 import applicationcontrollers.ApplicationControllerCreateTourn;
+import applicationcontrollers.ApplicationControllerModifyTourn;
 import bean.BeanTournCreation;
 import com.jfoenix.controls.JFXButton;
 import javafx.animation.FadeTransition;
@@ -10,8 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import singleton.SessionManager;
-import users.User;
+import util.TournValidation;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -45,34 +45,12 @@ public class CreateTournamentController extends AbstractTournController implemen
 
     @FXML
     public void createTournament(MouseEvent ignoredEvent) {
-        String name = tournamentName.getText();
-        String maxText = max.getText();
-        LocalDate tournDate = date.getValue();
+        BeanTournCreation bean = TournValidation.validateAndBuildBean(tournamentName.getText(), max, date, result, null);
+        if (bean == null) return;
 
-        if (name == null || name.isBlank() || maxText == null || maxText.isBlank() || tournDate == null) {
-            result.setText("Please fill all the fields.");
-            return;
-        }
-
-        int maxPlayers;
-        try {
-            maxPlayers = Integer.parseInt(maxText);
-            if (maxPlayers <= 0) {
-                result.setText("Maximum number must be greater than 0.");
-                return;
-            }
-        } catch (NumberFormatException _) {
-            result.setText("Max number must be a number.");
-            return;
-        }
-
-        User currentUser = SessionManager.getCurrentUser();
-        String organizer = currentUser.getUsername();
-
-        BeanTournCreation bean = new BeanTournCreation(name, maxPlayers, tournDate, organizer);
         try {
             new ApplicationControllerCreateTourn(bean);
-        } catch (Exception _) {
+        } catch (Exception e) {
             result.setText("Error while creating the tournament.");
             return;
         }

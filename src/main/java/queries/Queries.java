@@ -50,4 +50,12 @@ public class Queries {
     static final String ADD_TOURNAMENT = "INSERT INTO trafalgarbattles.tournaments (tName, dates, nPartecipants, nSubscribed, organizer) VALUES (?, ?, ?, ?, ?)";
 
     public static String getAddTournament() { return ADD_TOURNAMENT; }
+
+    static final String MOD_TOURNAMENT = "UPDATE trafalgarbattles.tournaments SET dates = ?, nPartecipants = ? WHERE tName = ?";
+
+    public static String getModTournament() { return MOD_TOURNAMENT; }
+
+    static final String DEL_TOURNAMENT = "DELETE FROM trafalgarbattles.tournaments WHERE tName = ?";
+
+    public static String getDelTournament() { return DEL_TOURNAMENT; }
 }
