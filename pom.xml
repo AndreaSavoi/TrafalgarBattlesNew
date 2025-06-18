@@ -14,8 +14,8 @@
         <junit.version>5.8.2</junit.version>
         <sonar.organization>andreasavoi</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.exclusions>**src/main/java/graphiccontrollerscli/**</sonar.exclusions>
-        <sonar.exclusions>**src/main/java/com/example/trafalgarbattlesnew/MainLauncher.java</sonar.exclusions>
+        <sonar.exclusions>graphiccontrollerscli/**</sonar.exclusions>
+        <sonar.exclusions>com/example/trafalgarbattlesnew/MainLauncher.java</sonar.exclusions>
     </properties>
 
     <dependencies>
