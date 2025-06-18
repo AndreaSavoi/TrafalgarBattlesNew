@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/CreateTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/CreateTournamentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageOrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageOrgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/MainLauncher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/CreateTournamentCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/LogRegCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainOrganizerCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainPlayerCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/ProfileCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/SubsCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPageOrgCLI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPagePlayerCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +77,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -109,8 +119,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.trafalgarbattlesnew.graphiccontrollers.Main" />
+    <configuration name="MainLauncher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.trafalgarbattlesnew.MainLauncher" />
       <module name="TrafalgarBattlesNew" />
       <extension name="coverage">
         <pattern>
@@ -166,7 +176,10 @@
       <workItem from="1746644992712" duration="3123000" />
       <workItem from="1746706142837" duration="4644000" />
       <workItem from="1747127127975" duration="11658000" />
-      <workItem from="1750102569161" duration="5634000" />
+      <workItem from="1750102569161" duration="6474000" />
+      <workItem from="1750188822093" duration="2617000" />
+      <workItem from="1750191458337" duration="162000" />
+      <workItem from="1750255297967" duration="3104000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -544,7 +557,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750108070646</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1750108229505</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1750108229505</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
