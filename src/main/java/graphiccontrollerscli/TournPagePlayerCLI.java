@@ -75,7 +75,7 @@ public class TournPagePlayerCLI {
         } else {
             System.out.println("Please login to subscribe or unsubscribe to the tournament.");
             System.out.println("Press enter to continue...");
-            reader.readLine();
+            String ignoredInput = reader.readLine();
         }
     }
 

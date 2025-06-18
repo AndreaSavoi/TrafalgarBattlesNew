@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/MainLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/CreateTournamentCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/LogRegCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainOrganizerCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainPlayerCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/ProfileCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/SubsCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPageOrgCLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPagePlayerCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +168,7 @@
       <workItem from="1750102569161" duration="6474000" />
       <workItem from="1750188822093" duration="2617000" />
       <workItem from="1750191458337" duration="162000" />
-      <workItem from="1750255297967" duration="3104000" />
+      <workItem from="1750255297967" duration="3924000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -236,14 +225,6 @@
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1695673588422</updated>
-    </task>
-    <task id="LOCAL-00009" summary="FixSonarCloud">
-      <option name="closed" value="true" />
-      <created>1727470305827</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1727470305827</updated>
     </task>
     <task id="LOCAL-00010" summary="FixNomi">
       <option name="closed" value="true" />
@@ -565,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750108229505</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1750258626286</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1750258626287</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

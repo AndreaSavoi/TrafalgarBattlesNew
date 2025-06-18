@@ -39,11 +39,11 @@ public class SubsCLI {
                         (i + 1), tL.getName(i), tL.getNS(i), tL.getNP(i), tL.getDate(i), tL.getSNO(i));
             }
             System.out.println("Press enter to go back to main menu.");
-            reader.readLine();
+            String ignoredInput = reader.readLine();
         } else {
             System.out.println("No available subscriptions.");
             System.out.println("Press enter to go back to main menu.");
-            reader.readLine();
+            String ignoredInput = reader.readLine();
         }
     }
 }
