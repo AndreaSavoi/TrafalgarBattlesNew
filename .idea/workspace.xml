@@ -107,7 +107,7 @@
   </component>
   <component name="RunManager">
     <configuration name="MainLauncher" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.trafalgarbattlesnew.MainLauncher" />
+      <option name="MAIN_CLASS_NAME" value="graphiccontrollerscli.MainLauncher" />
       <module name="TrafalgarBattlesNew" />
       <extension name="coverage">
         <pattern>

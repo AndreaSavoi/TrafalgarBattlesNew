@@ -1,6 +1,5 @@
-package com.example.trafalgarbattlesnew;
+package graphiccontrollerscli;
 
-import graphiccontrollerscli.MainCLI;
 import com.example.trafalgarbattlesnew.graphiccontrollers.Main;
 
 import java.io.BufferedReader;
