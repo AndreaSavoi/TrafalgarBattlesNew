@@ -15,6 +15,7 @@ public class MainCLI {
     public static void main(String[] args) {
         MainCLI mainCLI = new MainCLI();
         mainCLI.start();
+        // try
     }
 
     public void start() {
