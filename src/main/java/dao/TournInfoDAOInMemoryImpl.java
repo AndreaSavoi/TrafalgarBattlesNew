@@ -78,14 +78,7 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
         List<TournamentDetails> filteredTournaments = new ArrayList<>();
 
         for (TournamentDetails tourn : tournaments.values()) {
-            boolean add = false;
-            if ("all".equals(mode)) {
-                add = true;
-            } else if ("sub".equals(mode) && username != null && subscriptions.containsKey(username) && subscriptions.get(username).contains(tourn.tName)) {
-                add = true;
-            } else if ("org".equals(mode) && tourn.organizer.equals(username)) {
-                add = true;
-            }
+            boolean add = "all".equals(mode) || "sub".equals(mode) && username != null && subscriptions.containsKey(username) && subscriptions.get(username).contains(tourn.tName) || "org".equals(mode) && tourn.organizer.equals(username);
 
             if (add) {
                 filteredTournaments.add(tourn);
