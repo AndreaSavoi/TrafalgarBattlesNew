@@ -1,3 +1,4 @@
+// src/main/java/dao/TournInfoDAOInMemoryImpl.java
 package dao;
 
 import exception.AlreadySubscribedException;
@@ -9,8 +10,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
+// import java.util.stream.Collectors; // Non utilizzato, può essere rimosso se non serve altrove
 
 public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
+
+    private static final String DUMMY_TOURN_1_NAME = "DummyTourn1";
+    private static final String DUMMY_TOURN_2_NAME = "DummyTourn2"; // Costante per "DummyTourn2"
+    private static final String PUBLIC_TOURN_NAME = "PublicTourn";
+    private static final String TEST_ORGANIZER_USERNAME = "testorganizer";
+    private static final String TEST_PLAYER_USERNAME = "testplayer";
+    private static final String ANOTHER_ORG_USERNAME = "anotherorg";
 
     public static class TournamentDetails {
         int sno;
@@ -29,6 +38,7 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
             this.organizer = organizer;
         }
 
+        // Getters
         public int getSno() { return sno; }
         public String gettName() { return tName; }
         public String getDates() { return dates; }
@@ -36,24 +46,26 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
         public int getCurrentSubscribed() { return currentSubscribed; }
         public String getOrganizer() { return organizer; }
 
+        // Setters
         public void setDates(String dates) { this.dates = dates; }
         public void setMaxParticipants(int maxParticipants) { this.maxParticipants = maxParticipants; }
         public void setCurrentSubscribed(int currentSubscribed) { this.currentSubscribed = currentSubscribed; }
     }
 
     private static final Map<String, TournamentDetails> tournaments = new HashMap<>();
+
     private static final Map<String, List<String>> subscriptions = new HashMap<>();
+
     private static final AtomicInteger nextSno = new AtomicInteger(1);
 
     public TournInfoDAOInMemoryImpl() {
         if (tournaments.isEmpty()) {
-            // Add some fake data for testing
-            tournaments.put("DummyTourn1", new TournamentDetails(nextSno.getAndIncrement(), "DummyTourn1", "2025-07-10", 10, 0, "testorganizer"));
-            tournaments.put("DummyTourn2", new TournamentDetails(nextSno.getAndIncrement(), "DummyTourn2", "2025-08-15", 5, 2, "testorganizer"));
-            tournaments.put("PublicTourn", new TournamentDetails(nextSno.getAndIncrement(), "PublicTourn", "2025-09-01", 20, 5, "anotherorg"));
 
-            // Add some fake subscriptions
-            subscriptions.computeIfAbsent("testplayer", k -> new ArrayList<>()).add("DummyTourn2");
+            tournaments.put(DUMMY_TOURN_1_NAME, new TournamentDetails(nextSno.getAndIncrement(), DUMMY_TOURN_1_NAME, "2025-07-10", 10, 0, TEST_ORGANIZER_USERNAME));
+            tournaments.put(DUMMY_TOURN_2_NAME, new TournamentDetails(nextSno.getAndIncrement(), DUMMY_TOURN_2_NAME, "2025-08-15", 5, 2, TEST_ORGANIZER_USERNAME));
+            tournaments.put(PUBLIC_TOURN_NAME, new TournamentDetails(nextSno.getAndIncrement(), PUBLIC_TOURN_NAME, "2025-09-01", 20, 5, ANOTHER_ORG_USERNAME));
+
+            subscriptions.computeIfAbsent(TEST_PLAYER_USERNAME, k -> new ArrayList<>()).add(DUMMY_TOURN_2_NAME);
         }
     }
 
@@ -79,11 +91,12 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
             boolean add = false;
             if ("all".equals(mode)) {
                 add = true;
-            } else if ("sub".equals(mode) && username != null && subscriptions.containsKey(username) && subscriptions.get(username).contains(tourn.tName)) {
+            } else if ("sub".equals(mode) && username != null && subscriptions.containsKey(username) && subscriptions.get(username).contains(tourn.tName)) { // Linea 82 originale per il check "sub"
                 add = true;
-            } else if ("org".equals(mode) && tourn.organizer.equals(username)) {
+            } else if ("org".equals(mode) && tourn.organizer.equals(username)) { // Linea 84 originale per il check "org"
                 add = true;
             }
+
             if (add) {
                 filteredTournaments.add(tourn);
             }
@@ -112,7 +125,6 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
                 return;
             }
         }
-        // If not found, curr remains empty. Application controllers should handle this.
     }
 
     @Override
