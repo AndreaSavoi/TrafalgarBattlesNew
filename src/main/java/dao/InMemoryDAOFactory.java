@@ -1,8 +1,6 @@
 
 package dao;
 
-import java.io.IOException;
-
 public class InMemoryDAOFactory implements DAOFactory {
     @Override
     public LogRegDAO createLogRegDAO() {
