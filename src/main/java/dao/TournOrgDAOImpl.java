@@ -7,7 +7,7 @@ import singleton.DBconn;
 import java.io.IOException;
 import java.sql.*;
 
-public class TournOrgDAOImpl {
+public class TournOrgDAOImpl implements TournOrgDAO {
 
     private final Connection conn;
     private PreparedStatement stmt;
@@ -23,6 +23,7 @@ public class TournOrgDAOImpl {
         conn = DBconn.getDBConnection();
     }
 
+    @Override
     public void addTourn(BeanTournCreation bean) throws IOException, SQLException {
         connVerify();
 
@@ -35,6 +36,7 @@ public class TournOrgDAOImpl {
         stmt.executeUpdate();
     }
 
+    @Override
     public void modifyTourn(BeanTournCreation bean) throws IOException, SQLException {
 
         connVerify();
@@ -47,6 +49,7 @@ public class TournOrgDAOImpl {
 
     }
 
+    @Override
     public void deleteTourn(String name) throws IOException, SQLException {
         connVerify();
 

@@ -2,6 +2,7 @@ package dao;
 
 import exception.AlreadySubscribedException;
 import exception.MaxParticipantsReachedException;
+import exception.UserNotSubscribedException;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -13,5 +14,7 @@ public interface TournInfoDAO {
     void getSpecific(List<String> curr, int sno) throws SQLException, IOException;
 
     void addSub(String username, String tname) throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException;
+
+    void removeSub(String username, String tName) throws SQLException, IOException, UserNotSubscribedException;
 }
 

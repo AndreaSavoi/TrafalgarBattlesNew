@@ -57,7 +57,6 @@ public class ProfileCLI {
             switch (choice) {
                 case "1":
                     editProfile(appController, currentUser.getUsername(), userData);
-                    // Reload data after edit
                     try {
                         userData = appController.getUserProfile(currentUser.getUsername());
                     } catch (Exception e) {

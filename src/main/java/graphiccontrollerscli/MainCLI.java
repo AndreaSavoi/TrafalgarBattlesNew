@@ -51,7 +51,7 @@ public class MainCLI {
                 System.out.println("1. Manage Tournaments (Organizer)");
                 System.out.println("2. Create Tournament");
                 System.out.println("3. Logout");
-            } else { // Player
+            } else {
                 System.out.println("1. Show Tournaments");
                 System.out.println("2. Subscriptions");
                 System.out.println("3. My Profile");

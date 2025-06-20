@@ -13,7 +13,7 @@ public class PrivacyUtil {
 
         int atIndex = email.indexOf("@");
         if (atIndex <= 2) {
-            return email; // troppo corta da offuscare
+            return email;
         }
 
         String localPart = email.substring(0, atIndex);

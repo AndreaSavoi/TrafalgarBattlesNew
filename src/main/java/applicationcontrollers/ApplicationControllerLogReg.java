@@ -2,7 +2,9 @@ package applicationcontrollers;
 
 import bean.BeanLog;
 import bean.BeanReg;
+import dao.LogRegDAO;
 import dao.LogRegDAOImpl;
+import graphiccontrollerscli.MainLauncher;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -36,7 +38,7 @@ public class ApplicationControllerLogReg {
 
     public void verify() {
         try {
-            LogRegDAOImpl logDao = new LogRegDAOImpl();
+            LogRegDAO logDao = MainLauncher.getDaoFactory().createLogRegDAO();
             logDao.getLogInfo(username, password, type);
         } catch (SQLException | IOException _){
             throw new IllegalArgumentException("Invalid credentials");
@@ -45,7 +47,7 @@ public class ApplicationControllerLogReg {
 
     public void register() {
         try{
-            LogRegDAOImpl regDAO = new LogRegDAOImpl();
+            LogRegDAO regDAO = MainLauncher.getDaoFactory().createLogRegDAO();
             regDAO.register(email, username, password, type);
         } catch (SQLException | IOException _){
             throw new IllegalArgumentException("Something went wrong");

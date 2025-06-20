@@ -51,7 +51,6 @@ public class TournPageOrgCLI {
             switch (choice) {
                 case "1":
                     modifyTournament(beanCurrTourn);
-                    // Reload data after modification
                     try {
                         new ApplicationControllerTournInfo(beanCurrTourn);
                     } catch (Exception e) {

@@ -37,7 +37,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
         stmt = conn.prepareStatement(sql);
 
         if (mode.equals("sub") || mode.equals("org")) {
-            stmt.setString(1, username); // imposto l'username solo in sub e org
+            stmt.setString(1, username);
         }
 
         rs = stmt.executeQuery();
@@ -48,6 +48,48 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             dates.add(rs.getString("dates"));
             sno.add(rs.getString("sno"));
         }
+    }
+
+    @Override
+    public void getSpecific(List<String> curr, int sno) throws SQLException, IOException {
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getQueryCurrTourn());
+        stmt.setInt(1, sno);
+        rs = stmt.executeQuery();
+        while(rs.next()) {
+            curr.add(rs.getString("tname"));
+            curr.add(rs.getString("npartecipants"));
+            curr.add(rs.getString("nsubscribed"));
+            curr.add(rs.getString("dates"));
+        }
+    }
+
+    @Override
+    public void addSub(String username, String tName) throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException {
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getQueryAddSub());
+        stmt.setString(1, username);
+        stmt.setString(2, tName);
+        stmt.executeUpdate();
+    }
+
+    @Override
+    public void removeSub(String username, String tName) throws SQLException, IOException, UserNotSubscribedException {
+        connVerify();
+
+        stmt = conn.prepareStatement(Queries.getQueryCheckSub());
+        stmt.setString(1, username);
+        stmt.setString(2, tName);
+        rs = stmt.executeQuery();
+
+        if(!rs.next()) {throw new UserNotSubscribedException("You're not subscribed to this tournament.");}
+
+        stmt = conn.prepareStatement(Queries.getQueryDelSub());
+        stmt.setString(1, username);
+        stmt.setString(2, tName);
+        stmt.executeUpdate();
     }
 
     private static String getString(String mode, String username) {
@@ -64,44 +106,5 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             default -> throw new IllegalArgumentException("Invalid mode: " + mode);
         }
         return sql;
-    }
-
-    public void getSpecific(List<String> curr, int sno) throws SQLException, IOException {
-        connVerify();
-
-        stmt = conn.prepareStatement(Queries.getQueryCurrTourn());
-        stmt.setInt(1, sno);
-        rs = stmt.executeQuery();
-        while(rs.next()) {
-            curr.add(rs.getString("tname"));
-            curr.add(rs.getString("npartecipants"));
-            curr.add(rs.getString("nsubscribed"));
-            curr.add(rs.getString("dates"));
-        }
-    }
-
-    public void addSub(String username, String tName) throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException {
-        connVerify();
-
-        stmt = conn.prepareStatement(Queries.getQueryAddSub());
-        stmt.setString(1, username);
-        stmt.setString(2, tName);
-        stmt.executeUpdate();
-    }
-
-    public void removeSub(String username, String tName) throws SQLException, IOException, UserNotSubscribedException {
-        connVerify();
-
-        stmt = conn.prepareStatement(Queries.getQueryCheckSub());
-        stmt.setString(1, username);
-        stmt.setString(2, tName);
-        rs = stmt.executeQuery();
-
-        if(!rs.next()) {throw new UserNotSubscribedException("You're not subscribed to this tournament.");}
-
-        stmt = conn.prepareStatement(Queries.getQueryDelSub());
-        stmt.setString(1, username);
-        stmt.setString(2, tName);
-        stmt.executeUpdate();
     }
 }

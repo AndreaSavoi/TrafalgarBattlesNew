@@ -24,7 +24,7 @@ public abstract class AbstractMainController {
     protected final VisualizeScene visualizer = VisualizeScene.getVisualizer(null);
 
 
-    protected abstract JFXButton[] getHoverButtons();   // es. subs, profile
+    protected abstract JFXButton[] getHoverButtons();
 
     protected void initializeCommon() {
         applyHoverEffect(logReg);

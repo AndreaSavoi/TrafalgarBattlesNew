@@ -8,20 +8,20 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class LogRegCLI {
-    private final BufferedReader reader; //
+    private final BufferedReader reader;
 
-    public LogRegCLI(BufferedReader reader) { //
-        this.reader = reader; //
+    public LogRegCLI(BufferedReader reader) {
+        this.reader = reader;
     }
 
     private record CommonLoginRegInput(String username, String password, String type) {}
 
     private CommonLoginRegInput getCommonLoginRegistrationInput() throws IOException {
-        System.out.print("Username: "); //
+        System.out.print("Username: ");
         String username = reader.readLine();
-        System.out.print("Password: "); //
+        System.out.print("Password: ");
         String password = reader.readLine();
-        System.out.print("Are you an organizer? (y/n): "); //
+        System.out.print("Are you an organizer? (y/n): ");
         String roleChoice = reader.readLine();
         String type = roleChoice.equalsIgnoreCase("y") ? "Organizer" : "Player";
         return new CommonLoginRegInput(username, password, type);
@@ -68,9 +68,9 @@ public class LogRegCLI {
                 return;
             }
 
-            BeanReg bR = new BeanReg(email, username, password, type); //
+            BeanReg bR = new BeanReg(email, username, password, type);
             try{
-                new ApplicationControllerLogReg(bR); //
+                new ApplicationControllerLogReg(bR);
                 System.out.println("Registration successful! You can now log in.");
             } catch (IllegalArgumentException e) {
                 System.out.println("Error during registration: " + e.getMessage());

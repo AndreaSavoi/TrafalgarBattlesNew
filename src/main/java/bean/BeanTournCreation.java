@@ -10,7 +10,7 @@ public class BeanTournCreation implements Serializable {
     private String organizer;
 
     public BeanTournCreation() {
-        // Costruttore vuoto per compatibilità JavaBeans
+        //Costruttore
     }
 
     public BeanTournCreation(String name, int maxPlayers, LocalDate date, String organizer) {
@@ -20,7 +20,6 @@ public class BeanTournCreation implements Serializable {
         this.organizer = organizer;
     }
 
-    // Getter e Setter
     public String getName() { return name; }
 
     public void setName(String name) { this.name = name; }

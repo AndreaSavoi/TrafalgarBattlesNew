@@ -79,25 +79,20 @@ public class ProfileController implements Initializable {
 
         try {
             ApplicationControllerProfile appController = new ApplicationControllerProfile();
-            // Ottieni i dati attuali dal DB
             Map<String, String> current = appController.getUserProfile(user.getUsername());
 
-            // Scegli se aggiornare solo i campi compilati
             String b = !birth.getText().isBlank() ? birth.getText() : current.get("birth");
             String g = !game.getText().isBlank() ? game.getText() : current.get("game");
             String s = !sex.getText().isBlank() ? sex.getText() : current.get("sex");
             String f = !fullname.getText().isBlank() ? fullname.getText() : current.get("fullname");
 
-            // Esegui l'update completo (ma con valori misti tra nuovi e già esistenti)
             appController.updateUserProfile(b, g, s, f, user.getUsername());
 
-            // Disabilita solo i campi che sono stati compilati
             if (!birth.getText().isBlank()) birth.setDisable(true);
             if (!game.getText().isBlank()) game.setDisable(true);
             if (!sex.getText().isBlank()) sex.setDisable(true);
             if (!fullname.getText().isBlank()) fullname.setDisable(true);
 
-            // Fade-in iniziale (0.3 secondi)
             saveok.setOpacity(0.0);
             saveok.setVisible(true);
 

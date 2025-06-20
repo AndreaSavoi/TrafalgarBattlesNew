@@ -1,10 +1,11 @@
 package applicationcontrollers;
 
 import bean.BeanCurrTourn;
-import dao.TournInfoDAOImpl;
+import dao.TournInfoDAO;
 import exception.AlreadySubscribedException;
 import exception.MaxParticipantsReachedException;
 import exception.UserNotSubscribedException;
+import graphiccontrollerscli.MainLauncher;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -15,8 +16,10 @@ import java.util.Objects;
 public class ApplicationControllerTournInfo {
 
     List<String> curr = new ArrayList<>();
-    private TournInfoDAOImpl getCurrTurnInfo;
+    private final TournInfoDAO getCurrTurnInfo;
+
     public ApplicationControllerTournInfo(String username, String tname, String mode) throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException, UserNotSubscribedException {
+        getCurrTurnInfo = MainLauncher.getDaoFactory().createTournInfoDAO();
         if(Objects.equals(mode, "sub")) {
             addSub(username, tname);
         } else if (Objects.equals(mode, "unsub")) {
@@ -25,11 +28,11 @@ public class ApplicationControllerTournInfo {
     }
 
     public ApplicationControllerTournInfo(BeanCurrTourn bCT) throws SQLException, IOException {
+        getCurrTurnInfo = MainLauncher.getDaoFactory().createTournInfoDAO();
         addDatas(bCT);
     }
 
     private void addDatas(BeanCurrTourn bCT) throws SQLException, IOException {
-        getCurrTurnInfo = new TournInfoDAOImpl();
         getCurrTurnInfo.getSpecific(curr, bCT.getSno());
         bCT.settName(curr.get(0));
         bCT.setnPartecipants(curr.get(1));
@@ -38,7 +41,6 @@ public class ApplicationControllerTournInfo {
     }
 
     private void addSub(String username, String tname) throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException {
-        getCurrTurnInfo = new TournInfoDAOImpl();
         try {
             getCurrTurnInfo.addSub(username, tname);
         } catch (SQLException e) {
@@ -54,7 +56,6 @@ public class ApplicationControllerTournInfo {
     }
 
     private void delSub(String username, String tname) throws SQLException, IOException, UserNotSubscribedException {
-        getCurrTurnInfo = new TournInfoDAOImpl();
         try {
             getCurrTurnInfo.removeSub(username, tname);
         } catch (SQLException e) {

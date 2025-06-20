@@ -2,6 +2,7 @@ package applicationcontrollers;
 
 import dao.ProfileDAO;
 import dao.ProfileDAOImpl;
+import graphiccontrollerscli.MainLauncher;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -11,7 +12,7 @@ public class ApplicationControllerProfile {
     private final ProfileDAO dao;
 
     public ApplicationControllerProfile() throws IOException {
-        this.dao = new ProfileDAOImpl();
+        this.dao = MainLauncher.getDaoFactory().createProfileDAO();
     }
 
     public Map<String, String> getUserProfile(String username) throws SQLException, IOException {
