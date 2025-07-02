@@ -1,4 +1,3 @@
-// src/main/java/dao/LogRegDAOFileSystemImpl.java
 package dao;
 
 import singleton.SessionManager;
@@ -22,15 +21,14 @@ public class LogRegDAOFileSystemImpl implements LogRegDAO {
     private void loadUsersFromFile() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_NAME))) {
             users = (Map<String, SerializableUserDetails>) ois.readObject();
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException _) {
             users = new HashMap<>();
             if (users.isEmpty()) { // Aggiungi dati di esempio solo se il file è nuovo e vuoto
                 users.put("fsplayer", new SerializableUserDetails("fsplayer", "fspass", "fsplayer@example.com", "Player"));
                 users.put("fsorganizer", new SerializableUserDetails("fsorganizer", "fsorganizerpass", "fsorganizer@example.com", "Organizer"));
                 saveUsersToFile();
             }
-        } catch (IOException | ClassNotFoundException e) {
-            System.err.println("Error loading users from file, starting with empty map: " + e.getMessage());
+        } catch (IOException | ClassNotFoundException _) {
             users = new HashMap<>();
         }
     }
@@ -38,8 +36,8 @@ public class LogRegDAOFileSystemImpl implements LogRegDAO {
     private void saveUsersToFile() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(users);
-        } catch (IOException e) {
-            System.err.println("Error saving users to file: " + e.getMessage());
+        } catch (IOException _) {
+            throw new IllegalArgumentException("Could not save users to file");
         }
     }
 
