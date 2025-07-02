@@ -17,8 +17,6 @@ public class LogRegDAOImpl implements LogRegDAO {
 
     private final Connection conn;
 
-    private PreparedStatement stmt;
-
     private void connVerify() throws IOException {
         if(conn == null) {
             DBconn.getDBConnection();
@@ -33,24 +31,26 @@ public class LogRegDAOImpl implements LogRegDAO {
     public User getLogInfo(String username, String password, String type) throws SQLException, IOException {
         connVerify();
 
-        stmt = conn.prepareStatement(Queries.getQueryLogin());
-        stmt.setString(1, username);
-        stmt.setString(2, password);
-        stmt.setString(3, type);
-        ResultSet rs = stmt.executeQuery();
-        if(rs.next()){
-            User user;
-            if(type.equals("Player")){
-                user = new Player(username, rs.getString("email"));
-            } else if (type.equals("Organizer")){
-                user = new Organizer(username, rs.getString("email"));
-            } else {
-                throw new IllegalArgumentException("Invalid type");
+        try (PreparedStatement stmt = conn.prepareStatement(Queries.getQueryLogin())) {
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            stmt.setString(3, type);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if(rs.next()){
+                    User user;
+                    if(type.equals("Player")){
+                        user = new Player(username, rs.getString("email"));
+                    } else if (type.equals("Organizer")){
+                        user = new Organizer(username, rs.getString("email"));
+                    } else {
+                        throw new IllegalArgumentException("Invalid type");
+                    }
+
+                    SessionManager.setCurrentUser(user);
+
+                    return user;
+                }
             }
-
-            SessionManager.setCurrentUser(user);
-
-            return user;
         }
 
         throw new IllegalArgumentException("Something went wrong");
@@ -60,8 +60,7 @@ public class LogRegDAOImpl implements LogRegDAO {
     public boolean register(String email, String username, String password, String type) throws SQLException, IOException {
         connVerify();
 
-        try {
-            stmt = conn.prepareStatement(Queries.getRegisterUser());
+        try (PreparedStatement stmt = conn.prepareStatement(Queries.getRegisterUser())) {
             stmt.setString(1, username);
             stmt.setString(2, password);
             stmt.setString(3, email);

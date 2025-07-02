@@ -13,7 +13,6 @@ import java.util.Map;
 
 public class ProfileDAOImpl implements ProfileDAO{
     private final Connection conn;
-    private PreparedStatement stmt;
 
     public ProfileDAOImpl() throws IOException {
         conn = DBconn.getDBConnection();
@@ -29,14 +28,15 @@ public class ProfileDAOImpl implements ProfileDAO{
     public void updateProfileInfo(String birth, String game, String sex, String fullname, String username) throws SQLException, IOException {
         connVerify();
 
-        stmt = conn.prepareStatement(Queries.getAddProfileInfo());
-        stmt.setString(1, birth);
-        stmt.setString(2, game);
-        stmt.setString(3, sex);
-        stmt.setString(4, fullname);
-        stmt.setString(5, username);
+        try (PreparedStatement stmt = conn.prepareStatement(Queries.getAddProfileInfo())) {
+            stmt.setString(1, birth);
+            stmt.setString(2, game);
+            stmt.setString(3, sex);
+            stmt.setString(4, fullname);
+            stmt.setString(5, username);
 
-        stmt.executeUpdate();
+            stmt.executeUpdate();
+        }
     }
 
     @Override
@@ -44,15 +44,16 @@ public class ProfileDAOImpl implements ProfileDAO{
         connVerify();
         Map<String, String> profileData = new HashMap<>();
 
-        stmt = conn.prepareStatement(Queries.getQueryProfileInfo());
-        stmt.setString(1, username);
-        ResultSet rs = stmt.executeQuery();
-
-        if (rs.next()) {
-            profileData.put("birth", rs.getString("birth"));
-            profileData.put("game", rs.getString("game"));
-            profileData.put("sex", rs.getString("sex"));
-            profileData.put("fullname", rs.getString("fullname"));
+        try (PreparedStatement stmt = conn.prepareStatement(Queries.getQueryProfileInfo())) {
+            stmt.setString(1, username);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    profileData.put("birth", rs.getString("birth"));
+                    profileData.put("game", rs.getString("game"));
+                    profileData.put("sex", rs.getString("sex"));
+                    profileData.put("fullname", rs.getString("fullname"));
+                }
+            }
         }
 
         return profileData;
