@@ -4,10 +4,14 @@ import users.User;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 public class CompositeLogRegDAO implements LogRegDAO {
     private final LogRegDAO dbDao;
     private final LogRegDAO fileSystemDao;
+
+    Logger logger = Logger.getLogger(getClass().getName());
+
 
     public CompositeLogRegDAO(LogRegDAO dbDao, LogRegDAO fileSystemDao) {
         this.dbDao = dbDao;
@@ -23,22 +27,20 @@ public class CompositeLogRegDAO implements LogRegDAO {
 
         try {
             user = dbDao.getLogInfo(username, password, type);
-            System.out.println("Composite: Logged in (DB) -> " + username);
             return user;
         } catch (SQLException e) {
             dbSqlException = e;
-            System.err.println("Composite: DB login SQL error: " + e.getMessage());
+            logger.info("Composite: DB login SQL error: " + e.getMessage());
         } catch (IOException e) {
             dbIoException = e;
-            System.err.println("Composite: DB login IO error: " + e.getMessage());
+            logger.info("Composite: DB login IO error: " + e.getMessage());
         } catch (IllegalArgumentException e) {
             dbIllegalArgumentException = e;
-            System.err.println("Composite: DB login invalid credentials/not found: " + e.getMessage());
+            logger.info("Composite: DB login invalid credentials/not found: " + e.getMessage());
         }
 
         try {
             user = fileSystemDao.getLogInfo(username, password, type);
-            System.out.println("Composite: Logged in (FileSystem) -> " + username);
             return user;
         } catch (IllegalArgumentException e) {
             if (dbIllegalArgumentException != null) {
@@ -64,18 +66,16 @@ public class CompositeLogRegDAO implements LogRegDAO {
 
         try {
             dbDao.register(email, username, password, type);
-            System.out.println("Composite: Registered to DB -> " + username);
         } catch (Exception e) {
             dbException = e;
-            System.err.println("Composite: DB registration failed for " + username + ": " + e.getMessage());
+            logger.info("Composite: DB registration failed for " + username + ": " + e.getMessage());
         }
 
         try {
             fileSystemDao.register(email, username, password, type);
-            System.out.println("Composite: Registered to FileSystem -> " + username);
         } catch (Exception e) {
             fileSystemException = e;
-            System.err.println("Composite: FileSystem registration failed for " + username + ": " + e.getMessage());
+            logger.info("Composite: FileSystem registration failed for " + username + ": " + e.getMessage());
         }
 
         if (dbException == null && fileSystemException == null) {
@@ -83,10 +83,10 @@ public class CompositeLogRegDAO implements LogRegDAO {
         } else if (dbException != null && fileSystemException != null) {
             throw new IOException("Registration failed in both DB and FileSystem. DB Error: " + dbException.getMessage() + "; FS Error: " + fileSystemException.getMessage(), dbException);
         } else if (dbException != null) {
-            System.err.println("Composite Warning: DB registration failed but FileSystem succeeded for " + username);
+            logger.info("Composite Warning: DB registration failed but FileSystem succeeded for " + username);
             throw new IOException("DB registration failed, but FileSystem succeeded. Data may be inconsistent.", dbException);
         } else {
-            System.err.println("Composite Warning: FileSystem registration failed but DB succeeded for " + username);
+            logger.info("Composite Warning: FileSystem registration failed but DB succeeded for " + username);
             return true;
         }
     }

@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CompositeLogRegDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DBMSDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DBMSDAOFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOFileSystemImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOFileSystemImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CompositeLogRegDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CompositeLogRegDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +178,7 @@
       <workItem from="1750778417971" duration="282000" />
       <workItem from="1750778710965" duration="1952000" />
       <workItem from="1751295560261" duration="3127000" />
-      <workItem from="1751465304625" duration="2997000" />
+      <workItem from="1751465304625" duration="3807000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -237,14 +235,6 @@
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1695673588422</updated>
-    </task>
-    <task id="LOCAL-00033" summary="FixSubsCrash">
-      <option name="closed" value="true" />
-      <created>1746387323002</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1746387323002</updated>
     </task>
     <task id="LOCAL-00034" summary="FixSubsCrash">
       <option name="closed" value="true" />
@@ -566,7 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751466760201</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1751468473765</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1751468473765</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
