@@ -83,10 +83,10 @@ public class CompositeLogRegDAO implements LogRegDAO {
         } else if (dbException != null && fileSystemException != null) {
             throw new IOException("Registration failed in both DB and FileSystem. DB Error: " + dbException.getMessage() + "; FS Error: " + fileSystemException.getMessage(), dbException);
         } else if (dbException != null) {
-            logger.info("Composite Warning: DB registration failed but FileSystem succeeded for {}" + username);
+            logger.info("Composite Warning: DB registration failed but FileSystem succeeded for {0}" + username);
             throw new IOException("DB registration failed, but FileSystem succeeded. Data may be inconsistent.", dbException);
         } else {
-            logger.info("Composite Warning: FileSystem registration failed but DB succeeded for {}" + username);
+            logger.info("Composite Warning: FileSystem registration failed but DB succeeded for {0}" + username);
             return true;
         }
     }
