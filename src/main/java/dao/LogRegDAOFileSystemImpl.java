@@ -36,8 +36,8 @@ public class LogRegDAOFileSystemImpl implements LogRegDAO {
     private void saveUsersToFile() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(users);
-        } catch (IOException e) {
-            throw new RuntimeException("Could not save users to file", e);
+        } catch (IOException _) {
+            throw new IllegalArgumentException("Could not save users to file");
         }
     }
 
