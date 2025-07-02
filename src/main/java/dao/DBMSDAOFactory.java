@@ -6,11 +6,15 @@ import java.sql.SQLException;
 public class DBMSDAOFactory implements DAOFactory {
     @Override
     public LogRegDAO createLogRegDAO() throws IOException {
+        LogRegDAO dbImpl = null;
+        LogRegDAO fileSystemImpl = null;
         try {
-            return new LogRegDAOImpl();
+            dbImpl = new LogRegDAOImpl();
+            fileSystemImpl = new LogRegDAOFileSystemImpl();
         } catch (SQLException e) {
-            throw new IOException("Error creating LogRegDAOImpl", e);
+            throw new IOException("Error creating DB LogRegDAOImpl", e);
         }
+        return new CompositeLogRegDAO(dbImpl, fileSystemImpl);
     }
 
     @Override

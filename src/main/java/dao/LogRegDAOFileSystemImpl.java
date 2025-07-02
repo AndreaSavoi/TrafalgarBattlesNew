@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class LogRegDAOFileSystemImpl implements LogRegDAO {
 
-    private static final String FILE_NAME = "users.ser"; // File per salvare i dati serializzati
+    private static final String FILE_NAME = "users.ser";
     private Map<String, SerializableUserDetails> users;
 
     public LogRegDAOFileSystemImpl() {
@@ -23,7 +23,7 @@ public class LogRegDAOFileSystemImpl implements LogRegDAO {
             users = (Map<String, SerializableUserDetails>) ois.readObject();
         } catch (FileNotFoundException _) {
             users = new HashMap<>();
-            if (users.isEmpty()) { // Aggiungi dati di esempio solo se il file è nuovo e vuoto
+            if (users.isEmpty()) {
                 users.put("fsplayer", new SerializableUserDetails("fsplayer", "fspass", "fsplayer@example.com", "Player"));
                 users.put("fsorganizer", new SerializableUserDetails("fsorganizer", "fsorganizerpass", "fsorganizer@example.com", "Organizer"));
                 saveUsersToFile();
@@ -36,8 +36,8 @@ public class LogRegDAOFileSystemImpl implements LogRegDAO {
     private void saveUsersToFile() {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(users);
-        } catch (IOException _) {
-            throw new IllegalArgumentException("Could not save users to file");
+        } catch (IOException e) {
+            throw new RuntimeException("Could not save users to file", e);
         }
     }
 
@@ -74,4 +74,5 @@ public class LogRegDAOFileSystemImpl implements LogRegDAO {
         saveUsersToFile();
         return true;
     }
+
 }

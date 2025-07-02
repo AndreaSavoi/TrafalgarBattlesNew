@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FileSystemDAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOFileSystemImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/SerializableUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CompositeLogRegDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ProfileDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ProfileDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournOrgDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournOrgDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DBMSDAOFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DBMSDAOFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOFileSystemImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/LogRegDAOFileSystemImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +180,7 @@
       <workItem from="1750778417971" duration="282000" />
       <workItem from="1750778710965" duration="1952000" />
       <workItem from="1751295560261" duration="3127000" />
-      <workItem from="1751465304625" duration="1156000" />
+      <workItem from="1751465304625" duration="2997000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -241,22 +237,6 @@
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1695673588422</updated>
-    </task>
-    <task id="LOCAL-00031" summary="FixSubsCrash">
-      <option name="closed" value="true" />
-      <created>1746381158973</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1746381158974</updated>
-    </task>
-    <task id="LOCAL-00032" summary="FixSubsCrash">
-      <option name="closed" value="true" />
-      <created>1746387245162</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1746387245162</updated>
     </task>
     <task id="LOCAL-00033" summary="FixSubsCrash">
       <option name="closed" value="true" />
@@ -570,7 +550,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750422083787</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1751466470290</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1751466470290</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1751466760201</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1751466760201</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
