@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
-      <change afterPath="$PROJECT_DIR$/src/test/java/dao/LogRegDAOImplIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dao/ProfileDAOImplIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dao/TournamentDAOIntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ProfileDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ProfileDAOImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +71,7 @@
     "JUnit.LogRegDAOImplIntegrationTest.testRegisterUserSuccessfully.executor": "Run",
     "JUnit.ProfileDAOImplIntegrationTest.executor": "Run",
     "JUnit.TournamentDAOIntegrationTest.executor": "Run",
+    "JUnit.TournamentDAOIntegrationTest.testAddSubMaxParticipantsReachedThrowsException.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -281,7 +276,7 @@
       <workItem from="1751465304625" duration="4526000" />
       <workItem from="1751550181909" duration="838000" />
       <workItem from="1751661099422" duration="284000" />
-      <workItem from="1751664844808" duration="2446000" />
+      <workItem from="1751664844808" duration="3187000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -338,14 +333,6 @@
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1695673588422</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Fix">
-      <option name="closed" value="true" />
-      <created>1746478733812</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1746478733812</updated>
     </task>
     <task id="LOCAL-00040" summary="Fix">
       <option name="closed" value="true" />
@@ -667,7 +654,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751469798581</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1751670540075</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1751670540075</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

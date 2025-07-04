@@ -11,7 +11,6 @@ import singleton.DBconn;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
@@ -109,7 +108,7 @@ class TournamentDAOIntegrationTest {
     }
 
     @Test
-    void testAddSubSuccessfully() throws SQLException, IOException, MaxParticipantsReachedException {
+    void testAddSubSuccessfully() throws SQLException, IOException {
         BeanTournCreation bean = new BeanTournCreation("SubscribeTournamentDB", 2, LocalDate.now().plusDays(5), TEST_ORGANIZER);
         tournOrgDAO.addTourn(bean);
 
@@ -125,7 +124,7 @@ class TournamentDAOIntegrationTest {
         int sno = Integer.parseInt(snos.get(tNames.indexOf("SubscribeTournamentDB")));
 
         tournInfoDAO.getSpecific(curr, sno);
-        assertEquals("1", curr.get(2)); // One subscribed player
+        assertEquals("1", curr.get(2));
     }
 
     @Test
@@ -156,7 +155,7 @@ class TournamentDAOIntegrationTest {
 
 
     @Test
-    void testRemoveSubSuccessfully() throws SQLException, IOException, AlreadySubscribedException, UserNotSubscribedException, MaxParticipantsReachedException {
+    void testRemoveSubSuccessfully() throws SQLException, IOException, AlreadySubscribedException, MaxParticipantsReachedException {
         BeanTournCreation bean = new BeanTournCreation("UnsubscribeTournamentDB", 2, LocalDate.now().plusDays(5), TEST_ORGANIZER);
         tournOrgDAO.addTourn(bean);
         tournInfoDAO.addSub(TEST_PLAYER, "UnsubscribeTournamentDB");
