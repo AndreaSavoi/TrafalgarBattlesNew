@@ -29,7 +29,11 @@ public class ProfileDAOImpl implements ProfileDAO{
         connVerify();
 
         try (PreparedStatement stmt = conn.prepareStatement(Queries.getAddProfileInfo())) {
-            stmt.setString(1, birth);
+            if (birth != null && !birth.isBlank()) {
+                stmt.setString(1, birth);
+            } else {
+                stmt.setNull(1, java.sql.Types.DATE);
+            }
             stmt.setString(2, game);
             stmt.setString(3, sex);
             stmt.setString(4, fullname);
