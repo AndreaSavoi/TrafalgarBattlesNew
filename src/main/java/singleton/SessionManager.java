@@ -6,7 +6,7 @@ public class SessionManager {
         private static User currentUser;
 
         public SessionManager() {
-            //costruttore
+            //Constructor
         }
 
         public static void setCurrentUser(User user) {

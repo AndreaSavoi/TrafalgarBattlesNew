@@ -126,6 +126,6 @@ public class TournPageController implements Initializable {
     tName.setText(bCT.gettName());
     date.setText(bCT.getDates());
     nSub.setText(bCT.getnSubscribed());
-    nPart.setText(bCT.getnPartecipants());
+    nPart.setText(bCT.getnparticipants());
     }
 }

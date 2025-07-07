@@ -65,7 +65,7 @@ public class TournPageOrgController extends AbstractTournController implements I
         tName.setText(bCT.gettName());
         date.setValue(LocalDate.parse(bCT.getDates()));
         curr.setText(bCT.getnSubscribed());
-        max.setText(bCT.getnPartecipants());
+        max.setText(bCT.getnparticipants());
         date.setDisable(true);
         curr.setDisable(true);
         max.setDisable(true);

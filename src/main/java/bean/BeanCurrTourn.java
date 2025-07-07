@@ -4,12 +4,12 @@ public class BeanCurrTourn {
     private static BeanCurrTourn instance;
     private int sno;
     private String tName;
-    private String nPartecipants;
+    private String nparticipants;
     private String nSubscribed;
     private String dates;
 
     public BeanCurrTourn() {
-        //Costruttore
+        //Constructor
     }
 
     public static BeanCurrTourn getInstance() {
@@ -27,7 +27,7 @@ public class BeanCurrTourn {
 
     public void setDates(String dates) { this.dates = dates;}
 
-    public void setnPartecipants(String nPartecipants) { this.nPartecipants = nPartecipants;}
+    public void setnparticipants(String nparticipants) { this.nparticipants = nparticipants;}
 
     public void setnSubscribed(String nSubscribed) { this.nSubscribed = nSubscribed;}
 
@@ -37,7 +37,7 @@ public class BeanCurrTourn {
 
     public String getDates() { return dates; }
 
-    public String getnPartecipants() { return nPartecipants; }
+    public String getnparticipants() { return nparticipants; }
 
     public String getnSubscribed() { return nSubscribed; }
 

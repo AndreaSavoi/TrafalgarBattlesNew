@@ -11,7 +11,7 @@
    <children>
       <Pane layoutX="195.0" layoutY="158.0" prefHeight="644.0" prefWidth="1086.0" style="-fx-background-color: #F8F8FF;">
          <children>
-            <Label fx:id="tName" alignment="CENTER" layoutX="112.0" layoutY="218.0" prefHeight="104.0" prefWidth="440.0" text="Label">
+            <Label fx:id="tName" alignment="CENTER" layoutX="14.0" layoutY="218.0" prefHeight="104.0" prefWidth="633.0" text="Label" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="65.0" />
                </font>
@@ -24,7 +24,7 @@
             </Button>
             <Pane layoutX="660.0" layoutY="116.0" prefHeight="412.0" prefWidth="200.0" style="-fx-background-color: #ADD8E6; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;">
                <children>
-                  <Label fx:id="tName221" alignment="CENTER" layoutX="11.0" layoutY="21.0" prefHeight="60.0" prefWidth="178.0" styleClass="label-bold" stylesheets="@styles.css" text="Max Partecipants">
+                  <Label fx:id="tName221" alignment="CENTER" layoutX="11.0" layoutY="21.0" prefHeight="60.0" prefWidth="178.0" styleClass="label-bold" stylesheets="@styles.css" text="Max participants">
                      <font>
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>
@@ -34,7 +34,7 @@
                         <Font name="Century Gothic" size="19.0" />
                      </font>
                   </Label>
-                  <Label fx:id="tName22" alignment="CENTER" layoutY="152.0" prefHeight="60.0" prefWidth="200.0" styleClass="label-bold" stylesheets="@styles.css" text="Current Partecipants">
+                  <Label fx:id="tName22" alignment="CENTER" layoutY="152.0" prefHeight="60.0" prefWidth="200.0" styleClass="label-bold" stylesheets="@styles.css" text="Current participants">
                      <font>
                         <Font name="Century Gothic Bold Italic" size="19.0" />
                      </font>

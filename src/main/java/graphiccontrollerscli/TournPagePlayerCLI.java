@@ -35,7 +35,7 @@ public class TournPagePlayerCLI {
         System.out.println("\n--- Tournament Details: " + beanCurrTourn.gettName() + " ---");
         System.out.println("Name: " + beanCurrTourn.gettName());
         System.out.println("Date: " + beanCurrTourn.getDates());
-        System.out.println("Partecipants: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnPartecipants());
+        System.out.println("participants: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnparticipants());
 
         User currentUser = SessionManager.getCurrentUser();
         if (currentUser != null) {
@@ -52,7 +52,7 @@ public class TournPagePlayerCLI {
                         subscribeToTournament(currentUser.getUsername(), beanCurrTourn.gettName());
                         try {
                             new ApplicationControllerTournInfo(beanCurrTourn);
-                            System.out.println("Partecipants updated: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnPartecipants());
+                            System.out.println("participants updated: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnparticipants());
                         } catch (Exception e) {
                             System.out.println("Error while reloading informations: " + e.getMessage());
                         }
@@ -61,7 +61,7 @@ public class TournPagePlayerCLI {
                         unsubscribeFromTournament(currentUser.getUsername(), beanCurrTourn.gettName());
                         try {
                             new ApplicationControllerTournInfo(beanCurrTourn);
-                            System.out.println("Partecipants updated: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnPartecipants());
+                            System.out.println("participants updated: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnparticipants());
                         } catch (Exception e) {
                             System.out.println("Error while reloading informations: " + e.getMessage());
                         }

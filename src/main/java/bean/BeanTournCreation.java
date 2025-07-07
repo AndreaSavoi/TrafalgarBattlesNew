@@ -10,7 +10,7 @@ public class BeanTournCreation implements Serializable {
     private String organizer;
 
     public BeanTournCreation() {
-        //Costruttore
+        //Constructor
     }
 
     public BeanTournCreation(String name, int maxPlayers, LocalDate date, String organizer) {

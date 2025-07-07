@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ApplicationControllerTournaments {
     private final List<String> tName = new ArrayList<>();
-    private final List<String> nPartecipants = new ArrayList<>();
+    private final List<String> nparticipants = new ArrayList<>();
     private final List<String> nSubscribed = new ArrayList<>();
     private final List<String> dates = new ArrayList<>();
     private final List<String> sno = new ArrayList<>();
@@ -29,7 +29,7 @@ public class ApplicationControllerTournaments {
 
     private boolean addDatas(BeanTournList tL, String mode, String username) throws SQLException, IOException {
 
-        getTournamentsInfoDAO.getAllInfo(tName, nPartecipants, nSubscribed, dates, sno, mode, username);
+        getTournamentsInfoDAO.getAllInfo(tName, nparticipants, nSubscribed, dates, sno, mode, username);
 
         if(sno.isEmpty()) {
             return false;
@@ -37,7 +37,7 @@ public class ApplicationControllerTournaments {
 
         for (int i = 0;i < sno.size();i++) {
             tL.addName(tName.get(i));
-            tL.addNP(nPartecipants.get(i));
+            tL.addNP(nparticipants.get(i));
             tL.addNS(nSubscribed.get(i));
             tL.addDates(dates.get(i));
             tL.addSNO(sno.get(i));

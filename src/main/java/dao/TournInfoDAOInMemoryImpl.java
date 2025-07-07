@@ -68,9 +68,9 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
     }
 
     @Override
-    public void getAllInfo(List<String> tNameList, List<String> nPartecipantsList, List<String> nSubscribedList, List<String> datesList, List<String> snoList, String mode, String username) {
+    public void getAllInfo(List<String> tNameList, List<String> nparticipantsList, List<String> nSubscribedList, List<String> datesList, List<String> snoList, String mode, String username) {
         tNameList.clear();
-        nPartecipantsList.clear();
+        nparticipantsList.clear();
         nSubscribedList.clear();
         datesList.clear();
         snoList.clear();
@@ -89,7 +89,7 @@ public class TournInfoDAOInMemoryImpl implements TournInfoDAO {
 
         for (TournamentDetails tourn : filteredTournaments) {
             tNameList.add(tourn.tName);
-            nPartecipantsList.add(String.valueOf(tourn.maxParticipants));
+            nparticipantsList.add(String.valueOf(tourn.maxParticipants));
             nSubscribedList.add(String.valueOf(tourn.currentSubscribed));
             datesList.add(tourn.dates);
             snoList.add(String.valueOf(tourn.sno));

@@ -35,7 +35,7 @@ public class SubsCLI {
 
         if (controller.hasTournaments()) {
             for (int i = 0; i < tL.sno.size(); i++) {
-                System.out.printf("%d. %s - Partecipants: %s/%s - Date: %s (SNO: %s)\n",
+                System.out.printf("%d. %s - participants: %s/%s - Date: %s (SNO: %s)\n",
                         (i + 1), tL.getName(i), tL.getNS(i), tL.getNP(i), tL.getDate(i), tL.getSNO(i));
             }
             System.out.println("Press enter to go back to main menu.");

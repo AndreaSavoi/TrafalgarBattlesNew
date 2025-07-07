@@ -1,8 +1,5 @@
 package util;
 
-// Create a new abstract class or an interface for common methods if many controllers share them.
-// For simplicity, I'm showing a static utility method here.
-
 import bean.BeanTournCreation;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;

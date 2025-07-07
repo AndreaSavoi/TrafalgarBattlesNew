@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         Font.loadFont(getClass().getResourceAsStream("/fonts/Century Gothic.ttf"), 21);
         Font.loadFont(getClass().getResourceAsStream("/fonts/GOTHICB.ttf"), 21);
-        VisualizeScene visualizeScene =VisualizeScene.getVisualizer(stage);
+        VisualizeScene visualizeScene = VisualizeScene.getVisualizer(stage);
         visualizeScene.mainVisualizer("MainView.fxml");
     }
 

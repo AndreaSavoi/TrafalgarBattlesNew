@@ -38,7 +38,7 @@ public class TournPageOrgCLI {
         System.out.println("\n--- Tournament Edit: " + beanCurrTourn.gettName() + " ---");
         System.out.println("Name: " + beanCurrTourn.gettName());
         System.out.println("Date: " + beanCurrTourn.getDates());
-        System.out.println("Partecipants: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnPartecipants());
+        System.out.println("participants: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnparticipants());
 
         while (true) {
             System.out.println("\nOptions:");
@@ -59,7 +59,7 @@ public class TournPageOrgCLI {
                     System.out.println("Changes saved.");
                     System.out.println("Name: " + beanCurrTourn.gettName());
                     System.out.println("Date: " + beanCurrTourn.getDates());
-                    System.out.println("Partecipants: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnPartecipants());
+                    System.out.println("participants: " + beanCurrTourn.getnSubscribed() + "/" + beanCurrTourn.getnparticipants());
                     break;
                 case "2":
                     deleteTournament(beanCurrTourn.gettName());
@@ -90,13 +90,13 @@ public class TournPageOrgCLI {
         }
 
 
-        System.out.print("New Max Partecipants number (actual: " + currentTournBean.getnPartecipants() + "): ");
+        System.out.print("New Max participants number (actual: " + currentTournBean.getnparticipants() + "): ");
         String newMaxText = reader.readLine();
         int newMaxPlayers = 0;
         String validationError = null;
 
         if (newMaxText.isBlank()) {
-            newMaxPlayers = Integer.parseInt(currentTournBean.getnPartecipants());
+            newMaxPlayers = Integer.parseInt(currentTournBean.getnparticipants());
         } else {
             try {
                 newMaxPlayers = Integer.parseInt(newMaxText);
@@ -127,7 +127,7 @@ public class TournPageOrgCLI {
 
     private static BeanTournCreation getBeanTournCreation(BeanCurrTourn currentTournBean, LocalDate newDate, int newMaxPlayers) {
         LocalDate finalDate = (newDate != null) ? newDate : LocalDate.parse(currentTournBean.getDates());
-        int finalMaxPlayers = (newMaxPlayers != 0) ? newMaxPlayers : Integer.parseInt(currentTournBean.getnPartecipants());
+        int finalMaxPlayers = (newMaxPlayers != 0) ? newMaxPlayers : Integer.parseInt(currentTournBean.getnparticipants());
 
         User currentUser = SessionManager.getCurrentUser();
         String organizer = currentUser.getUsername();

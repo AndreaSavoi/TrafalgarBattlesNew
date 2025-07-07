@@ -68,7 +68,7 @@
                   <Font name="Century Gothic" size="31.0" />
                </font>
             </Label>
-            <Label layoutX="436.0" layoutY="3.0" styleClass="label-bold" stylesheets="@styles.css" text="PARTECIPANTS" textAlignment="CENTER">
+            <Label layoutX="436.0" layoutY="3.0" styleClass="label-bold" stylesheets="@styles.css" text="participants" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="31.0" />
                </font>

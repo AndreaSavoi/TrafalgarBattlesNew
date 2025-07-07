@@ -35,7 +35,7 @@ public class ApplicationControllerTournInfo {
     private void addDatas(BeanCurrTourn bCT) throws SQLException, IOException {
         getCurrTurnInfo.getSpecific(curr, bCT.getSno());
         bCT.settName(curr.get(0));
-        bCT.setnPartecipants(curr.get(1));
+        bCT.setnparticipants(curr.get(1));
         bCT.setnSubscribed(curr.get(2));
         bCT.setDates(curr.get(3));
     }
@@ -48,7 +48,7 @@ public class ApplicationControllerTournInfo {
             if (msg.contains("already registered")) {
                 throw new AlreadySubscribedException("You're already subscribed to this tournament.");
             } else if (msg.contains("max participants")) {
-                throw new MaxParticipantsReachedException("Max partecipants reached for this tournament.");
+                throw new MaxParticipantsReachedException("Max participants reached for this tournament.");
             } else {
                 throw e;
             }

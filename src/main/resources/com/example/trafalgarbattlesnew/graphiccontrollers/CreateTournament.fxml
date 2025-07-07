@@ -13,7 +13,7 @@
          <children>
             <Line endX="1607.4000244140625" endY="157.9000244140625" layoutX="-523.0" layoutY="486.0" startX="-1.627604251552839E-5" startY="158.40000915527344" />
             <DatePicker fx:id="date" layoutX="630.0" layoutY="224.0" prefHeight="73.0" prefWidth="305.0" promptText="DATE" styleClass="date-picker" stylesheets="@styles.css" />
-            <TextField fx:id="max" alignment="CENTER" layoutX="391.0" layoutY="383.0" prefHeight="73.0" prefWidth="305.0" promptText="MAX PARTECIPANTS">
+            <TextField fx:id="max" alignment="CENTER" layoutX="391.0" layoutY="383.0" prefHeight="73.0" prefWidth="305.0" promptText="MAX participants">
                <font>
                   <Font name="Century Gothic" size="28.0" />
                </font></TextField>
@@ -22,7 +22,7 @@
                   <Font name="Century Gothic" size="26.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="405.0" layoutY="351.0" prefHeight="33.0" prefWidth="276.0" text="MAX PARTECIPANTS">
+            <Label alignment="CENTER" layoutX="405.0" layoutY="351.0" prefHeight="33.0" prefWidth="276.0" text="MAX participants">
                <font>
                   <Font name="Century Gothic" size="26.0" />
                </font>

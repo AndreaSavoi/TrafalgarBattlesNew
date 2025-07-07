@@ -17,7 +17,6 @@ public class MainPlayerCLI {
     }
 
     public void displayAvailableTournaments() throws IOException, SQLException {
-        //User currentUser = SessionManager.getCurrentUser();
         String mode = "all";
 
         System.out.println("\n--- Available Tournaments ---");
@@ -32,7 +31,7 @@ public class MainPlayerCLI {
 
         if (controller.hasTournaments()) {
             for (int i = 0; i < tL.sno.size(); i++) {
-                System.out.printf("%d. %s - Partecipants: %s/%s - Date: %s (SNO: %s)\n",
+                System.out.printf("%d. %s - participants: %s/%s - Date: %s (SNO: %s)\n",
                         (i + 1), tL.getName(i), tL.getNS(i), tL.getNP(i), tL.getDate(i), tL.getSNO(i));
             }
             System.out.print("Insert Tournament number for more info (0 to go back): ");

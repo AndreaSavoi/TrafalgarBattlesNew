@@ -27,7 +27,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
     }
 
     @Override
-    public void getAllInfo(List<String> tName, List<String> nPartecipants, List<String> nSubscribed, List<String> dates, List<String> sno, String mode, String username) throws SQLException, IOException {
+    public void getAllInfo(List<String> tName, List<String> nparticipants, List<String> nSubscribed, List<String> dates, List<String> sno, String mode, String username) throws SQLException, IOException {
         connVerify();
 
         String sql = getString(mode, username);
@@ -41,7 +41,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
                     tName.add(rs.getString("tname"));
-                    nPartecipants.add(rs.getString("npartecipants"));
+                    nparticipants.add(rs.getString("nparticipants"));
                     nSubscribed.add(rs.getString("nsubscribed"));
                     dates.add(rs.getString("dates"));
                     sno.add(rs.getString("sno"));
@@ -59,7 +59,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             try (ResultSet rs = stmt.executeQuery()) {
                 while(rs.next()) {
                     curr.add(rs.getString("tname"));
-                    curr.add(rs.getString("npartecipants"));
+                    curr.add(rs.getString("nparticipants"));
                     curr.add(rs.getString("nsubscribed"));
                     curr.add(rs.getString("dates"));
                 }
@@ -80,7 +80,7 @@ public class TournInfoDAOImpl implements TournInfoDAO {
             if (msg.contains("already registered")) {
                 throw new AlreadySubscribedException("You're already subscribed to this tournament.");
             } else if (msg.contains("maximum participants")) {
-                throw new MaxParticipantsReachedException("Max partecipants reached for this tournament.");
+                throw new MaxParticipantsReachedException("Max participants reached for this tournament.");
             } else {
                 throw e;
             }

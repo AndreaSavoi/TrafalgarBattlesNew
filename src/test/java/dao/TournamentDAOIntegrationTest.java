@@ -150,7 +150,7 @@ class TournamentDAOIntegrationTest {
         MaxParticipantsReachedException thrown = assertThrows(MaxParticipantsReachedException.class, () -> {
             tournInfoDAO.addSub("another_player", "MaxParticipantsDB");
         });
-        assertEquals("Max partecipants reached for this tournament.", thrown.getMessage());
+        assertEquals("Max participants reached for this tournament.", thrown.getMessage());
     }
 
 

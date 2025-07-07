@@ -23,7 +23,7 @@ public class Queries {
 
     public static String getQueryAddSub() { return QUERY_ADD_SUB; }
 
-    static final String QUERY_SUB_TOURNAMENTS = "SELECT t.sno, t.tName, t.dates, t.nPartecipants, t.nSubscribed FROM tournaments t INNER JOIN subscription s ON t.tName = s.tName WHERE s.username = ?";
+    static final String QUERY_SUB_TOURNAMENTS = "SELECT t.sno, t.tName, t.dates, t.nparticipants, t.nSubscribed FROM tournaments t INNER JOIN subscription s ON t.tName = s.tName WHERE s.username = ?";
 
     public static String getQuerySubTournaments() { return QUERY_SUB_TOURNAMENTS; }
 
@@ -47,11 +47,11 @@ public class Queries {
 
     public static String getQueryOrgTournaments() { return QUERY_ORG_TOURNAMENTS; }
 
-    static final String ADD_TOURNAMENT = "INSERT INTO trafalgarbattles.tournaments (tName, dates, nPartecipants, nSubscribed, organizer) VALUES (?, ?, ?, ?, ?)";
+    static final String ADD_TOURNAMENT = "INSERT INTO trafalgarbattles.tournaments (tName, dates, nparticipants, nSubscribed, organizer) VALUES (?, ?, ?, ?, ?)";
 
     public static String getAddTournament() { return ADD_TOURNAMENT; }
 
-    static final String MOD_TOURNAMENT = "UPDATE trafalgarbattles.tournaments SET dates = ?, nPartecipants = ? WHERE tName = ?";
+    static final String MOD_TOURNAMENT = "UPDATE trafalgarbattles.tournaments SET dates = ?, nparticipants = ? WHERE tName = ?";
 
     public static String getModTournament() { return MOD_TOURNAMENT; }
 
