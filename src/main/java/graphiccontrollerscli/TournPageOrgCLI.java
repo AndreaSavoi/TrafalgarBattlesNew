@@ -137,7 +137,7 @@ public class TournPageOrgCLI {
     private void deleteTournament(String tournamentName) throws IOException, SQLException {
         System.out.print("Are you sure you want to delete the tournament '" + tournamentName + "'? (y/n): ");
         String confirmation = reader.readLine();
-        if (confirmation.equalsIgnoreCase("s")) {
+        if (confirmation.equalsIgnoreCase("y")) {
             try {
                 ApplicationControllerDeleteTourn controller = new ApplicationControllerDeleteTourn();
                 controller.deleteTournament(tournamentName);
