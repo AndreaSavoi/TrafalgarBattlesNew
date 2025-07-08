@@ -24,11 +24,16 @@ public class TournValidation {
             return null;
         }
 
+        if(tournDate.isBefore(LocalDate.now())) {
+            resultLabel.setText("Please enter a valid date.");
+            return null;
+        }
+
         int maxPlayers;
         try {
             maxPlayers = Integer.parseInt(maxText);
-            if (maxPlayers <= 0) {
-                resultLabel.setText("Maximum number must be greater than 0.");
+            if (maxPlayers <= 1) {
+                resultLabel.setText("Maximum number must be greater than 1.");
                 return null;
             }
 
