@@ -6,32 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerTournaments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/BeanCurrTourn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/BeanCurrTourn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/BeanTournCreation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/BeanTournCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/BeanTournList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/BeanTournList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageOrgController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/TournPageOrgController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOInMemoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TournInfoDAOInMemoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainOrganizerCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainOrganizerCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainPlayerCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainPlayerCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/SubsCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/SubsCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPageOrgCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPageOrgCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPagePlayerCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPagePlayerCLI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/queries/Queries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/queries/Queries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/singleton/SessionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/TournValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/CreateTournament.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/CreateTournament.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainViewOrganizer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/MainViewOrganizer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/Subs.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfoOrg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/TournamentInfoOrg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/TournamentDAOIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dao/TournamentDAOIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers/LogRegForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +121,7 @@
       <recent name="bean" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TournamentDAOIntegrationTest">
+  <component name="RunManager" selected="Application.MainLauncher">
     <configuration name="MainLauncher" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="graphiccontrollerscli.MainLauncher" />
       <module name="TrafalgarBattlesNew" />
@@ -311,7 +287,8 @@
       <workItem from="1751751715532" duration="64000" />
       <workItem from="1751751799665" duration="3763000" />
       <workItem from="1751822373663" duration="10982000" />
-      <workItem from="1751910107741" duration="400000" />
+      <workItem from="1751910107741" duration="3747000" />
+      <workItem from="1751965983456" duration="661000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -368,14 +345,6 @@
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1695673588422</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Fix">
-      <option name="closed" value="true" />
-      <created>1747127763894</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1747127763894</updated>
     </task>
     <task id="LOCAL-00042" summary="Fix">
       <option name="closed" value="true" />
@@ -697,7 +666,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751670912606</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1751910699055</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1751910699055</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

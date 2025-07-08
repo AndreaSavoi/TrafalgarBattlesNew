@@ -31,6 +31,8 @@ public class LogRegFormController implements Initializable {
     @FXML
     protected Label formRes;
     @FXML
+    protected Label logout;
+    @FXML
     protected CheckBox checkRoleL;
     @FXML
     protected CheckBox checkRoleR;
@@ -84,6 +86,7 @@ public class LogRegFormController implements Initializable {
         }
     }
 
+    @FXML
     public void returnHome(MouseEvent event){
         User currentUser = SessionManager.getCurrentUser();
         if(currentUser == null){
@@ -96,5 +99,16 @@ public class LogRegFormController implements Initializable {
     @Override
     public void initialize(java.net.URL url, java.util.ResourceBundle resourceBundle) {
         applyHoverEffect(home);
+        User currentUser = SessionManager.getCurrentUser();
+        if(currentUser == null){
+            logout.setDisable(true);
+        }
+    }
+
+    @FXML
+    public void logout(MouseEvent mouseEvent) {
+        SessionManager.clear();
+        formRes.setText("Successfully logged out");
+        logout.setDisable(true);
     }
 }

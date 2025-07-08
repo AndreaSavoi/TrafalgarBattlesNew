@@ -98,6 +98,11 @@
                         <Font size="27.0" />
                     </font>
                 </Label>
+            <Label fx:id="logout" alignment="CENTER" layoutX="1051.0" layoutY="97.0" onMouseClicked="#logout" prefHeight="30.0" prefWidth="124.0" stylesheets="@styles.css" text="LOGOUT" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
             </children></Pane>
     </children>
 </AnchorPane>
