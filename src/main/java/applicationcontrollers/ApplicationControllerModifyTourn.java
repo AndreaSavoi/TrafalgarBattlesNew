@@ -2,7 +2,6 @@ package applicationcontrollers;
 
 import bean.BeanTournCreation;
 import dao.TournOrgDAO;
-import dao.TournOrgDAOImpl;
 import graphiccontrollerscli.MainLauncher;
 
 import java.io.IOException;

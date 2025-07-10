@@ -1,7 +1,6 @@
 package applicationcontrollers;
 
 import dao.ProfileDAO;
-import dao.ProfileDAOImpl;
 import graphiccontrollerscli.MainLauncher;
 
 import java.io.IOException;

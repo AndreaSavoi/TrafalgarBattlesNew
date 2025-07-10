@@ -36,7 +36,7 @@ public class CreateTournamentCLI {
         LocalDate tournDate;
         try {
             tournDate = LocalDate.parse(dateText);
-        } catch (DateTimeParseException e) {
+        } catch (DateTimeParseException _) {
             System.out.println("Not valid date format. Please use YYYY-MM-DD.");
             return;
         }

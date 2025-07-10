@@ -12,6 +12,9 @@ import java.util.Map;
 
 public class ProfileCLI {
     private final BufferedReader reader;
+    private static final String N_S = "Not specified";
+    private static final String BIRTH = "birth";
+    private static final String F_N = "fullname";
 
     public ProfileCLI(BufferedReader reader) {
         this.reader = reader;
@@ -37,10 +40,10 @@ public class ProfileCLI {
             return;
         }
 
-        String birth = userData.getOrDefault("birth", "Not specified");
-        String game = userData.getOrDefault("game", "Not specified");
-        String sex = userData.getOrDefault("sex", "Not specified");
-        String fullname = userData.getOrDefault("fullname", "Not specified");
+        String birth = userData.getOrDefault(BIRTH, N_S);
+        String game = userData.getOrDefault("game", N_S);
+        String sex = userData.getOrDefault("sex", N_S);
+        String fullname = userData.getOrDefault(F_N, N_S);
 
         System.out.println("Birth Date: " + birth);
         System.out.println("Favourite Game: " + game);
@@ -63,10 +66,10 @@ public class ProfileCLI {
                         System.out.println("Error while loading profile datas: " + e.getMessage());
                     }
                     System.out.println("\n--- Updatated Profile ---");
-                    System.out.println("Birth Date: " + userData.getOrDefault("birth", "Not specified"));
-                    System.out.println("Favourite Game: " + userData.getOrDefault("game", "Not specified"));
-                    System.out.println("Sex: " + userData.getOrDefault("sex", "Not specified"));
-                    System.out.println("Full name: " + userData.getOrDefault("fullname", "Not specified"));
+                    System.out.println("Birth Date: " + userData.getOrDefault(BIRTH, N_S));
+                    System.out.println("Favourite Game: " + userData.getOrDefault("game", N_S));
+                    System.out.println("Sex: " + userData.getOrDefault("sex", N_S));
+                    System.out.println("Full name: " + userData.getOrDefault(F_N, N_S));
                     break;
                 case "0":
                     return;
@@ -80,9 +83,9 @@ public class ProfileCLI {
         System.out.println("\n--- Modify Profile Fields ---");
         System.out.println("Keep it blank if you don't want to change it.");
 
-        System.out.print("New Birth Date (actual: " + currentData.getOrDefault("birth", "") + "): ");
+        System.out.print("New Birth Date (actual: " + currentData.getOrDefault(BIRTH, "") + "): ");
         String newBirth = reader.readLine();
-        if (newBirth.isBlank()) newBirth = currentData.get("birth");
+        if (newBirth.isBlank()) newBirth = currentData.get(BIRTH);
 
         System.out.print("New Favourite Game (actual: " + currentData.getOrDefault("game", "") + "): ");
         String newGame = reader.readLine();
@@ -92,9 +95,9 @@ public class ProfileCLI {
         String newSex = reader.readLine();
         if (newSex.isBlank()) newSex = currentData.get("sex");
 
-        System.out.print("New Full name (actual: " + currentData.getOrDefault("fullname", "") + "): ");
+        System.out.print("New Full name (actual: " + currentData.getOrDefault(F_N, "") + "): ");
         String newFullname = reader.readLine();
-        if (newFullname.isBlank()) newFullname = currentData.get("fullname");
+        if (newFullname.isBlank()) newFullname = currentData.get(F_N);
 
         try {
             appController.updateUserProfile(newBirth, newGame, newSex, newFullname, username);

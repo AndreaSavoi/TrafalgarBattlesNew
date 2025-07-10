@@ -34,11 +34,11 @@ public class SubsCLI {
         }
 
         if (controller.hasTournaments()) {
-            MainPlayerCLI.TournSelectionCLI(tL, reader);
+            MainPlayerCLI.tournSelectionCLI(tL, reader);
         } else {
             System.out.println("No available subscriptions.");
             System.out.println("Press enter to go back to main menu.");
-            String ignoredInput = reader.readLine();
+            String _ = reader.readLine();
         }
     }
 }

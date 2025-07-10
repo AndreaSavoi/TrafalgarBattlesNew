@@ -3,7 +3,6 @@ package applicationcontrollers;
 import bean.BeanLog;
 import bean.BeanReg;
 import dao.LogRegDAO;
-import dao.LogRegDAOImpl;
 import graphiccontrollerscli.MainLauncher;
 
 import java.io.IOException;

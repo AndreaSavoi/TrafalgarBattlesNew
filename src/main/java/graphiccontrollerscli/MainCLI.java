@@ -10,6 +10,7 @@ import java.sql.SQLException;
 
 public class MainCLI {
 
+    private static final String N_V = "Not a valid option!.";
     private static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
@@ -31,7 +32,7 @@ public class MainCLI {
                 System.err.println("I/O Error: " + e.getMessage());
             } catch (SQLException e) {
                 System.err.println("Database error: " + e.getMessage());
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException _) {
                 System.err.println("Not valid input, please insert a number.");
             } catch (IllegalArgumentException e) {
                 System.err.println("Error: " + e.getMessage());
@@ -76,7 +77,7 @@ public class MainCLI {
                 case "0":
                     return true;
                 default:
-                    System.out.println("Not a valid option!.");
+                    System.out.println(N_V);
             }
         } else {
             if (currentUser instanceof users.Organizer) {
@@ -94,7 +95,7 @@ public class MainCLI {
                     case "0":
                         return true;
                     default:
-                        System.out.println("Not a valid option!.");
+                        System.out.println(N_V);
                 }
             } else {
                 switch (choice) {
@@ -114,7 +115,7 @@ public class MainCLI {
                     case "0":
                         return true;
                     default:
-                        System.out.println("Not a valid option!.");
+                        System.out.println(N_V);
                 }
             }
         }

@@ -2,8 +2,6 @@ package graphiccontrollerscli;
 
 import applicationcontrollers.ApplicationControllerTournaments;
 import bean.BeanTournList;
-import singleton.SessionManager;
-import users.User;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,15 +28,15 @@ public class MainPlayerCLI {
         }
 
         if (controller.hasTournaments()) {
-            TournSelectionCLI(tL, reader);
+            tournSelectionCLI(tL, reader);
         } else {
             System.out.println("No available Tournaments.");
         }
     }
 
-    public static void TournSelectionCLI(BeanTournList tL, BufferedReader reader) throws IOException, SQLException {
+    public static void tournSelectionCLI(BeanTournList tL, BufferedReader reader) throws IOException, SQLException {
         for (int i = 0; i < tL.sno.size(); i++) {
-            System.out.printf("%d. %s - participants: %s/%s - Date: %s (SNO: %s)\n",
+            System.out.printf("%d. %s - participants: %s/%s - Date: %s (SNO: %s)%n",
                     (i + 1), tL.getName(i), tL.getNS(i), tL.getNP(i), tL.getDate(i), tL.getSNO(i));
         }
         System.out.print("Insert Tournament number for more info (0 to go back): ");
@@ -53,7 +51,7 @@ public class MainPlayerCLI {
             } else {
                 System.out.println("Not a valid choice.");
             }
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException _) {
             System.out.println("Not a valid option. Please insert a valid number.");
         }
     }

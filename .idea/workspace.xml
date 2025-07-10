@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="f7906fc1-9224-4c7f-b978-12f9a0a7f511" name="Changes" comment="Fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerDeleteTourn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerDeleteTourn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerLogReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerLogReg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerModifyTourn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerModifyTourn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/applicationcontrollers/ApplicationControllerProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/CreateTournamentCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/CreateTournamentCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/LogRegCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/LogRegCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainOrganizerCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainOrganizerCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainPlayerCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/MainPlayerCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/ProfileCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/ProfileCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/SubsCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/SubsCLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPageOrgCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPageOrgCLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPagePlayerCLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/graphiccontrollerscli/TournPagePlayerCLI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +53,13 @@
     &quot;assignee&quot;: &quot;AndreaSavoi&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="747380a8-2d2b-4a50-9597-aab2dc1ec4de" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AndreaSavoi/TrafalgarBattlesNew.git&quot;,
-    &quot;accountId&quot;: &quot;f8bf4f50-21ef-4ba4-8a6c-640c9a99cf89&quot;
+    &quot;accountId&quot;: &quot;535d75c9-93b3-4b86-bf79-41e15529ec82&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -63,46 +79,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.MainLauncher.executor": "Run",
-    "Application.ReadSerializedUsers.executor": "Run",
-    "JUnit.LogRegDAOImplIntegrationTest.executor": "Run",
-    "JUnit.LogRegDAOImplIntegrationTest.testGetLogInfoSuccessfully.executor": "Run",
-    "JUnit.LogRegDAOImplIntegrationTest.testRegisterDuplicateUsernameThrowsException.executor": "Run",
-    "JUnit.LogRegDAOImplIntegrationTest.testRegisterUserSuccessfully.executor": "Run",
-    "JUnit.ProfileDAOImplIntegrationTest.executor": "Run",
-    "JUnit.TournamentDAOIntegrationTest.executor": "Run",
-    "JUnit.TournamentDAOIntegrationTest.testAddSubMaxParticipantsReachedThrowsException.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "public",
-    "git-widget-placeholder": "master",
-    "ignore.preview.features.used": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/andre/IdeaProjects/TrafalgarBattlesNew/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.34049585",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainLauncher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadSerializedUsers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogRegDAOImplIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogRegDAOImplIntegrationTest.testGetLogInfoSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogRegDAOImplIntegrationTest.testRegisterDuplicateUsernameThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogRegDAOImplIntegrationTest.testRegisterUserSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProfileDAOImplIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TournamentDAOIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TournamentDAOIntegrationTest.testAddSubMaxParticipantsReachedThrowsException.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;public&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/IdeaProjects/TrafalgarBattlesNew/src/main/resources/com/example/trafalgarbattlesnew/graphiccontrollers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.34049585&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\andre\IdeaProjects\TrafalgarBattlesNew\src\main\resources\com\example\trafalgarbattlesnew\graphiccontrollers" />
@@ -288,7 +304,16 @@
       <workItem from="1751751799665" duration="3763000" />
       <workItem from="1751822373663" duration="10982000" />
       <workItem from="1751910107741" duration="3747000" />
-      <workItem from="1751965983456" duration="10616000" />
+      <workItem from="1751965983456" duration="11489000" />
+      <workItem from="1751989352050" duration="12000" />
+      <workItem from="1752068299643" duration="20000" />
+      <workItem from="1752071951080" duration="554000" />
+      <workItem from="1752133661628" duration="247000" />
+      <workItem from="1752133921397" duration="206000" />
+      <workItem from="1752143176508" duration="1608000" />
+      <workItem from="1752144799070" duration="14000" />
+      <workItem from="1752144822537" duration="5000" />
+      <workItem from="1752144915155" duration="1510000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1695670186976</created>
@@ -345,14 +370,6 @@
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
       <updated>1695673588422</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Fix">
-      <option name="closed" value="true" />
-      <created>1747143089215</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1747143089215</updated>
     </task>
     <task id="LOCAL-00048" summary="Fix">
       <option name="closed" value="true" />
@@ -674,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751986244252</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1751987646117</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1751987646117</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

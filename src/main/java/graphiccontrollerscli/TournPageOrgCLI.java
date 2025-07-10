@@ -7,7 +7,6 @@ import bean.BeanCurrTourn;
 import bean.BeanTournCreation;
 import singleton.SessionManager;
 import users.User;
-import util.TournValidation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -82,7 +81,7 @@ public class TournPageOrgCLI {
         if (!newDateText.isBlank()) {
             try {
                 newDate = LocalDate.parse(newDateText);
-            } catch (DateTimeParseException e) {
+            } catch (DateTimeParseException _) {
                 System.out.println("Date format not valid. Date won't be modified.");
             }
         } else {
@@ -105,7 +104,7 @@ public class TournPageOrgCLI {
                 } else if (newMaxPlayers < Integer.parseInt(currentTournBean.getnSubscribed())) {
                     validationError = "Maximum number must be equal or greater than the current subscribed players. (" + currentTournBean.getnSubscribed() + ").";
                 }
-            } catch (NumberFormatException e) {
+            } catch (NumberFormatException _) {
                 validationError = "Maximum number must be a number.";
             }
         }
